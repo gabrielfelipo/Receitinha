@@ -28,3 +28,19 @@ class PesquisarViewController: UIViewController {
     */
 
 }
+
+
+// MARK: - Preview
+#if DEBUG
+import SwiftUI
+@available(iOS 13, *)
+struct PesquisarViewController_Preview: PreviewProvider {
+    static var previews: some View {
+        // view controller using programmatic UI
+        Group {
+            PesquisarViewController().showPreview().previewDevice("iPhone SE (3rd generation)")
+            PesquisarViewController().showPreview().previewDevice("iPhone SE (3rd generation)").previewInterfaceOrientation(.landscapeLeft)
+        }
+    }
+}
+#endif
