@@ -18,7 +18,7 @@ class TabBarController: UITabBarController{
     }
     
     private func setupTabBarController () {
-        tabBar.backgroundColor = .white
+        tabBar.backgroundColor = UIColor(named: "tabBarColor")
         
         guard let items = tabBar.items else{return}
         
@@ -30,8 +30,11 @@ class TabBarController: UITabBarController{
         
         items[2].title = "Buscar"
         items[2].image = UIImage(systemName: "magnifyingglass")
+        
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
+        tabBar.layer.shadowRadius = 0
+        tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabBar.layer.shadowOpacity = 0.3
     }
 
 }
-
-

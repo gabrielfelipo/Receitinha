@@ -11,7 +11,7 @@ class ConquistasViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
+        view.backgroundColor = UIColor(named: "blueBackground")
         // Do any additional setup after loading the view.
     }
     
