@@ -11,6 +11,7 @@
 		0D66D53028CFBD8A00F1A41C /* ReceitasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66D52F28CFBD8A00F1A41C /* ReceitasViewController.swift */; };
 		0D66D53228CFBD9500F1A41C /* ConquistasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66D53128CFBD9500F1A41C /* ConquistasViewController.swift */; };
 		477E934B28CFB532009E57A8 /* Receita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E934A28CFB532009E57A8 /* Receita.swift */; };
+		8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */; };
 		CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4928CFC04C00D5268F /* UIView+Preview.swift */; };
 		CA826B4C28CFC05D00D5268F /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4B28CFC05D00D5268F /* UIViewController+Preview.swift */; };
 		CA826B4E28CFC52C00D5268F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4D28CFC52C00D5268F /* TabBarController.swift */; };
@@ -25,6 +26,7 @@
 		0D66D52F28CFBD8A00F1A41C /* ReceitasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitasViewController.swift; sourceTree = "<group>"; };
 		0D66D53128CFBD9500F1A41C /* ConquistasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConquistasViewController.swift; sourceTree = "<group>"; };
 		477E934A28CFB532009E57A8 /* Receita.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receita.swift; sourceTree = "<group>"; };
+		8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receita+Receitas.swift"; sourceTree = "<group>"; };
 		CA826B4928CFC04C00D5268F /* UIView+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		CA826B4B28CFC05D00D5268F /* UIViewController+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 		CA826B4D28CFC52C00D5268F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				477E934A28CFB532009E57A8 /* Receita.swift */,
+				8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */,
 				CAEE6FCA28CFACD1007AA493 /* AppDelegate.swift in Sources */,
 				CAEE6FCC28CFACD1007AA493 /* SceneDelegate.swift in Sources */,
+				8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
