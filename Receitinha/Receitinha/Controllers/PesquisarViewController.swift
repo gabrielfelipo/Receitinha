@@ -12,7 +12,7 @@ class PesquisarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Pesquisar"
-        view.backgroundColor = .red
+        view.backgroundColor = .yellow
         // Do any additional setup after loading the view.
     }
     
