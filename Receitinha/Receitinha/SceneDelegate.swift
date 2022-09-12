@@ -19,9 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let tabBarController = UITabBarController ()
-        let searchNavigation = UINavigationController (rootViewController: PesquisarViewController())
+        let searchNavigation = PesquisarViewController()
         let recipeNavigation = UINavigationController (rootViewController: ReceitasViewController())
-        let conquerNavigation = UINavigationController (rootViewController: ConquistasViewController ())
+        let conquerNavigation = ConquistasViewController ()
         tabBarController.viewControllers = [conquerNavigation, recipeNavigation, searchNavigation]
         window.rootViewController = tabBarController
         self.window = window
