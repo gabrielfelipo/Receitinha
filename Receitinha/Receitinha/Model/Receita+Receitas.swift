@@ -14,7 +14,7 @@ extension Receita {
             Receita(
                 //comentario de thales
                 titulo: "Banana com Nescau",
-                imagemPrevia: "imagem da previa aqui",
+                imagemPrevia: "IMG_BananaComNescau_Preview",
                 dificuldade: "Fácil",
                 descricaoPrevia: "Essa é uma receita de uma deliciosa banana com leite em pó, Nescau e farinha láctea. Um lanche prático, rápido e muito divertido de fazer!!",
                 duracao: 10,
@@ -29,8 +29,18 @@ extension Receita {
                     "Farinha láctea"
                 ],
                 imagem: [
-                    "falta essa parte",
-                    "e mais um bocado aqui em baixo"
+                    "IMG_BananaComNescau_1",
+                    "IMG_BananaComNescau_2",
+                    "IMG_BananaComNescau_3",
+                    "IMG_BananaComNescau_4",
+                    "IMG_BananaComNescau_5",
+                    "IMG_BananaComNescau_6",
+                    "IMG_BananaComNescau_7",
+                    "IMG_BananaComNescau_8",
+                    "IMG_BananaComNescau_9",
+                    "IMG_BananaComNescau_10",
+                    "IMG_BananaComNescau_11",
+                    
                 ],
                 tituloInstrucao: [
                     "Pegue um prato",
@@ -75,7 +85,7 @@ extension Receita {
             ),
             Receita(
                 titulo: "Misto quente",
-                imagemPrevia: "imagem da previa aqui",
+                imagemPrevia: "IMG_MistoQuente_Preview",
                 dificuldade: "Médio",
                 descricaoPrevia: "Essa é uma receita muito gostosa e prática de um misto quente bastante recheado perfeito para um lachinho da tarde ou café da manhã",
                 duracao: 10,
@@ -89,8 +99,22 @@ extension Receita {
                     "Queijo Mussarela fatiado"
                 ],
                 imagem: [
-                    "falta essa parte",
-                    "e mais um bocado aqui em baixo"
+                    "IMG_MistoQuente_1",
+                    "IMG_MistoQuente_2",
+                    "IMG_MistoQuente_3",
+                    "IMG_MistoQuente_4",
+                    "IMG_MistoQuente_5",
+                    "IMG_MistoQuente_6",
+                    "IMG_MistoQuente_7",
+                    "IMG_MistoQuente_8",
+                    "IMG_MistoQuente_9",
+                    "IMG_MistoQuente_10",
+                    "IMG_MistoQuente_11",
+                    "IMG_MistoQuente_12",
+                    "IMG_MistoQuente_13",
+                    "IMG_MistoQuente_14",
+                    "IMG_MistoQuente_15",
+                    
                 ],
                 tituloInstrucao: [
                     "Pegue um prato e coloque em cima da mesa",
