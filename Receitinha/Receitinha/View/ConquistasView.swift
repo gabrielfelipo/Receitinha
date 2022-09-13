@@ -16,5 +16,5 @@ class ConquistasView: UIView {
         // Drawing code
     }
     */
-
+    // Agora tem os assets da banana e misto
 }
