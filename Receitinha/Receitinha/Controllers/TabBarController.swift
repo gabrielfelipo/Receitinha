@@ -11,6 +11,7 @@ class TabBarController: UITabBarController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //teste
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -18,7 +19,7 @@ class TabBarController: UITabBarController{
     }
     
     private func setupTabBarController () {
-        tabBar.backgroundColor = .white
+        tabBar.backgroundColor = UIColor(named: "tabBarColor")
         
         guard let items = tabBar.items else{return}
         
@@ -38,5 +39,3 @@ class TabBarController: UITabBarController{
     }
 
 }
-
-

@@ -10,6 +10,7 @@ import Foundation
 struct Receita{
     //Dados estáticos
     let titulo: String
+    let imagemPrevia: String
     let dificuldade: String
     let descricaoPrevia: String
     let duracao: Int

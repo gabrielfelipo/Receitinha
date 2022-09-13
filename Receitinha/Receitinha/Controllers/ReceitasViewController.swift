@@ -11,8 +11,14 @@ class ReceitasViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
+        setupReceitasViewController()
         // Do any additional setup after loading the view.
+    }
+    
+    func setupReceitasViewController () {
+        view.backgroundColor = UIColor(named: "blueBackground")
+        self.navigationItem.title = "Escolher receita"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
 

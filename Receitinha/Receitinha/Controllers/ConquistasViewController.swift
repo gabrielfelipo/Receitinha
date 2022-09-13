@@ -11,11 +11,16 @@ class ConquistasViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
+        setupConquistasViewController()
         // Do any additional setup after loading the view.
     }
     
-
+    func setupConquistasViewController () {
+        view.backgroundColor = UIColor(named: "blueBackground")
+//        self.navigationItem.title = "Escolher receita"
+//        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     /*
     // MARK: - Navigation
 

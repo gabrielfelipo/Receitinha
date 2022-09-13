@@ -11,10 +11,15 @@ class PesquisarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+        setupPesquisarViewController()
         // Do any additional setup after loading the view.
     }
     
+    func setupPesquisarViewController () {
+        view.backgroundColor = UIColor(named: "blueBackground")
+        self.navigationItem.title = "Buscar receita"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
 
     /*
     // MARK: - Navigation
