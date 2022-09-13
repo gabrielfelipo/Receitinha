@@ -30,6 +30,11 @@ class TabBarController: UITabBarController{
         
         items[2].title = "Buscar"
         items[2].image = UIImage(systemName: "magnifyingglass")
+        
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
+        tabBar.layer.shadowRadius = 0
+        tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabBar.layer.shadowOpacity = 0.3
     }
 
 }
