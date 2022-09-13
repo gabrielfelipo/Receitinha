@@ -19,14 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let tabBarController = TabBarController()
-        let searchNavigation = UINavigationController (rootViewController: PesquisarViewController())
-        let recipeNavigation = UINavigationController (rootViewController: ReceitasViewController())
-        let conquerNavigation = ConquistasViewController ()
-        tabBarController.viewControllers = [conquerNavigation, recipeNavigation, searchNavigation]
         window.rootViewController = tabBarController
-        
         self.window = window
-        window.makeKeyAndVisible ()
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
