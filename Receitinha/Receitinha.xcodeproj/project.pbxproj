@@ -10,6 +10,11 @@
 		0D66D52E28CFBD7A00F1A41C /* PesquisarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66D52D28CFBD7A00F1A41C /* PesquisarViewController.swift */; };
 		0D66D53028CFBD8A00F1A41C /* ReceitasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66D52F28CFBD8A00F1A41C /* ReceitasViewController.swift */; };
 		0D66D53228CFBD9500F1A41C /* ConquistasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66D53128CFBD9500F1A41C /* ConquistasViewController.swift */; };
+		0DF1FBBF28D0EE0A005EE8D7 /* ReceitasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1FBBE28D0EE0A005EE8D7 /* ReceitasView.swift */; };
+		0DF1FBC128D0EE41005EE8D7 /* PassoPassoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1FBC028D0EE41005EE8D7 /* PassoPassoView.swift */; };
+		0DF1FBC328D0EE57005EE8D7 /* CheckpointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1FBC228D0EE57005EE8D7 /* CheckpointView.swift */; };
+		0DF1FBC528D0EE7E005EE8D7 /* ConquistasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1FBC428D0EE7E005EE8D7 /* ConquistasView.swift */; };
+		0DF1FBC728D0EED6005EE8D7 /* PesquisarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1FBC628D0EED6005EE8D7 /* PesquisarView.swift */; };
 		477E934B28CFB532009E57A8 /* Receita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E934A28CFB532009E57A8 /* Receita.swift */; };
 		8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */; };
 		CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4928CFC04C00D5268F /* UIView+Preview.swift */; };
@@ -25,6 +30,11 @@
 		0D66D52D28CFBD7A00F1A41C /* PesquisarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisarViewController.swift; sourceTree = "<group>"; };
 		0D66D52F28CFBD8A00F1A41C /* ReceitasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitasViewController.swift; sourceTree = "<group>"; };
 		0D66D53128CFBD9500F1A41C /* ConquistasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConquistasViewController.swift; sourceTree = "<group>"; };
+		0DF1FBBE28D0EE0A005EE8D7 /* ReceitasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitasView.swift; sourceTree = "<group>"; };
+		0DF1FBC028D0EE41005EE8D7 /* PassoPassoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassoPassoView.swift; sourceTree = "<group>"; };
+		0DF1FBC228D0EE57005EE8D7 /* CheckpointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckpointView.swift; sourceTree = "<group>"; };
+		0DF1FBC428D0EE7E005EE8D7 /* ConquistasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConquistasView.swift; sourceTree = "<group>"; };
+		0DF1FBC628D0EED6005EE8D7 /* PesquisarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisarView.swift; sourceTree = "<group>"; };
 		477E934A28CFB532009E57A8 /* Receita.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receita.swift; sourceTree = "<group>"; };
 		8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receita+Receitas.swift"; sourceTree = "<group>"; };
 		CA826B4928CFC04C00D5268F /* UIView+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
@@ -53,6 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				CAEE6FD428CFACD2007AA493 /* LaunchScreen.storyboard */,
+				0DF1FBBE28D0EE0A005EE8D7 /* ReceitasView.swift */,
+				0DF1FBC028D0EE41005EE8D7 /* PassoPassoView.swift */,
+				0DF1FBC228D0EE57005EE8D7 /* CheckpointView.swift */,
+				0DF1FBC428D0EE7E005EE8D7 /* ConquistasView.swift */,
+				0DF1FBC628D0EED6005EE8D7 /* PesquisarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,15 +202,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DF1FBC328D0EE57005EE8D7 /* CheckpointView.swift in Sources */,
 				CA826B4C28CFC05D00D5268F /* UIViewController+Preview.swift in Sources */,
 				0D66D52E28CFBD7A00F1A41C /* PesquisarViewController.swift in Sources */,
+				0DF1FBC128D0EE41005EE8D7 /* PassoPassoView.swift in Sources */,
 				CA826B4E28CFC52C00D5268F /* TabBarController.swift in Sources */,
+				0DF1FBC728D0EED6005EE8D7 /* PesquisarView.swift in Sources */,
 				0D66D53228CFBD9500F1A41C /* ConquistasViewController.swift in Sources */,
 				0D66D53028CFBD8A00F1A41C /* ReceitasViewController.swift in Sources */,
 				477E934B28CFB532009E57A8 /* Receita.swift in Sources */,
 				CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */,
 				CAEE6FCA28CFACD1007AA493 /* AppDelegate.swift in Sources */,
 				CAEE6FCC28CFACD1007AA493 /* SceneDelegate.swift in Sources */,
+				0DF1FBBF28D0EE0A005EE8D7 /* ReceitasView.swift in Sources */,
+				0DF1FBC528D0EE7E005EE8D7 /* ConquistasView.swift in Sources */,
 				8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

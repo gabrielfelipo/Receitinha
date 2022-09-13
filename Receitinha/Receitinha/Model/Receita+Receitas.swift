@@ -9,6 +9,7 @@ import Foundation
 
 extension Receita {
     static func receitas() -> [Receita] {
+        //comentario legal
         return [
             Receita(
                 titulo: "Banana com Nescau",
