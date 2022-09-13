@@ -41,13 +41,17 @@ class TabBarController: UITabBarController {
             viewController.navigationItem.largeTitleDisplayMode = .always
             let navigation = UINavigationController(rootViewController: viewController)
             navigation.navigationBar.prefersLargeTitles = true
-        
-            navigation.navigationBar.backgroundColor = UIColor(named: "tabBarColor")
             
             navigation.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 0.5)
             navigation.navigationBar.layer.shadowRadius = 0
             navigation.navigationBar.layer.shadowColor = UIColor.black.cgColor
             navigation.navigationBar.layer.shadowOpacity = 0.3
+            
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor(named: "tabBarColor")
+            navigation.navigationBar.standardAppearance = appearance;
+            navigation.navigationBar.scrollEdgeAppearance = navigation.navigationBar.standardAppearance
             
             navigation.tabBarItem = UITabBarItem(title: titles[index],
                                                  image: UIImage(systemName: icons[index]) , tag: 1)
