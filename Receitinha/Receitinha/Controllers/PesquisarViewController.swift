@@ -18,19 +18,7 @@ class PesquisarViewController: UIViewController {
     func setupPesquisarViewController () {
         view.backgroundColor = UIColor(named: "blueBackground")
         self.navigationItem.title = "Buscar receita"
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
