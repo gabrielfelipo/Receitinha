@@ -102,7 +102,7 @@ extension Receita {
                     "",
                     "",
                     "",
-                    "Abra o pão pacote de pão e coloque duas fatias em cima do prato",
+                    "Abra o pacote de pão e coloque duas fatias em cima do prato",
                     "Pegue uma fatia de presunto e coloque no pão que está em cima do prato",
                     "Pegue uma fatia de queijo e coloque no pão com presunto que está em cima do prato",
                     "Pegue a outra fatia de pão e coloque por cima do queijo, para terminar o sanduiche",
