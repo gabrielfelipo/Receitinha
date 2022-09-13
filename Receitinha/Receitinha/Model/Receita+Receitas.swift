@@ -11,6 +11,7 @@ extension Receita {
     static func receitas() -> [Receita] {
         return [
             Receita(
+                //comentario de thales
                 titulo: "Banana com Nescau",
                 imagemPrevia: "imagem da previa aqui",
                 dificuldade: "Fácil",
