@@ -24,6 +24,17 @@
 		CAEE6FCC28CFACD1007AA493 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE6FCB28CFACD1007AA493 /* SceneDelegate.swift */; };
 		CAEE6FD328CFACD2007AA493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAEE6FD228CFACD2007AA493 /* Assets.xcassets */; };
 		CAEE6FD628CFACD2007AA493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEE6FD428CFACD2007AA493 /* LaunchScreen.storyboard */; };
+		D3C7D70A28D11AE600B08BA6 /* MP3_BananaComNescau_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D6FF28D11AE600B08BA6 /* MP3_BananaComNescau_3.mp3 */; };
+		D3C7D70B28D11AE600B08BA6 /* MP3_BananaComNescau_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D70028D11AE600B08BA6 /* MP3_BananaComNescau_1.mp3 */; };
+		D3C7D70C28D11AE600B08BA6 /* MP3_BananaComNescau_8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D70128D11AE600B08BA6 /* MP3_BananaComNescau_8.mp3 */; };
+		D3C7D70D28D11AE600B08BA6 /* MP3_BananaComNescau_9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D70228D11AE600B08BA6 /* MP3_BananaComNescau_9.mp3 */; };
+		D3C7D70E28D11AE600B08BA6 /* MP3_BananaComNescau_10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D70328D11AE600B08BA6 /* MP3_BananaComNescau_10.mp3 */; };
+		D3C7D70F28D11AE600B08BA6 /* MP3_BananaComNescau_11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D70428D11AE600B08BA6 /* MP3_BananaComNescau_11.mp3 */; };
+		D3C7D71028D11AE600B08BA6 /* MP3_BananaComNescau_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D70528D11AE600B08BA6 /* MP3_BananaComNescau_2.mp3 */; };
+		D3C7D71128D11AE600B08BA6 /* MP3_BananaComNescau_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D70628D11AE600B08BA6 /* MP3_BananaComNescau_4.mp3 */; };
+		D3C7D71228D11AE600B08BA6 /* MP3_BananaComNescau_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D70728D11AE600B08BA6 /* MP3_BananaComNescau_6.mp3 */; };
+		D3C7D71328D11AE600B08BA6 /* MP3_BananaComNescau_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D70828D11AE600B08BA6 /* MP3_BananaComNescau_7.mp3 */; };
+		D3C7D71428D11AE600B08BA6 /* MP3_BananaComNescau_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D70928D11AE600B08BA6 /* MP3_BananaComNescau_5.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +57,17 @@
 		CAEE6FD228CFACD2007AA493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAEE6FD528CFACD2007AA493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAEE6FD728CFACD2007AA493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C7D6FF28D11AE600B08BA6 /* MP3_BananaComNescau_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_3.mp3; sourceTree = "<group>"; };
+		D3C7D70028D11AE600B08BA6 /* MP3_BananaComNescau_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_1.mp3; sourceTree = "<group>"; };
+		D3C7D70128D11AE600B08BA6 /* MP3_BananaComNescau_8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_8.mp3; sourceTree = "<group>"; };
+		D3C7D70228D11AE600B08BA6 /* MP3_BananaComNescau_9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_9.mp3; sourceTree = "<group>"; };
+		D3C7D70328D11AE600B08BA6 /* MP3_BananaComNescau_10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_10.mp3; sourceTree = "<group>"; };
+		D3C7D70428D11AE600B08BA6 /* MP3_BananaComNescau_11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_11.mp3; sourceTree = "<group>"; };
+		D3C7D70528D11AE600B08BA6 /* MP3_BananaComNescau_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_2.mp3; sourceTree = "<group>"; };
+		D3C7D70628D11AE600B08BA6 /* MP3_BananaComNescau_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_4.mp3; sourceTree = "<group>"; };
+		D3C7D70728D11AE600B08BA6 /* MP3_BananaComNescau_6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_6.mp3; sourceTree = "<group>"; };
+		D3C7D70828D11AE600B08BA6 /* MP3_BananaComNescau_7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_7.mp3; sourceTree = "<group>"; };
+		D3C7D70928D11AE600B08BA6 /* MP3_BananaComNescau_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_5.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +128,7 @@
 		CAEE6FBD28CFACD1007AA493 = {
 			isa = PBXGroup;
 			children = (
+				D3C7D6FE28D11AD100B08BA6 /* Audios */,
 				CAEE6FC828CFACD1007AA493 /* Receitinha */,
 				CAEE6FC728CFACD1007AA493 /* Products */,
 			);
@@ -130,6 +153,24 @@
 				0D66D52A28CFBCFB00F1A41C /* Supporting Files */,
 			);
 			path = Receitinha;
+			sourceTree = "<group>";
+		};
+		D3C7D6FE28D11AD100B08BA6 /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+				D3C7D70028D11AE600B08BA6 /* MP3_BananaComNescau_1.mp3 */,
+				D3C7D70528D11AE600B08BA6 /* MP3_BananaComNescau_2.mp3 */,
+				D3C7D6FF28D11AE600B08BA6 /* MP3_BananaComNescau_3.mp3 */,
+				D3C7D70628D11AE600B08BA6 /* MP3_BananaComNescau_4.mp3 */,
+				D3C7D70928D11AE600B08BA6 /* MP3_BananaComNescau_5.mp3 */,
+				D3C7D70728D11AE600B08BA6 /* MP3_BananaComNescau_6.mp3 */,
+				D3C7D70828D11AE600B08BA6 /* MP3_BananaComNescau_7.mp3 */,
+				D3C7D70128D11AE600B08BA6 /* MP3_BananaComNescau_8.mp3 */,
+				D3C7D70228D11AE600B08BA6 /* MP3_BananaComNescau_9.mp3 */,
+				D3C7D70328D11AE600B08BA6 /* MP3_BananaComNescau_10.mp3 */,
+				D3C7D70428D11AE600B08BA6 /* MP3_BananaComNescau_11.mp3 */,
+			);
+			name = Audios;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +231,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C7D70C28D11AE600B08BA6 /* MP3_BananaComNescau_8.mp3 in Resources */,
+				D3C7D70D28D11AE600B08BA6 /* MP3_BananaComNescau_9.mp3 in Resources */,
 				CAEE6FD628CFACD2007AA493 /* LaunchScreen.storyboard in Resources */,
+				D3C7D70E28D11AE600B08BA6 /* MP3_BananaComNescau_10.mp3 in Resources */,
+				D3C7D71028D11AE600B08BA6 /* MP3_BananaComNescau_2.mp3 in Resources */,
+				D3C7D70B28D11AE600B08BA6 /* MP3_BananaComNescau_1.mp3 in Resources */,
+				D3C7D71228D11AE600B08BA6 /* MP3_BananaComNescau_6.mp3 in Resources */,
+				D3C7D71328D11AE600B08BA6 /* MP3_BananaComNescau_7.mp3 in Resources */,
+				D3C7D70A28D11AE600B08BA6 /* MP3_BananaComNescau_3.mp3 in Resources */,
 				CAEE6FD328CFACD2007AA493 /* Assets.xcassets in Resources */,
+				D3C7D71128D11AE600B08BA6 /* MP3_BananaComNescau_4.mp3 in Resources */,
+				D3C7D71428D11AE600B08BA6 /* MP3_BananaComNescau_5.mp3 in Resources */,
+				D3C7D70F28D11AE600B08BA6 /* MP3_BananaComNescau_11.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CMWHQAT5B4;
+				DEVELOPMENT_TEAM = GMAYGR5U3T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Receitinha/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -382,7 +434,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CMWHQAT5B4;
+				DEVELOPMENT_TEAM = GMAYGR5U3T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Receitinha/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
