@@ -68,3 +68,18 @@ class TabBarController: UITabBarController {
     }
 
 }
+
+// MARK: - Preview
+#if DEBUG
+import SwiftUI
+
+@available(iOS 13, *)
+struct TabBarController_Preview: PreviewProvider {
+    static var previews: some View {
+        Group {
+            TabBarController().showPreview().previewDevice("iPhone SE (3rd generation)")
+            TabBarController().showPreview().previewDevice("iPhone SE (3rd generation)").previewInterfaceOrientation(.landscapeLeft)
+        }
+    }
+}
+#endif
