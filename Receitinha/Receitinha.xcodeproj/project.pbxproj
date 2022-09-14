@@ -91,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				CAEE6FD428CFACD2007AA493 /* LaunchScreen.storyboard */,
+				D3AABE1928D247620094400B /* CheckTableViewCell.swift */,
 				0DF1FBBE28D0EE0A005EE8D7 /* ReceitasView.swift */,
 				0DF1FBC028D0EE41005EE8D7 /* PassoPassoView.swift */,
 				0DF1FBC228D0EE57005EE8D7 /* CheckpointView.swift */,
@@ -129,7 +130,6 @@
 				0D66D53128CFBD9500F1A41C /* ConquistasViewController.swift */,
 				D3AABE1328D23C5D0094400B /* CheckViewController.swift */,
 				D3AABE1128D23C3D0094400B /* CheckCollectionViewController.swift */,
-				D3AABE1928D247620094400B /* CheckTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
