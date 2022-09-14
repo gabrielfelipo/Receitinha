@@ -14,7 +14,7 @@ class PreviaView: UIView {
     //pq nao ta aparecendo nada no preview? - já apareceu =)
     //povoar apenas no VC? como fazer isso?
     //como adicionar raio na borda do botao
-    //como configura scroll view aaaaaaaaaaaaaaaaaaaaaaaaaa
+    //como configura scroll view aaaaaaaaaaaaaaaaaaaaaaaaaa - consegui +-
     
     let scrollView = UIScrollView()
         let contentView = UIView()
@@ -136,7 +136,7 @@ class PreviaView: UIView {
         
         stackViewGlobal.axis = .vertical
         stackViewGlobal.alignment = .fill
-        stackViewGlobal.distribution = .fill
+        stackViewGlobal.distribution = .equalSpacing
         stackViewGlobal.spacing = 24
         
         stackViewCards.axis = .horizontal
@@ -168,10 +168,15 @@ class PreviaView: UIView {
         buttonIniciarReceita.tintColor = UIColor(named: "azul-acao")
         buttonIniciarReceita.layer.cornerRadius = 50
         
-        //self.backgroundColor = .green
-        stackViewGlobal.backgroundColor = .green
-        buttonIniciarReceitaContainer.backgroundColor = .blue
+        self.backgroundColor = .green
+        stackViewGlobal.backgroundColor = .white
+        buttonIniciarReceitaContainer.backgroundColor = .systemCyan
         imagemCapaContainer.backgroundColor = .red
+        
+        imagemCapa.image = UIImage(named: "IMG_MistoQuente_Preview")
+        imagemCapa.contentMode = .scaleAspectFit
+        
+        objetosLabelContainer.backgroundColor = .blue
         
         
         
@@ -191,7 +196,9 @@ class PreviaView: UIView {
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
         ])
         
         stackViewGlobal.translatesAutoresizingMaskIntoConstraints = false
@@ -200,6 +207,33 @@ class PreviaView: UIView {
             stackViewGlobal.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             stackViewGlobal.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             stackViewGlobal.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
+        
+        imagemCapaContainer.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imagemCapaContainer.heightAnchor.constraint(equalTo: imagemCapa.heightAnchor)
+        ])
+        
+        imagemCapa.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imagemCapa.leadingAnchor.constraint(equalTo: imagemCapaContainer.leadingAnchor, constant: 8),
+            imagemCapa.trailingAnchor.constraint(equalTo: imagemCapaContainer.trailingAnchor, constant: -8),
+            imagemCapa.centerYAnchor.constraint(equalTo: imagemCapaContainer.centerYAnchor)
+        ])
+        
+        stackViewCardsContainer.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackViewCardsContainer.heightAnchor.constraint(equalToConstant: 100)
+        ])
+        
+        stackViewCards.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackViewCards.heightAnchor.constraint(equalToConstant: <#T##CGFloat#>)
+        ])
+        
+        buttonIniciarReceitaContainer.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            buttonIniciarReceitaContainer.heightAnchor.constraint(equalTo: buttonIniciarReceita.heightAnchor)
         ])
         
         buttonIniciarReceita.translatesAutoresizingMaskIntoConstraints = false
