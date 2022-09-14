@@ -45,12 +45,13 @@ class CheckTableViewCell: UITableViewCell {
         imageView.image = symbol
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView ?? UIImageView()
+        return imageView
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
             super.init(style: style, reuseIdentifier: reuseIdentifier)
-            setupRecipeCellView()
+            setupHierarquia()
+            setupViewCell()
             setupStack()
         }
     
@@ -58,15 +59,19 @@ class CheckTableViewCell: UITableViewCell {
             fatalError("init(coder:) has not been implemented")
         }
     
-    private func setupRecipeCellView () {
+    private func setupHierarquia () {
+        self.addSubview(cellView)
+        cellView.addSubview(dayLabel)
+        cellView.addSubview(stack)
+        stack.addArrangedSubview(ajudaLabel)
+        stack.addArrangedSubview(ajudaSymbol)
+    }
+    
+    private func setupViewCell () {
         
         stack.translatesAutoresizingMaskIntoConstraints = false
         
         self.backgroundColor = UIColor(named: "blueBackground")
-        
-        self.addSubview(cellView)
-        cellView.addSubview(dayLabel)
-        cellView.addSubview(stack)
         
         NSLayoutConstraint.activate([
                 cellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
@@ -84,24 +89,21 @@ class CheckTableViewCell: UITableViewCell {
     private func setupStack () {
         
         NSLayoutConstraint.activate([
-                cellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
-                cellView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-                cellView.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: -16)
+                stack.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
+                stack.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+                stack.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -16)
             ])
-        ajudaLabel.leftAnchor.constraint(equalTo: cellView.leftAnchor, constant: 200).isActive = true
-
-        stack.addArrangedSubview(ajudaLabel)
-        stack.addArrangedSubview(ajudaSymbol)
+        stack.leftAnchor.constraint(equalTo: cellView.leftAnchor, constant: 100).isActive = true
         
         ajudaLabel.heightAnchor.constraint(equalToConstant: 56).isActive = true
-        ajudaLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        ajudaLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
         ajudaLabel.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
-        ajudaLabel.leftAnchor.constraint(equalTo: cellView.leftAnchor, constant: 20).isActive = true
+        ajudaLabel.leftAnchor.constraint(equalTo: stack.leftAnchor, constant: 20).isActive = true
         
-        ajudaSymbol.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        ajudaSymbol.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        ajudaSymbol.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        ajudaSymbol.widthAnchor.constraint(equalToConstant: 50).isActive = true
         ajudaSymbol.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
-        ajudaSymbol.leftAnchor.constraint(equalTo: cellView.leftAnchor, constant: 20).isActive = true
+        ajudaSymbol.leftAnchor.constraint(equalTo: stack.leftAnchor, constant: 20).isActive = true
     }
 }
 
