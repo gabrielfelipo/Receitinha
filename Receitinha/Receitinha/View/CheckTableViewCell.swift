@@ -28,9 +28,30 @@ class CheckTableViewCell: UITableViewCell {
             return label
         }()
     
+    let stack = UIStackView()
+    
+    let ajudaLabel: UILabel = {
+            let label = UILabel()
+            label.text = "Ajuda"
+            label.textColor = .black
+            label.font = UIFont.systemFont(ofSize: 12)
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
+    
+    let ajudaSymbol: UIImageView = {
+        let symbol = UIImage(named: "questionmark.circle")
+        let imageView = UIImageView()
+        imageView.image = symbol
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView ?? UIImageView()
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
             super.init(style: style, reuseIdentifier: reuseIdentifier)
             setupRecipeCellView()
+            setupStack()
         }
     
         required init?(coder aDecoder: NSCoder) {
@@ -39,23 +60,49 @@ class CheckTableViewCell: UITableViewCell {
     
     private func setupRecipeCellView () {
         
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        
         self.backgroundColor = UIColor(named: "blueBackground")
         
         self.addSubview(cellView)
         cellView.addSubview(dayLabel)
+        cellView.addSubview(stack)
         
         NSLayoutConstraint.activate([
-                cellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+                cellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
                 cellView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
                 cellView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-                cellView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+                cellView.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: -4)
             ])
-        dayLabel.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        dayLabel.heightAnchor.constraint(equalToConstant: 56).isActive = true
         dayLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
         dayLabel.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
         dayLabel.leftAnchor.constraint(equalTo: cellView.leftAnchor, constant: 20).isActive = true
     }
+    
+    private func setupStack () {
+        
+        NSLayoutConstraint.activate([
+                cellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
+                cellView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+                cellView.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: -16)
+            ])
+        ajudaLabel.leftAnchor.constraint(equalTo: cellView.leftAnchor, constant: 200).isActive = true
 
+        stack.addArrangedSubview(ajudaLabel)
+        stack.addArrangedSubview(ajudaSymbol)
+        
+        ajudaLabel.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        ajudaLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        ajudaLabel.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
+        ajudaLabel.leftAnchor.constraint(equalTo: cellView.leftAnchor, constant: 20).isActive = true
+        
+        ajudaSymbol.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        ajudaSymbol.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        ajudaSymbol.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
+        ajudaSymbol.leftAnchor.constraint(equalTo: cellView.leftAnchor, constant: 20).isActive = true
+    }
 }
 
 /*
@@ -110,3 +157,11 @@ class ReceitasTableViewCell: UITableViewCell {
 
 }
 */
+
+
+
+
+
+
+
+
