@@ -9,57 +9,61 @@ import UIKit
 
 class PreviaView: UIView {
     
-    //qual modo de stackview usar
+    //qual modo de stackview usar - ela se adaptar ao conteudo dentro dela
     //pode travar a rotação?
-    //pq nao ta aparecendo nada no preview?
+    //pq nao ta aparecendo nada no preview? - já apareceu =)
     //povoar apenas no VC? como fazer isso?
+    //como adicionar raio na borda do botao
+    //como configura scroll view aaaaaaaaaaaaaaaaaaaaaaaaaa
     
-    
-    let stackViewGlobal = UIStackView()
-    
-        let imagemCapaContainer = UIView()
-            let imagemCapa = UIImageView()
-    
-        let stackViewCardsContainer = UIView()
-            let stackViewCards = UIStackView()
+    let scrollView = UIScrollView()
+        let contentView = UIView()
         
-                let cardTempoContainer = UIView()
-                    let stackViewCardTempo = UIStackView()
-                        let iconAlarmContainer = UIView()
-                            let iconAlarm = UIImageView()
-                        let labelDuracao = UILabel()
-                        let labelTempoDuracao = UILabel()
+            let stackViewGlobal = UIStackView()
+            
+                let imagemCapaContainer = UIView()
+                    let imagemCapa = UIImageView()
+            
+                let stackViewCardsContainer = UIView()
+                    let stackViewCards = UIStackView()
+                
+                        let cardTempoContainer = UIView()
+                            let stackViewCardTempo = UIStackView()
+                                let iconAlarmContainer = UIView()
+                                    let iconAlarm = UIImageView()
+                                let labelDuracao = UILabel()
+                                let labelTempoDuracao = UILabel()
 
-                let cardDificuldadeContainer = UIView()
-                    let stackViewCardDificuldade = UIStackView()
-                        let iconDificuldadeContainer = UIView()
-                            let iconDificuldade = UIImageView()
-                        let labelDificuldade = UILabel()
-                        let labelDificuldadeDificuldade = UILabel()  //me perdoem por esse nome realmente n pensei num melhor
+                        let cardDificuldadeContainer = UIView()
+                            let stackViewCardDificuldade = UIStackView()
+                                let iconDificuldadeContainer = UIView()
+                                    let iconDificuldade = UIImageView()
+                                let labelDificuldade = UILabel()
+                                let labelDificuldadeDificuldade = UILabel()  //me perdoem por esse nome realmente n pensei num melhor
 
-        let linhaView1 = LinhaView()
-    
-        let descricaoLabelContainer = UIView()
-            let descricaoLabel = UILabel()
-    
-        let linhaView2 = LinhaView()
-    
-        let stackObjetosContainer = UIView()
-            let stackObjetos = UIStackView()
-                let objetosLabelContainer = UIView()
-                    let objetosLabel = UILabel()
-                let listaObjetosLabelContainer = UIView()
-                    let listaObjetosLabel = UILabel()
-    
-        let stackIngredientesContainer = UIView()
-            let stackIngredientes = UIStackView()
-                let ingredientesLabelContainer = UIView()
-                    let ingredientesLabel = UILabel()
-                let listaIngredientesLabelContainer = UIView()
-                    let listaIngredientesLabel = UILabel()
-    
-        let buttonIniciarReceitaContainer = UIView()
-            let buttonIniciarReceita = UIButton()
+                let linhaView1 = LinhaView()
+            
+                let descricaoLabelContainer = UIView()
+                    let descricaoLabel = UILabel()
+            
+                let linhaView2 = LinhaView()
+            
+                let stackObjetosContainer = UIView()
+                    let stackObjetos = UIStackView()
+                        let objetosLabelContainer = UIView()
+                            let objetosLabel = UILabel()
+                        let listaObjetosLabelContainer = UIView()
+                            let listaObjetosLabel = UILabel()
+            
+                let stackIngredientesContainer = UIView()
+                    let stackIngredientes = UIStackView()
+                        let ingredientesLabelContainer = UIView()
+                            let ingredientesLabel = UILabel()
+                        let listaIngredientesLabelContainer = UIView()
+                            let listaIngredientesLabel = UILabel()
+            
+                let buttonIniciarReceitaContainer = UIView()
+                    let buttonIniciarReceita = UIButton(configuration: .filled())
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -72,48 +76,53 @@ class PreviaView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     fileprivate func setupViewHierarchy(){
-        self.addSubview(stackViewGlobal)
+        self.addSubview(scrollView)
         
-        stackViewGlobal.addSubview(imagemCapaContainer)
-        stackViewGlobal.addSubview(stackViewCardsContainer)
-        stackViewGlobal.addSubview(linhaView1)
-        stackViewGlobal.addSubview(descricaoLabelContainer)
-        stackViewGlobal.addSubview(linhaView2)
-        stackViewGlobal.addSubview(stackObjetosContainer)
-        stackViewGlobal.addSubview(stackIngredientesContainer)
-        stackViewGlobal.addSubview(buttonIniciarReceitaContainer)
+        scrollView.addSubview(contentView)
+        
+        contentView.addSubview(stackViewGlobal)
+        
+        stackViewGlobal.addArrangedSubview(imagemCapaContainer)
+        stackViewGlobal.addArrangedSubview(stackViewCardsContainer)
+        stackViewGlobal.addArrangedSubview(linhaView1)
+        stackViewGlobal.addArrangedSubview(descricaoLabelContainer)
+        stackViewGlobal.addArrangedSubview(linhaView2)
+        stackViewGlobal.addArrangedSubview(stackObjetosContainer)
+        stackViewGlobal.addArrangedSubview(stackIngredientesContainer)
+        stackViewGlobal.addArrangedSubview(buttonIniciarReceitaContainer)
         
         imagemCapaContainer.addSubview(imagemCapa)
         
         stackViewCardsContainer.addSubview(stackViewCards)
-        stackViewCards.addSubview(cardTempoContainer)
+        stackViewCards.addArrangedSubview(cardTempoContainer)
         cardTempoContainer.addSubview(stackViewCardTempo)
-        stackViewCardTempo.addSubview(iconAlarmContainer)
+        stackViewCardTempo.addArrangedSubview(iconAlarmContainer)
         iconAlarmContainer.addSubview(iconAlarm)
-        stackViewCardTempo.addSubview(labelDuracao)
-        stackViewCardTempo.addSubview(labelTempoDuracao)
-        stackViewCards.addSubview(cardDificuldadeContainer)
+        stackViewCardTempo.addArrangedSubview(labelDuracao)
+        stackViewCardTempo.addArrangedSubview(labelTempoDuracao)
+        stackViewCards.addArrangedSubview(cardDificuldadeContainer)
         cardDificuldadeContainer.addSubview(stackViewCardDificuldade)
-        stackViewCardDificuldade.addSubview(iconDificuldadeContainer)
+        stackViewCardDificuldade.addArrangedSubview(iconDificuldadeContainer)
         iconDificuldadeContainer.addSubview(iconDificuldade)
-        stackViewCardDificuldade.addSubview(labelDificuldade)
-        stackViewCardDificuldade.addSubview(labelDificuldadeDificuldade)
+        stackViewCardDificuldade.addArrangedSubview(labelDificuldade)
+        stackViewCardDificuldade.addArrangedSubview(labelDificuldadeDificuldade)
         
         
         descricaoLabelContainer.addSubview(descricaoLabel)
         
         stackObjetosContainer.addSubview(stackObjetos)
-        stackObjetos.addSubview(objetosLabelContainer)
+        stackObjetos.addArrangedSubview(objetosLabelContainer)
         objetosLabelContainer.addSubview(objetosLabel)
-        stackObjetos.addSubview(listaObjetosLabelContainer)
+        stackObjetos.addArrangedSubview(listaObjetosLabelContainer)
         listaObjetosLabelContainer.addSubview(listaObjetosLabel)
         
         
         stackIngredientesContainer.addSubview(stackIngredientes)
-        stackIngredientes.addSubview(ingredientesLabelContainer)
+        stackIngredientes.addArrangedSubview(ingredientesLabelContainer)
         ingredientesLabelContainer.addSubview(ingredientesLabel)
-        stackIngredientes.addSubview(listaIngredientesLabelContainer)
+        stackIngredientes.addArrangedSubview(listaIngredientesLabelContainer)
         listaObjetosLabelContainer.addSubview(listaIngredientesLabel)
         
         buttonIniciarReceitaContainer.addSubview(buttonIniciarReceita)
@@ -127,7 +136,7 @@ class PreviaView: UIView {
         
         stackViewGlobal.axis = .vertical
         stackViewGlobal.alignment = .fill
-        stackViewGlobal.distribution = .fillEqually
+        stackViewGlobal.distribution = .fill
         stackViewGlobal.spacing = 24
         
         stackViewCards.axis = .horizontal
@@ -157,22 +166,40 @@ class PreviaView: UIView {
         buttonIniciarReceita.setTitle("Iniciar a receita", for: .normal)
         buttonIniciarReceita.setTitleColor(.white, for: .normal)
         buttonIniciarReceita.tintColor = UIColor(named: "azul-acao")
+        buttonIniciarReceita.layer.cornerRadius = 50
         
         //self.backgroundColor = .green
         stackViewGlobal.backgroundColor = .green
-        buttonIniciarReceitaContainer.backgroundColor = .red
+        buttonIniciarReceitaContainer.backgroundColor = .blue
+        imagemCapaContainer.backgroundColor = .red
         
         
         
     }
     
     fileprivate func setupConstraints(){
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            scrollView.heightAnchor.constraint(equalTo: self.heightAnchor),
+            scrollView.widthAnchor.constraint(equalTo: self.widthAnchor),
+            scrollView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            scrollView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            
+        ])
+        // TODO: -AJUSTAR O TAMANHO DA SCROLL
+        scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height: UIScreen.main.bounds.height*100)
+        
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        ])
+        
         stackViewGlobal.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stackViewGlobal.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 16),
-            stackViewGlobal.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            stackViewGlobal.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            stackViewGlobal.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            stackViewGlobal.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            stackViewGlobal.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            stackViewGlobal.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            stackViewGlobal.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
         
         buttonIniciarReceita.translatesAutoresizingMaskIntoConstraints = false
