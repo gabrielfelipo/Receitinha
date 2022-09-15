@@ -13,7 +13,6 @@ class ReceitasViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupReceitasViewController()
         setupTableView()
         self.view = receitasView

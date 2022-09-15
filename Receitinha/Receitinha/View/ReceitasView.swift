@@ -30,7 +30,7 @@ class ReceitasView: UIView {
     }
 
     private func setupRecipeViewHierarchy () {
-        receitasTableView.register (ReceitasTableViewCell.self, forCellReuseIdentifier: "RecipeCellID")
+        receitasTableView.register (ReceitasTableViewCell.self, forCellReuseIdentifier: ReceitasTableViewCell.recipeCellIdentifier)
         self.addSubview(receitasTableView)
         
         
