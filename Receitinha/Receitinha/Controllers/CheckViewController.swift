@@ -8,29 +8,85 @@
 import UIKit
 
 class CheckViewController: UIViewController {
-
-/*//    lazy var collectionView:UICollectionView = {
-//        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
-//        collectionView.translatesAutoresizingMaskIntoConstraints = false
-//        collectionView.backgroundColor = .red
-//        collectionView.register(CheckCollectionViewController.self, forCellWithReuseIdentifier: "Cell")
-//
-//        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
-//        layout.scrollDirection = .vertical
-//        collectionView.setCollectionViewLayout(layout, animated: false)
-//
-////        collectionView.delegate = self
-////        collectionView.dataSource = self
-//
-//        return collectionView
-//    }()*/
+    
+    let scrollView: UIScrollView = {
+        var scroll = UIScrollView()
+//        scroll.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 1110)
+        return scroll
+    }()
+    
+    
+    let contentView = UIView()
+    
+    let titleLabelContainer = UIView()
+    
+    let titleLabel: UILabel = {
+       let label = UILabel()
+        label.text = "Muito Bem!"
+        label.textAlignment = .center
+        label.textColor = .black
+        label.font = UIFont.boldSystemFont(ofSize: 28)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    let cenouraImageContainer = UIView()
+    
+    let cenouraImage : UIImageView = {
+        let image = UIImage(named: "cenourinhaCheck")
+        let imageView = UIImageView()
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    let subTitleLabelContainer = UIView()
+    
+    let subTitleLabel: UILabel = {
+       let label = UILabel()
+        label.textAlignment = .center
+        label.text = "Você finalizou os preparativos!"
+        label.textColor = .black
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let descLabelContainer = UIView()
+    
+    let descLabel: UILabel = {
+       let label = UILabel()
+        label.text = "Agora confira se você tem todos os itens e ingredientes organizados."
+        label.numberOfLines = 10
+//        label.minimumScaleFactor = 18
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+//        label.backgroundColor = .red
+        return label
+    }()
+    
+    let stackzona: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.alignment = .fill
+  //      stack.distribution = .fillEqually
+        stack.spacing = 24
+        return stack
+    }()
+    
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.isScrollEnabled = true
+//        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.isScrollEnabled = false
         tableView.separatorColor = UIColor(named: "blueBackground")
+//        tableView.backgroundView?.backgroundColor = .green
         tableView.register(CheckTableViewCell.self, forCellReuseIdentifier: CheckTableViewCell.indentifier)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 56
         return tableView
     }()
     
@@ -38,21 +94,95 @@ class CheckViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(named: "blueBackground")
-        self.view.addSubview(self.tableView)
-        self.configConstraints()
+        setupHierarquia()
+        setupConstraints()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
-    private func configConstraints(){
-        NSLayoutConstraint.activate([
-            self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 16),
-            self.tableView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.tableView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+    private func setupHierarquia(){
+        self.view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(stackzona)
+        titleLabelContainer.addSubview(titleLabel)
+        subTitleLabelContainer.addSubview(subTitleLabel)
+        cenouraImageContainer.addSubview(cenouraImage)
+        descLabelContainer.addSubview(descLabel)
+        stackzona.addArrangedSubview(titleLabelContainer)
+        stackzona.addArrangedSubview(cenouraImageContainer)
+        stackzona.addArrangedSubview(subTitleLabelContainer)
+        stackzona.addArrangedSubview(descLabelContainer)
+        stackzona.addArrangedSubview(tableView)
+    }
+    
+    private func setupConstraints(){
+        stackzona.translatesAutoresizingMaskIntoConstraints = false
+        titleLabelContainer.translatesAutoresizingMaskIntoConstraints = false
+        cenouraImageContainer.translatesAutoresizingMaskIntoConstraints = false
+        subTitleLabelContainer.translatesAutoresizingMaskIntoConstraints = false
+        descLabel.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.translatesAutoresizingMaskIntoConstraints = false
         
+//        scrollView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        scrollView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        
+//        contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
+        contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+        contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+        contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+        contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+        
+        NSLayoutConstraint.activate([
+            stackzona.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 16),
+            stackzona.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 16),
+            stackzona.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            stackzona.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            stackzona.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: titleLabelContainer.topAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: titleLabelContainer.leadingAnchor),
+            titleLabel.centerXAnchor.constraint(equalTo: titleLabelContainer.centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: titleLabelContainer.centerYAnchor)
+        ])
+
+        NSLayoutConstraint.activate([
+            subTitleLabel.topAnchor.constraint(equalTo: subTitleLabelContainer.topAnchor),
+            subTitleLabel.leadingAnchor.constraint(equalTo: subTitleLabelContainer.leadingAnchor),
+            subTitleLabel.centerXAnchor.constraint(equalTo: subTitleLabelContainer.centerXAnchor),
+            subTitleLabel.centerYAnchor.constraint(equalTo: subTitleLabelContainer.centerYAnchor)
+        ])
+
+
+        NSLayoutConstraint.activate([
+            cenouraImage.topAnchor.constraint(equalTo: cenouraImageContainer.topAnchor),
+            cenouraImage.leadingAnchor.constraint(equalTo: cenouraImageContainer.leadingAnchor),
+            cenouraImage.centerXAnchor.constraint(equalTo: cenouraImageContainer.centerXAnchor),
+            cenouraImage.centerYAnchor.constraint(equalTo: cenouraImageContainer.centerYAnchor)
+        ])
+
+        NSLayoutConstraint.activate([
+            descLabel.topAnchor.constraint(equalTo: descLabelContainer.topAnchor),
+            descLabel.leadingAnchor.constraint(equalTo: descLabelContainer.leadingAnchor),
+            descLabel.centerXAnchor.constraint(equalTo: descLabelContainer.centerXAnchor),
+            descLabel.centerYAnchor.constraint(equalTo: descLabelContainer.centerYAnchor)
+        ])
+
+//        NSLayoutConstraint.activate([
+//            tableView.topAnchor.constraint(equalTo: descLabelContainer.topAnchor),
+//            tableView.leadingAnchor.constraint(equalTo: stackzona.leadingAnchor),
+//            tableView.centerXAnchor.constraint(equalTo: stackzona.centerXAnchor),
+//            tableView.centerYAnchor.constraint(equalTo: stackzona.centerYAnchor)
+//        ])
+//        tableView.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
 }
 
@@ -60,15 +190,14 @@ extension CheckViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CheckTableViewCell.indentifier, for: indexPath) as? CheckTableViewCell
+        CheckTableViewCell.checkIndex = "\((indexPath.row)+1)"
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 56
     }
-    
 }
 
 
