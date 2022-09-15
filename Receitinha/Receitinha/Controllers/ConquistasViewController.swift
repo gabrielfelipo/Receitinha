@@ -8,15 +8,18 @@
 import UIKit
 
 class ConquistasViewController: UIViewController {
-
+    
+    var conquistasCollectionView: UICollectionView!
+    let conquistasView = ConquistasView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupConquistasViewController()
-        // Do any additional setup after loading the view.
     }
     
     func setupConquistasViewController () {
-        view.backgroundColor = UIColor(named: "blueBackground")
+        self.view = conquistasView
         self.navigationItem.title = "Conquistas"
     }
 }
