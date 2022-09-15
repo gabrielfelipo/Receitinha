@@ -14,7 +14,7 @@ extension Receita {
             Receita(
                 //comentario de thales
                 titulo: "Banana com Nescau",
-                imagemPrevia: "imagem da previa aqui",
+                imagemPrevia: "IMG_BananaComNescau_Preview",
                 dificuldade: "Fácil",
                 descricaoPrevia: "Essa é uma receita de uma deliciosa banana com leite em pó, Nescau e farinha láctea. Um lanche prático, rápido e muito divertido de fazer!!",
                 duracao: 10,
@@ -29,8 +29,18 @@ extension Receita {
                     "Farinha láctea"
                 ],
                 imagem: [
-                    "falta essa parte",
-                    "e mais um bocado aqui em baixo"
+                    "IMG_BananaComNescau_1",
+                    "IMG_BananaComNescau_2",
+                    "IMG_BananaComNescau_3",
+                    "IMG_BananaComNescau_4",
+                    "IMG_BananaComNescau_5",
+                    "IMG_BananaComNescau_6",
+                    "IMG_BananaComNescau_7",
+                    "IMG_BananaComNescau_8",
+                    "IMG_BananaComNescau_9",
+                    "IMG_BananaComNescau_10",
+                    "IMG_BananaComNescau_11",
+                    
                 ],
                 tituloInstrucao: [
                     "Pegue um prato",
@@ -59,13 +69,23 @@ extension Receita {
                     "Pegue a Farinha Láctea com a colher e espalhe por cima da banana"
                 ],
                 audioDescricao: [
-                    "falta essa parte",
-                    "e mais um bocado aqui em baixo"
+                    "MP3_BananaComNescau_1",
+                    "MP3_BananaComNescau_2",
+                    "MP3_BananaComNescau_3",
+                    "MP3_BananaComNescau_4",
+                    "MP3_BananaComNescau_5",
+                    "MP3_BananaComNescau_6",
+                    "MP3_BananaComNescau_7",
+                    "MP3_BananaComNescau_8",
+                    "MP3_BananaComNescau_9",
+                    "MP3_BananaComNescau_10",
+                    "MP3_BananaComNescau_11",
+                    
                 ]
             ),
             Receita(
                 titulo: "Misto quente",
-                imagemPrevia: "imagem da previa aqui",
+                imagemPrevia: "IMG_MistoQuente_Preview",
                 dificuldade: "Médio",
                 descricaoPrevia: "Essa é uma receita muito gostosa e prática de um misto quente bastante recheado perfeito para um lachinho da tarde ou café da manhã",
                 duracao: 10,
@@ -79,8 +99,22 @@ extension Receita {
                     "Queijo Mussarela fatiado"
                 ],
                 imagem: [
-                    "falta essa parte",
-                    "e mais um bocado aqui em baixo"
+                    "IMG_MistoQuente_1",
+                    "IMG_MistoQuente_2",
+                    "IMG_MistoQuente_3",
+                    "IMG_MistoQuente_4",
+                    "IMG_MistoQuente_5",
+                    "IMG_MistoQuente_6",
+                    "IMG_MistoQuente_7",
+                    "IMG_MistoQuente_8",
+                    "IMG_MistoQuente_9",
+                    "IMG_MistoQuente_10",
+                    "IMG_MistoQuente_11",
+                    "IMG_MistoQuente_12",
+                    "IMG_MistoQuente_13",
+                    "IMG_MistoQuente_14",
+                    "IMG_MistoQuente_15",
+                    
                 ],
                 tituloInstrucao: [
                     "Pegue um prato e coloque em cima da mesa",
@@ -92,6 +126,7 @@ extension Receita {
                     "Coloque o presunto",
                     "Coloque o queijo",
                     "Coloque o pão",
+                    "Coloque o sanduiche",
                     "Posicione a sanduicheira",
                     "Espere 5 minutos",
                     "Abra a sanduicheira",
@@ -108,16 +143,30 @@ extension Receita {
                     "Pegue uma fatia de presunto e coloque no pão que está em cima do prato",
                     "Pegue uma fatia de queijo e coloque no pão com presunto que está em cima do prato",
                     "Pegue a outra fatia de pão e coloque por cima do queijo, para terminar o sanduiche",
-                    "Abra a sanduicheira e a conecte em uma tomada",
-                    "Posicione o sanduiche que estava no prato na saduicheira e a feche",
+                    "Abra a sanduicheira e posicione o sanduiche que estava no prato",
+                    "Feche a sanduicheira e a conecte em uma tomada",
                     "Confira se a sanduicheira está fechada",
                     "Desligue a sanduicheira e deixe aberta para que a temperatura do pão diminua",
                     "Você pode aproveitar esse tempo para organizar os materiais que foram utilizados na receita",
                     "Retire o misto quente da sanduicheira e coloque no prato"
                 ],
                 audioDescricao: [
-                    "falta essa parte",
-                    "e mais um bocado aqui em baixo"
+                    "MP3_MistoQuente_1",
+                    "MP3_MistoQuente_2",
+                    "MP3_MistoQuente_3",
+                    "MP3_MistoQuente_4",
+                    "MP3_MistoQuente_5",
+                    "MP3_MistoQuente_6",
+                    "MP3_MistoQuente_7",
+                    "MP3_MistoQuente_8",
+                    "MP3_MistoQuente_9",
+                    "MP3_MistoQuente_10",
+                    "MP3_MistoQuente_11",
+                    "MP3_MistoQuente_12",
+                    "MP3_MistoQuente_13",
+                    "MP3_MistoQuente_14",
+                    "MP3_MistoQuente_15",
+                    
                 ]
             )
         ]

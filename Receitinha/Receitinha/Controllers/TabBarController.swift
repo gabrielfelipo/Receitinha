@@ -7,30 +7,62 @@
 
 import UIKit
 
-class TabBarController: UITabBarController{
+class TabBarController: UITabBarController {
+    
+    var navigationControllers: [UIViewController] = []
+    
+    let controllers: [UIViewController] = [
+        ConquistasViewController(),
+        ReceitasViewController(),
+        PesquisarViewController()
+    ]
+    
+    let icons = [
+      "rosette",
+      "fork.knife",
+      "magnifyingglass"]
 
+    let titles = [
+        "Conquistas",
+        "Receitas",
+        "Buscar"
+        
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //teste
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         setupTabBarController()
     }
     
+    
     private func setupTabBarController () {
+        
+        controllers.enumerated().forEach{ (index, viewController) in
+            viewController.navigationItem.largeTitleDisplayMode = .always
+            let navigation = UINavigationController(rootViewController: viewController)
+            navigation.navigationBar.prefersLargeTitles = true
+            
+            navigation.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 0.5)
+            navigation.navigationBar.layer.shadowRadius = 0
+            navigation.navigationBar.layer.shadowColor = UIColor.black.cgColor
+            navigation.navigationBar.layer.shadowOpacity = 0.3
+            
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor(named: "tabBarColor")
+            navigation.navigationBar.standardAppearance = appearance;
+            navigation.navigationBar.scrollEdgeAppearance = navigation.navigationBar.standardAppearance
+            
+            navigation.tabBarItem = UITabBarItem(title: titles[index],
+                                                 image: UIImage(systemName: icons[index]) , tag: 1)
+            
+            navigationControllers.append(navigation)
+        }
+        setViewControllers(self.navigationControllers, animated: true)
+        
         tabBar.backgroundColor = UIColor(named: "tabBarColor")
         
-        guard let items = tabBar.items else{return}
-        
-        items[0].title = "Conquistas"
-        items[0].image = UIImage(systemName: "rosette")
-        
-        items[1].title = "Receitas"
-        items[1].image = UIImage(systemName: "fork.knife")
-        
-        items[2].title = "Buscar"
-        items[2].image = UIImage(systemName: "magnifyingglass")
+        self.selectedIndex = 1
         
         tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
         tabBar.layer.shadowRadius = 0
