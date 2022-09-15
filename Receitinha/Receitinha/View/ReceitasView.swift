@@ -13,16 +13,15 @@ class ReceitasView: UIView {
         table.separatorColor = .clear
         table.backgroundColor = UIColor(named: "blueBackground")
         table.translatesAutoresizingMaskIntoConstraints = false
+        table.showsVerticalScrollIndicator = false
         return table
     } ()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor(named: "blueBackground")
         setupRecipeViewHierarchy()
-//      setupViewsAtributes()
+        setupRecipeViewsAtributes()
         setupRecipeConstraints()
-//        setupAdditionalConfiguration()
     }
     
     required init?(coder: NSCoder) {
@@ -34,6 +33,10 @@ class ReceitasView: UIView {
         self.addSubview(receitasTableView)
         
         
+    }
+    
+    private func setupRecipeViewsAtributes() {
+        self.backgroundColor = UIColor(named: "blueBackground")
     }
     
     private func setupRecipeConstraints () {
