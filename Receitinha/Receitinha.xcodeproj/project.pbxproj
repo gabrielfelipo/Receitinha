@@ -32,6 +32,7 @@
 		472B6E5128D1208B00A0D036 /* MP3_MistoQuente_9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E4228D1208B00A0D036 /* MP3_MistoQuente_9.mp3 */; };
 		477E934B28CFB532009E57A8 /* Receita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E934A28CFB532009E57A8 /* Receita.swift */; };
 		8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */; };
+		CA10F66F28D3AE50009433ED /* ConquistasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10F66E28D3AE50009433ED /* ConquistasCollectionViewCell.swift */; };
 		CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4928CFC04C00D5268F /* UIView+Preview.swift */; };
 		CA826B4C28CFC05D00D5268F /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4B28CFC05D00D5268F /* UIViewController+Preview.swift */; };
 		CA826B4E28CFC52C00D5268F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4D28CFC52C00D5268F /* TabBarController.swift */; };
@@ -78,6 +79,7 @@
 		472B6E4228D1208B00A0D036 /* MP3_MistoQuente_9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_9.mp3; sourceTree = "<group>"; };
 		477E934A28CFB532009E57A8 /* Receita.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receita.swift; sourceTree = "<group>"; };
 		8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receita+Receitas.swift"; sourceTree = "<group>"; };
+		CA10F66E28D3AE50009433ED /* ConquistasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConquistasCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA826B4928CFC04C00D5268F /* UIView+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		CA826B4B28CFC05D00D5268F /* UIViewController+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 		CA826B4D28CFC52C00D5268F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				0DF1FBC228D0EE57005EE8D7 /* CheckpointView.swift */,
 				0DF1FBC428D0EE7E005EE8D7 /* ConquistasView.swift */,
 				0DF1FBC628D0EED6005EE8D7 /* PesquisarView.swift */,
+				CA10F66E28D3AE50009433ED /* ConquistasCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				0DF1FBC128D0EE41005EE8D7 /* PassoPassoView.swift in Sources */,
 				CA826B4E28CFC52C00D5268F /* TabBarController.swift in Sources */,
 				0DF1FBC728D0EED6005EE8D7 /* PesquisarView.swift in Sources */,
+				CA10F66F28D3AE50009433ED /* ConquistasCollectionViewCell.swift in Sources */,
 				0D66D53228CFBD9500F1A41C /* ConquistasViewController.swift in Sources */,
 				0D66D53028CFBD8A00F1A41C /* ReceitasViewController.swift in Sources */,
 				477E934B28CFB532009E57A8 /* Receita.swift in Sources */,
