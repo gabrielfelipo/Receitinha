@@ -44,6 +44,7 @@ class ReceitasTableViewCell: UITableViewCell {
     
     let minorLabelStackView = UIStackView ()
     let labelsStackView = UIStackView ()
+    let dificultyStackView = UIStackView ()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -57,11 +58,15 @@ class ReceitasTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    
     private func setupRecipeCellViewHierarchy () {
         self.addSubview(cellView)
         
+        self.dificultyStackView.addArrangedSubview(dificultyRecipe)
+        
         self.minorLabelStackView.addArrangedSubview(durationRecipe)
-        self.minorLabelStackView.addArrangedSubview(dificultyRecipe)
+        self.minorLabelStackView.addArrangedSubview(dificultyStackView)
         
         self.labelsStackView.addArrangedSubview(nameRecipe)
         self.labelsStackView.addArrangedSubview(minorLabelStackView)
@@ -70,28 +75,35 @@ class ReceitasTableViewCell: UITableViewCell {
         self.cellView.addSubview(labelsStackView)
     }
     
+    
+    
     private func setupRecipeCellViewAtributes(){
-        let backgroundView = UIView ()
-        backgroundView.backgroundColor = UIColor(named: "blueBackground")
-        self.selectedBackgroundView = backgroundView
+        self.selectionStyle = .none
         
         imageRecipe.image = UIImage (named: "IMG_BananaComNescau_8")
         imageRecipe.layer.cornerRadius = 16
         imageRecipe.clipsToBounds = true
         imageRecipe.contentMode = .scaleAspectFill
         
-        nameRecipe.text = "<nameRecipeLabel>"
+        nameRecipe.text = "<nameLabel>"
+        nameRecipe.numberOfLines = 0
         
-        durationRecipe.text = "<durationRecipeLabel>"
+        durationRecipe.text = "<durationLabel>"
         
-        dificultyRecipe.text = "<dificultyRecipeLabel>"
+        dificultyRecipe.text = "<dificultyLabel>"
         
         minorLabelStackView.axis = .vertical
+        minorLabelStackView.alignment = .top
+        minorLabelStackView.spacing = 0
         
         labelsStackView.axis = .vertical
         labelsStackView.alignment = .top
-        labelsStackView.spacing = 0
+        labelsStackView.spacing = 8
+     
+        dificultyStackView.axis = .horizontal
+        dificultyStackView.alignment = .top
         
+        setupCellShadow()
     }
     
     private func setupRecipeCellConstraints() {
@@ -109,7 +121,8 @@ class ReceitasTableViewCell: UITableViewCell {
             imageRecipe.topAnchor.constraint(equalTo: self.cellView.topAnchor, constant: 8),
             imageRecipe.bottomAnchor.constraint(equalTo: self.cellView.bottomAnchor, constant: -8),
             imageRecipe.leadingAnchor.constraint(equalTo: self.cellView.leadingAnchor, constant: 8),
-            imageRecipe.trailingAnchor.constraint(equalTo: self.labelsStackView.leadingAnchor, constant: -8)
+            imageRecipe.trailingAnchor.constraint(equalTo: self.labelsStackView.leadingAnchor, constant: -8),
+            imageRecipe.heightAnchor.constraint(equalTo: imageRecipe.widthAnchor, multiplier: 0.72)
         ])
         
         labelsStackView.setContentHuggingPriority(.defaultLow, for: .horizontal)
@@ -118,10 +131,14 @@ class ReceitasTableViewCell: UITableViewCell {
             labelsStackView.topAnchor.constraint(equalTo: self.cellView.topAnchor, constant: 8),
             labelsStackView.bottomAnchor.constraint(equalTo: self.cellView.bottomAnchor, constant: -8),
             labelsStackView.trailingAnchor.constraint(equalTo: self.cellView.trailingAnchor, constant: -8)
-            
         ])
-        minorLabelStackView.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }
     
+    private func setupCellShadow () {
+        cellView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        cellView.layer.shadowRadius = 2
+        cellView.layer.shadowColor = UIColor.black.cgColor
+        cellView.layer.shadowOpacity = 0.2
+    }
     
 }
