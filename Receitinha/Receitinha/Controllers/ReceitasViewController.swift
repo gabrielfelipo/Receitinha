@@ -9,16 +9,27 @@ import UIKit
 
 class ReceitasViewController: UIViewController {
 
+    let receitasView = ReceitasView ()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupReceitasViewController()
+        setupTableView()
+        self.view = receitasView
         // Do any additional setup after loading the view.
     }
     
+    func setupTableView() {
+        receitasView.receitasTableView.delegate = self
+        receitasView.receitasTableView.dataSource = self
+    }
+    
+    
     func setupReceitasViewController () {
-        view.backgroundColor = UIColor(named: "blueBackground")
         self.navigationItem.title = "Escolher receita"
     }
+    
+    
 
 }
 

@@ -59,7 +59,10 @@ class TabBarController: UITabBarController {
             navigationControllers.append(navigation)
         }
         setViewControllers(self.navigationControllers, animated: true)
+        
         tabBar.backgroundColor = UIColor(named: "tabBarColor")
+        
+        self.selectedIndex = 1
         
         tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
         tabBar.layer.shadowRadius = 0
