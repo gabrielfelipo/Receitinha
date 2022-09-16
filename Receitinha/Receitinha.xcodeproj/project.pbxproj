@@ -31,6 +31,7 @@
 		472B6E5028D1208B00A0D036 /* MP3_MistoQuente_12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E4128D1208B00A0D036 /* MP3_MistoQuente_12.mp3 */; };
 		472B6E5128D1208B00A0D036 /* MP3_MistoQuente_9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E4228D1208B00A0D036 /* MP3_MistoQuente_9.mp3 */; };
 		477E934B28CFB532009E57A8 /* Receita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E934A28CFB532009E57A8 /* Receita.swift */; };
+		8FD221E728D27640008EB0C4 /* PassoPassoViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD221E628D27640008EB0C4 /* PassoPassoViewControler.swift */; };
 		8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */; };
 		CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4928CFC04C00D5268F /* UIView+Preview.swift */; };
 		CA826B4C28CFC05D00D5268F /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4B28CFC05D00D5268F /* UIViewController+Preview.swift */; };
@@ -77,6 +78,7 @@
 		472B6E4128D1208B00A0D036 /* MP3_MistoQuente_12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_12.mp3; sourceTree = "<group>"; };
 		472B6E4228D1208B00A0D036 /* MP3_MistoQuente_9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_9.mp3; sourceTree = "<group>"; };
 		477E934A28CFB532009E57A8 /* Receita.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receita.swift; sourceTree = "<group>"; };
+		8FD221E628D27640008EB0C4 /* PassoPassoViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassoPassoViewControler.swift; sourceTree = "<group>"; };
 		8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receita+Receitas.swift"; sourceTree = "<group>"; };
 		CA826B4928CFC04C00D5268F /* UIView+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		CA826B4B28CFC05D00D5268F /* UIViewController+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				0D66D52D28CFBD7A00F1A41C /* PesquisarViewController.swift */,
 				0D66D52F28CFBD8A00F1A41C /* ReceitasViewController.swift */,
 				0D66D53128CFBD9500F1A41C /* ConquistasViewController.swift */,
+				8FD221E628D27640008EB0C4 /* PassoPassoViewControler.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				CA826B4E28CFC52C00D5268F /* TabBarController.swift in Sources */,
 				0DF1FBC728D0EED6005EE8D7 /* PesquisarView.swift in Sources */,
 				0D66D53228CFBD9500F1A41C /* ConquistasViewController.swift in Sources */,
+				8FD221E728D27640008EB0C4 /* PassoPassoViewControler.swift in Sources */,
 				0D66D53028CFBD8A00F1A41C /* ReceitasViewController.swift in Sources */,
 				477E934B28CFB532009E57A8 /* Receita.swift in Sources */,
 				CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */,
