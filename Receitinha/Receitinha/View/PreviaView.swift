@@ -9,9 +9,7 @@ import UIKit
 
 class PreviaView: UIView {
     
-    //qual modo de stackview usar - ela se adaptar ao conteudo dentro dela
     //pode travar a rotação?
-    //como adicionar raio na borda do botao
     //como configura scroll view aaaaaaaaaaaaaaaaaaaaaaaaaa - consegui +-
     
     let scrollView = UIScrollView()
@@ -59,21 +57,26 @@ class PreviaView: UIView {
                                 let iconAlarmContainer = UIView()
                                     let iconAlarm: UIImageView = {
                                         let img = UIImageView()
-                                        img.image = UIImage(named: "IMG_MistoQuente_Preview")
+                                        var imagem = UIImage(systemName: "alarm")
+                                        //TODO: AJUSTAR A COR DA IMAGEM
+                                        imagem = imagem?.withTintColor(UIColor(named: "labelCardColor")!)
+                                        img.image = imagem
                                         img.contentMode = .scaleAspectFit
-                                        img.backgroundColor = .white
+                                        //img.backgroundColor = .white
                                         return img
                                     }()
                                 let labelDuracao: UILabel = {
                                     let label = UILabel()
                                     label.textAlignment = .center
                                     label.text = "Duração:"
+                                    label.textColor = UIColor(named: "labelCardColor")
                                     return label
                                 }()
                                 let labelTempoDuracao: UILabel = {
                                     let label = UILabel()
                                     label.textAlignment = .center
                                     label.text = "<x> minutos"
+                                    label.textColor = UIColor(named: "labelCardColor")
                                     label.font = UIFont.boldSystemFont(ofSize: 17)
                                     return label
                                 }()
@@ -103,14 +106,15 @@ class PreviaView: UIView {
                                 let iconDificuldadeContainer = UIView()
                                     let iconDificuldade: UIImageView = {
                                         let img = UIImageView()
-                                        img.image = UIImage(named: "IMG_MistoQuente_Preview")
+                                        img.image = UIImage(systemName: "chart.bar")?.withTintColor(UIColor(named: "labelCardColor")!)
                                         img.contentMode = .scaleAspectFit
-                                        img.backgroundColor = .white
+                                        //img.backgroundColor = .white
                                         return img
                                     }()
                                 let labelDificuldade: UILabel = {
                                     let label = UILabel()
                                     label.text = "Dificuldade:"
+                                    label.textColor = UIColor(named: "labelCardColor")
                                     label.textAlignment = .center
                                     return label
                                 }()
@@ -118,6 +122,7 @@ class PreviaView: UIView {
                                     let label = UILabel()
                                     label.textAlignment = .center
                                     label.text = "<dificuldade>"
+                                    label.textColor = UIColor(named: "labelCardColor")
                                     label.font = UIFont.boldSystemFont(ofSize: 17)
                                     return label
                                 }()  //me perdoem por esse nome realmente n pensei num melhor

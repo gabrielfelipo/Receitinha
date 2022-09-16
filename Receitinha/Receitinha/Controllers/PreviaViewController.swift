@@ -9,7 +9,7 @@ import UIKit
 
 class PreviaViewController: UIViewController {
     
-    var i: Int?
+    var i: Int? = 1
     let previaView = PreviaView()
     let receitas = Receita.receitas()
 
@@ -23,7 +23,30 @@ class PreviaViewController: UIViewController {
     
     func setupPreviaViewController () {
         view.backgroundColor = UIColor(named: "blueBackground")
-        self.navigationItem.title = receitas[0].titulo
+        self.navigationItem.title = receitas[i!].titulo
+        // TODO: SETAR O LEFT ITEM (PRECISA DE ALGUM VC ANTES)
+        previaView.imagemCapa.image = UIImage(named: receitas[i!].imagemPrevia)
+        previaView.descricaoLabel.text = receitas[i!].descricaoPrevia
+        let objetosIngredientes = gerarListas()
+        previaView.listaObjetosLabel.text = objetosIngredientes[0]
+        previaView.listaIngredientesLabel.text = objetosIngredientes[1]
+        previaView.labelTempoDuracao.text = "\(String(receitas[i!].duracao)) minutos"
+        previaView.labelDificuldadeDificuldade.text = receitas[i!].dificuldade
+    }
+    
+    func gerarListas () -> [String]{
+        var array: [String] = []
+        var textoObjetos = ""
+        var textoIngredientes = ""
+        receitas[i!].objetos.enumerated().forEach{ (index, objeto) in
+            textoObjetos = "\(textoObjetos)• \(objeto)\n"
+        }
+        receitas[i!].ingredientes.enumerated().forEach{ (index, ingrediente) in
+            textoIngredientes = "\(textoIngredientes)• \(ingrediente)\n"
+        }
+        array.append(textoObjetos)
+        array.append(textoIngredientes)
+        return array
     }
     
 
