@@ -33,6 +33,7 @@
 		477E934B28CFB532009E57A8 /* Receita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E934A28CFB532009E57A8 /* Receita.swift */; };
 		8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */; };
 		CA10F66F28D3AE50009433ED /* ConquistasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10F66E28D3AE50009433ED /* ConquistasCollectionViewCell.swift */; };
+		CA44F62628D3F9F400D2188B /* Conquista.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44F62528D3F9F400D2188B /* Conquista.swift */; };
 		CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4928CFC04C00D5268F /* UIView+Preview.swift */; };
 		CA826B4C28CFC05D00D5268F /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4B28CFC05D00D5268F /* UIViewController+Preview.swift */; };
 		CA826B4E28CFC52C00D5268F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA826B4D28CFC52C00D5268F /* TabBarController.swift */; };
@@ -80,6 +81,7 @@
 		477E934A28CFB532009E57A8 /* Receita.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receita.swift; sourceTree = "<group>"; };
 		8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receita+Receitas.swift"; sourceTree = "<group>"; };
 		CA10F66E28D3AE50009433ED /* ConquistasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConquistasCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA44F62528D3F9F400D2188B /* Conquista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conquista.swift; sourceTree = "<group>"; };
 		CA826B4928CFC04C00D5268F /* UIView+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		CA826B4B28CFC05D00D5268F /* UIViewController+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 		CA826B4D28CFC52C00D5268F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				477E934A28CFB532009E57A8 /* Receita.swift */,
+				CA44F62528D3F9F400D2188B /* Conquista.swift */,
 				8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */,
 			);
 			path = Model;
@@ -343,6 +346,7 @@
 				0D66D53228CFBD9500F1A41C /* ConquistasViewController.swift in Sources */,
 				0D66D53028CFBD8A00F1A41C /* ReceitasViewController.swift in Sources */,
 				477E934B28CFB532009E57A8 /* Receita.swift in Sources */,
+				CA44F62628D3F9F400D2188B /* Conquista.swift in Sources */,
 				CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */,
 				CAEE6FCA28CFACD1007AA493 /* AppDelegate.swift in Sources */,
 				CAEE6FCC28CFACD1007AA493 /* SceneDelegate.swift in Sources */,

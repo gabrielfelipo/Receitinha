@@ -11,7 +11,6 @@ class ConquistasView: UIView {
     //MARK: - Inicialização dos componentes
     let trofeuImageView = UIImageView()
     let descricaoLabel = UILabel()
-    var conquistasCollectionView: UICollectionView?
     
     let trofeuContainer = UIView()
     let descricaoContainer = UIView()
@@ -26,7 +25,7 @@ class ConquistasView: UIView {
         
         let widthScreen = UIScreen.main.bounds.width - 64
         let teste = widthScreen / 3 - 2*8
-        layout.itemSize = CGSize(width: teste, height: teste)
+        layout.itemSize = CGSize(width: teste, height: 103)
         
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(ConquistasCollectionViewCell.self, forCellWithReuseIdentifier: "conquistasCollectionViewCell")
