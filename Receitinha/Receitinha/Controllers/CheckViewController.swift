@@ -81,7 +81,7 @@ class CheckViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
 //        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.isScrollEnabled = false
+        tableView.isScrollEnabled = true
         tableView.separatorColor = UIColor(named: "blueBackground")
 //        tableView.backgroundView?.backgroundColor = .green
         tableView.register(CheckTableViewCell.self, forCellReuseIdentifier: CheckTableViewCell.indentifier)
@@ -89,7 +89,6 @@ class CheckViewController: UIViewController {
         tableView.estimatedRowHeight = 56
         return tableView
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -140,11 +139,11 @@ class CheckViewController: UIViewController {
         contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
         
         NSLayoutConstraint.activate([
-            stackzona.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 16),
-            stackzona.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 16),
-            stackzona.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            stackzona.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            stackzona.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            stackzona.topAnchor.constraint(equalTo: view.topAnchor,constant: 16),
+            stackzona.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16),
+            stackzona.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackzona.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackzona.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
         NSLayoutConstraint.activate([

@@ -47,7 +47,7 @@ class CheckTableViewCell: UITableViewCell {
     let ajudaSymbolContainer = UIView()
     
     let ajudaSymbol: UIImageView = {
-        let symbol = UIImage(named: "IMG_MistoQuente_1")
+        let symbol = UIImage(systemName: "questionmark.circle")
         let imageView = UIImageView()
         imageView.image = symbol
         imageView.contentMode = .scaleToFill
