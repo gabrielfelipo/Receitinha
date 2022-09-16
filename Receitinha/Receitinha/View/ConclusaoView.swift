@@ -8,7 +8,7 @@
 import UIKit
 
 class ConclusaoView: UIView {
-
+    
     let parabensLabel: UILabel = {
         let label = UILabel ()
         label.textColor = UIColor.black
@@ -50,9 +50,9 @@ class ConclusaoView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-
+        
     }
-
+    
     private func setupConclusaoViewHierarchy() {
         self.addSubview(componentesStackView)
         
@@ -85,7 +85,15 @@ class ConclusaoView: UIView {
         
         finalizarButton.setTitle("Finalizar receita", for: .normal)
         finalizarButton.tintColor = UIColor(named: "azul-acao")
-        finalizarButton.layer.cornerRadius = 27
+        finalizarButton.layer.cornerRadius = 30
+        finalizarButton.layer.masksToBounds = true
+        
+        //shadow do botao
+        finalizarButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        finalizarButton.layer.shadowRadius = 10
+        finalizarButton.layer.shadowColor = UIColor.black.cgColor
+        finalizarButton.layer.shadowOpacity = 0.25
+        
     }
     
     private func setupConclusaoConstraints() {
@@ -96,13 +104,13 @@ class ConclusaoView: UIView {
             componentesStackView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,constant: -16),
             componentesStackView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -8)
         ])
-
+        
         parabensLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
         cenouraImage.setContentHuggingPriority(.defaultLow, for: .vertical)
         
         finalizarButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-           finalizarButton.heightAnchor.constraint(equalToConstant: 56)
+            finalizarButton.heightAnchor.constraint(equalToConstant: 56)
         ])
     }
     
