@@ -85,8 +85,6 @@ class ConclusaoView: UIView {
         
         finalizarButton.setTitle("Finalizar receita", for: .normal)
         finalizarButton.tintColor = UIColor(named: "azul-acao")
-        finalizarButton.layer.cornerRadius = 30
-        finalizarButton.layer.masksToBounds = true
         
         //shadow do botao
         finalizarButton.layer.shadowOffset = CGSize(width: 0, height: 3)
