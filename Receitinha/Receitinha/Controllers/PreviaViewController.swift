@@ -25,6 +25,7 @@ class PreviaViewController: UIViewController {
         view.backgroundColor = UIColor(named: "blueBackground")
         self.navigationItem.title = receitas[i!].titulo
         // TODO: SETAR O LEFT ITEM (PRECISA DE ALGUM VC ANTES)
+        self.navigationItem.leftBarButtonItem?.title = "Voltar para receitas"
         previaView.imagemCapa.image = UIImage(named: receitas[i!].imagemPrevia)
         previaView.descricaoLabel.text = receitas[i!].descricaoPrevia
         let objetosIngredientes = gerarListas()

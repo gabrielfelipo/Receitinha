@@ -27,7 +27,14 @@ class PreviaView: UIView {
     }()
             
                 let imagemCapaContainer = UIView()
-                    let imagemCapa = UIImageView()
+                    let imagemCapa: UIImageView = {
+                        let img = UIImageView()
+                        img.image = UIImage(named: "IMG_MistoQuente_Preview")
+                        img.contentMode = .scaleAspectFit
+                        img.tintColor = UIColor(named: "labelCardColor")
+                        //img.backgroundColor = .white
+                        return img
+                    }()
             
                 let stackViewCardsContainer = UIView()
                     let stackViewCards : UIStackView = {
@@ -58,10 +65,9 @@ class PreviaView: UIView {
                                     let iconAlarm: UIImageView = {
                                         let img = UIImageView()
                                         var imagem = UIImage(systemName: "alarm")
-                                        //TODO: AJUSTAR A COR DA IMAGEM
-                                        imagem = imagem?.withTintColor(UIColor(named: "labelCardColor")!)
                                         img.image = imagem
                                         img.contentMode = .scaleAspectFit
+                                        img.tintColor = UIColor(named: "labelCardColor")
                                         //img.backgroundColor = .white
                                         return img
                                     }()
@@ -106,7 +112,8 @@ class PreviaView: UIView {
                                 let iconDificuldadeContainer = UIView()
                                     let iconDificuldade: UIImageView = {
                                         let img = UIImageView()
-                                        img.image = UIImage(systemName: "chart.bar")?.withTintColor(UIColor(named: "labelCardColor")!)
+                                        img.image = UIImage(systemName: "chart.bar")
+                                        img.tintColor = UIColor(named: "labelCardColor")
                                         img.contentMode = .scaleAspectFit
                                         //img.backgroundColor = .white
                                         return img
@@ -233,9 +240,9 @@ class PreviaView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViewHierarchy()
-        setupViewAttributes()
         translateMasks()
         setupConstraints()
+        setupAdittionalConfiguration()
         //self.backgroundColor = .green
     }
     
@@ -297,17 +304,6 @@ class PreviaView: UIView {
         listaIngredientesLabelContainer.addSubview(listaIngredientesLabel)
         
         buttonIniciarReceitaContainer.addSubview(buttonIniciarReceita)
-    }
-    
-    fileprivate func setupViewAttributes(){
-        
-        imagemCapa.contentMode = .scaleAspectFit
-        
-        imagemCapa.image = UIImage(named: "IMG_MistoQuente_Preview")
-        imagemCapa.contentMode = .scaleAspectFit
-        imagemCapaContainer.clipsToBounds = true
-
- 
     }
     
     fileprivate func translateMasks(){
@@ -546,6 +542,14 @@ class PreviaView: UIView {
             buttonIniciarReceita.leadingAnchor.constraint(equalTo: buttonIniciarReceitaContainer.leadingAnchor, constant: 16),
             buttonIniciarReceita.heightAnchor.constraint(equalToConstant: 60)
         ])
+    }
+    
+    fileprivate func setupAdittionalConfiguration(){
+        buttonIniciarReceita.addTarget(self, action: #selector(tappedButton(sender:)), for: .touchUpInside)
+    }
+    
+    @objc func tappedButton (sender: UIButton){
+        print("clicou no botao")
     }
     
     
