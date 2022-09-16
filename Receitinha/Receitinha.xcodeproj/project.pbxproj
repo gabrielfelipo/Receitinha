@@ -170,25 +170,7 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		472B6E3228D1205A00A0D036 /* BananaComNescau */ = {
-			isa = PBXGroup;
-			children = (
-				D3C7D70028D11AE600B08BA6 /* MP3_BananaComNescau_1.mp3 */,
-				D3C7D70528D11AE600B08BA6 /* MP3_BananaComNescau_2.mp3 */,
-				D3C7D6FF28D11AE600B08BA6 /* MP3_BananaComNescau_3.mp3 */,
-				D3C7D70628D11AE600B08BA6 /* MP3_BananaComNescau_4.mp3 */,
-				D3C7D70928D11AE600B08BA6 /* MP3_BananaComNescau_5.mp3 */,
-				D3C7D70728D11AE600B08BA6 /* MP3_BananaComNescau_6.mp3 */,
-				D3C7D70828D11AE600B08BA6 /* MP3_BananaComNescau_7.mp3 */,
-				D3C7D70128D11AE600B08BA6 /* MP3_BananaComNescau_8.mp3 */,
-				D3C7D70228D11AE600B08BA6 /* MP3_BananaComNescau_9.mp3 */,
-				D3C7D70328D11AE600B08BA6 /* MP3_BananaComNescau_10.mp3 */,
-				D3C7D70428D11AE600B08BA6 /* MP3_BananaComNescau_11.mp3 */,
-			);
-			name = BananaComNescau;
-			sourceTree = "<group>";
-		};
-		472B6E3328D1207900A0D036 /* MistoQuente */ = {
+		0DD453B928D3FC2400DA32F3 /* MistoQuente */ = {
 			isa = PBXGroup;
 			children = (
 				472B6E3F28D1208B00A0D036 /* MP3_MistoQuente_1.mp3 */,
@@ -207,13 +189,40 @@
 				472B6E3D28D1208B00A0D036 /* MP3_MistoQuente_14.mp3 */,
 				472B6E3E28D1208B00A0D036 /* MP3_MistoQuente_15.mp3 */,
 			);
-			name = MistoQuente;
+			path = MistoQuente;
+			sourceTree = "<group>";
+		};
+		0DD453BA28D3FC4B00DA32F3 /* BananaComNescau */ = {
+			isa = PBXGroup;
+			children = (
+				D3C7D70028D11AE600B08BA6 /* MP3_BananaComNescau_1.mp3 */,
+				D3C7D70528D11AE600B08BA6 /* MP3_BananaComNescau_2.mp3 */,
+				D3C7D6FF28D11AE600B08BA6 /* MP3_BananaComNescau_3.mp3 */,
+				D3C7D70628D11AE600B08BA6 /* MP3_BananaComNescau_4.mp3 */,
+				D3C7D70928D11AE600B08BA6 /* MP3_BananaComNescau_5.mp3 */,
+				D3C7D70728D11AE600B08BA6 /* MP3_BananaComNescau_6.mp3 */,
+				D3C7D70828D11AE600B08BA6 /* MP3_BananaComNescau_7.mp3 */,
+				D3C7D70128D11AE600B08BA6 /* MP3_BananaComNescau_8.mp3 */,
+				D3C7D70228D11AE600B08BA6 /* MP3_BananaComNescau_9.mp3 */,
+				D3C7D70328D11AE600B08BA6 /* MP3_BananaComNescau_10.mp3 */,
+				D3C7D70428D11AE600B08BA6 /* MP3_BananaComNescau_11.mp3 */,
+			);
+			path = BananaComNescau;
+			sourceTree = "<group>";
+		};
+		0DD453BB28D3FC5D00DA32F3 /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+				0DD453B928D3FC2400DA32F3 /* MistoQuente */,
+				0DD453BA28D3FC4B00DA32F3 /* BananaComNescau */,
+			);
+			path = Audios;
 			sourceTree = "<group>";
 		};
 		CAEE6FBD28CFACD1007AA493 = {
 			isa = PBXGroup;
 			children = (
-				D3C7D6FE28D11AD100B08BA6 /* Audios */,
+				0DD453BB28D3FC5D00DA32F3 /* Audios */,
 				CAEE6FC828CFACD1007AA493 /* Receitinha */,
 				CAEE6FC728CFACD1007AA493 /* Products */,
 			);
@@ -238,15 +247,6 @@
 				0D66D52A28CFBCFB00F1A41C /* Supporting Files */,
 			);
 			path = Receitinha;
-			sourceTree = "<group>";
-		};
-		D3C7D6FE28D11AD100B08BA6 /* Audios */ = {
-			isa = PBXGroup;
-			children = (
-				472B6E3328D1207900A0D036 /* MistoQuente */,
-				472B6E3228D1205A00A0D036 /* BananaComNescau */,
-			);
-			name = Audios;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
