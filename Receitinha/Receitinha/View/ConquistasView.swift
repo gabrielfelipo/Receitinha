@@ -8,7 +8,9 @@ import UIKit
 import SwiftUI
 
 class ConquistasView: UIView {
+    
     //MARK: - Inicialização dos componentes
+    
     let trofeuImageView = UIImageView()
     let descricaoLabel = UILabel()
     
@@ -24,8 +26,8 @@ class ConquistasView: UIView {
         layout.minimumLineSpacing = 24
         
         let widthScreen = UIScreen.main.bounds.width - 64
-        let teste = widthScreen / 3 - 2*8
-        layout.itemSize = CGSize(width: teste, height: 103)
+        let cellWidth = widthScreen / 3 - 2*8
+        layout.itemSize = CGSize(width: cellWidth, height: cellWidth+23)
         
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(ConquistasCollectionViewCell.self, forCellWithReuseIdentifier: "conquistasCollectionViewCell")
@@ -51,6 +53,8 @@ class ConquistasView: UIView {
         fatalError("init(coder:) has not implemented")
     }
     
+    //MARK: - Organizando Hierarquia
+    
     func setupViewsHierarchy () {
         self.addSubview(conquistasStackView)
         
@@ -62,6 +66,9 @@ class ConquistasView: UIView {
         conquistasStackView.addArrangedSubview(descricaoContainer)
         conquistasStackView.addArrangedSubview(conquistasCollectionViewContainer)
     }
+    
+    
+    //MARK: - Setando atributos
     
     private func setupViewsAttribute () {
         trofeuImageView.image = UIImage(named: "trofeu")
@@ -83,6 +90,9 @@ class ConquistasView: UIView {
         //conquistasStackView.backgroundColor = .purple
     }
     
+    
+    //MARK: - Setando constraints das views
+    
     private func setupConstraints() {
         conquistasStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -94,7 +104,8 @@ class ConquistasView: UIView {
         
         trofeuImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            trofeuImageView.centerXAnchor.constraint(equalTo: centerXAnchor)
+            trofeuImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            trofeuImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.12)
         ])
         
         descricaoLabel.translatesAutoresizingMaskIntoConstraints = false

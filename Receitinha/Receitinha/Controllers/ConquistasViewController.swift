@@ -12,9 +12,10 @@ class ConquistasViewController: UIViewController, UICollectionViewDelegate, UICo
     
     let conquistasView = ConquistasView()
     
+// Array de conquistas
     public let conquistas: [Conquista] = [
-        Conquista(imagem: ["mestreBanana_bloq","mestreBanana_color"], nome: ["bloqueada", "Mestre Banana"]),
-        Conquista(imagem: ["misto_bloq","misto_color"], nome: ["bloqueada", "Esquentou!"])
+        Conquista(imagem: ["mestreBanana_bloq","mestreBanana_color"], nome: ["Bloqueada", "Mestre Banana"]),
+        Conquista(imagem: ["misto_bloq","misto_color"], nome: ["Bloqueada", "Esquentou!"])
     ]
     
     override func viewDidLoad() {
@@ -29,6 +30,8 @@ class ConquistasViewController: UIViewController, UICollectionViewDelegate, UICo
         self.view = conquistasView
         self.navigationItem.title = "Conquistas"
     }
+    
+//MARK: - Funções da collection view
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let numeroConquistas = conquistas.count
