@@ -38,6 +38,7 @@
 		472B6E5028D1208B00A0D036 /* MP3_MistoQuente_12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E4128D1208B00A0D036 /* MP3_MistoQuente_12.mp3 */; };
 		472B6E5128D1208B00A0D036 /* MP3_MistoQuente_9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E4228D1208B00A0D036 /* MP3_MistoQuente_9.mp3 */; };
 		477E934B28CFB532009E57A8 /* Receita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E934A28CFB532009E57A8 /* Receita.swift */; };
+		8FD221E728D27640008EB0C4 /* PassoPassoViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD221E628D27640008EB0C4 /* PassoPassoViewControler.swift */; };
 		8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */; };
 		CA67837F28D4BD02006134FF /* ConquistasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67837E28D4BD02006134FF /* ConquistasCollectionViewCell.swift */; };
 		CA67838128D4BD11006134FF /* Conquista.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67838028D4BD11006134FF /* Conquista.swift */; };
@@ -93,6 +94,7 @@
 		472B6E4128D1208B00A0D036 /* MP3_MistoQuente_12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_12.mp3; sourceTree = "<group>"; };
 		472B6E4228D1208B00A0D036 /* MP3_MistoQuente_9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_9.mp3; sourceTree = "<group>"; };
 		477E934A28CFB532009E57A8 /* Receita.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receita.swift; sourceTree = "<group>"; };
+		8FD221E628D27640008EB0C4 /* PassoPassoViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassoPassoViewControler.swift; sourceTree = "<group>"; };
 		8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receita+Receitas.swift"; sourceTree = "<group>"; };
 		CA67837E28D4BD02006134FF /* ConquistasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConquistasCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA67838028D4BD11006134FF /* Conquista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conquista.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				0DB5C28828D221AC00267028 /* ReceitasViewController+Delegate.swift */,
 				0DD453B528D3ACFF00DA32F3 /* ConclusaoViewController.swift */,
 				0D50648F28D4C58700020F17 /* ComecoViewController.swift */,
+				8FD221E628D27640008EB0C4 /* PassoPassoViewControler.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				CA67837F28D4BD02006134FF /* ConquistasCollectionViewCell.swift in Sources */,
 				0DB5C28928D221AC00267028 /* ReceitasViewController+Delegate.swift in Sources */,
 				0D50649228D4C8D400020F17 /* ComecoView.swift in Sources */,
+				8FD221E728D27640008EB0C4 /* PassoPassoViewControler.swift in Sources */,
 				0D66D53028CFBD8A00F1A41C /* ReceitasViewController.swift in Sources */,
 				477E934B28CFB532009E57A8 /* Receita.swift in Sources */,
 				0DB5C28528D21AE300267028 /* ReceitasTableViewCell.swift in Sources */,
