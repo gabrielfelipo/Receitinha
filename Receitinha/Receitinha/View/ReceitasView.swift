@@ -62,8 +62,8 @@ struct ReceitasView_Preview: PreviewProvider {
     static var previews: some View {
         // view controller using programmatic UI
         Group {
-            ConquistasViewController().showPreview().previewDevice("iPhone SE (3rd generation)")
-            ConquistasViewController().showPreview().previewDevice("iPhone SE (3rd generation)").previewInterfaceOrientation(.landscapeLeft)
+            ReceitasViewController().showPreview().previewDevice("iPhone SE (3rd generation)")
+            ReceitasViewController().showPreview().previewDevice("iPhone SE (3rd generation)").previewInterfaceOrientation(.landscapeLeft)
         }
     }
 }
