@@ -15,20 +15,21 @@ class TabBarController: UITabBarController {
         ConquistasViewController(),
         ReceitasViewController(),
         PesquisarViewController(),
-        PreviaViewController()
+        //PreviaViewController()
     ]
     
     let icons = [
       "rosette",
       "fork.knife",
       "magnifyingglass",
-      "magnifyingglass",]
+      //"magnifyingglass",
+    ]
 
     let titles = [
         "Conquistas",
         "Receitas",
         "Buscar",
-        "Previa"
+        //"Previa"
     ]
     
     override func viewDidLoad() {
