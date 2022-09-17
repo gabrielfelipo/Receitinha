@@ -35,7 +35,7 @@ class ConclusaoView: UIView {
         return label
     } ()
     
-    let finalizarButton = UIButton(configuration: .filled())
+    let finalizarButton = UIButton()
     
     let componentesStackView = UIStackView ()
     let labelsStackView = UIStackView ()
@@ -84,14 +84,14 @@ class ConclusaoView: UIView {
         labelsStackView.distribution = .fill
         
         finalizarButton.setTitle("Finalizar receita", for: .normal)
-        finalizarButton.tintColor = UIColor(named: "azul-acao")
+        finalizarButton.backgroundColor = UIColor(named: "azul-acao")
+        finalizarButton.layer.cornerRadius = 25
         
         //shadow do botao
         finalizarButton.layer.shadowOffset = CGSize(width: 0, height: 3)
         finalizarButton.layer.shadowRadius = 10
         finalizarButton.layer.shadowColor = UIColor.black.cgColor
         finalizarButton.layer.shadowOpacity = 0.25
-        
     }
     
     private func setupConclusaoConstraints() {
