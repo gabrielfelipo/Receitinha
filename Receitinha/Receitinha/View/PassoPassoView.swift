@@ -122,7 +122,7 @@ class PassoPassoView: UIView {
         
         //isso aqui é pra esconder caso seja preciso
         //implementar no back
-        //corpoDescricaoStackView.isHidden = true
+        corpoDescricaoStackView.isHidden = false
         
         progressoStackView.axis = .vertical
         progressoStackView.alignment = .fill

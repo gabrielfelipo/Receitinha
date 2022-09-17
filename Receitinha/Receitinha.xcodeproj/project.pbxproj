@@ -38,7 +38,9 @@
 		472B6E5028D1208B00A0D036 /* MP3_MistoQuente_12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E4128D1208B00A0D036 /* MP3_MistoQuente_12.mp3 */; };
 		472B6E5128D1208B00A0D036 /* MP3_MistoQuente_9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E4228D1208B00A0D036 /* MP3_MistoQuente_9.mp3 */; };
 		477E934B28CFB532009E57A8 /* Receita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E934A28CFB532009E57A8 /* Receita.swift */; };
-		8FD221E728D27640008EB0C4 /* PassoPassoViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD221E628D27640008EB0C4 /* PassoPassoViewControler.swift */; };
+		8F2391EF28D5F1BD00B75299 /* GanhoConquistasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2391EE28D5F1BD00B75299 /* GanhoConquistasView.swift */; };
+		8F2391F128D5F1D600B75299 /* GanhoConquistasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2391F028D5F1D600B75299 /* GanhoConquistasViewController.swift */; };
+		8FD221E728D27640008EB0C4 /* PassoPassoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD221E628D27640008EB0C4 /* PassoPassoViewController.swift */; };
 		8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */; };
 		CA67837F28D4BD02006134FF /* ConquistasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67837E28D4BD02006134FF /* ConquistasCollectionViewCell.swift */; };
 		CA67838128D4BD11006134FF /* Conquista.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67838028D4BD11006134FF /* Conquista.swift */; };
@@ -94,7 +96,9 @@
 		472B6E4128D1208B00A0D036 /* MP3_MistoQuente_12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_12.mp3; sourceTree = "<group>"; };
 		472B6E4228D1208B00A0D036 /* MP3_MistoQuente_9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_9.mp3; sourceTree = "<group>"; };
 		477E934A28CFB532009E57A8 /* Receita.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receita.swift; sourceTree = "<group>"; };
-		8FD221E628D27640008EB0C4 /* PassoPassoViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassoPassoViewControler.swift; sourceTree = "<group>"; };
+		8F2391EE28D5F1BD00B75299 /* GanhoConquistasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GanhoConquistasView.swift; sourceTree = "<group>"; };
+		8F2391F028D5F1D600B75299 /* GanhoConquistasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GanhoConquistasViewController.swift; sourceTree = "<group>"; };
+		8FD221E628D27640008EB0C4 /* PassoPassoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassoPassoViewController.swift; sourceTree = "<group>"; };
 		8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receita+Receitas.swift"; sourceTree = "<group>"; };
 		CA67837E28D4BD02006134FF /* ConquistasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConquistasCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA67838028D4BD11006134FF /* Conquista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conquista.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 				0DB5C28428D21AE300267028 /* ReceitasTableViewCell.swift */,
 				0DD453B728D3AD1500DA32F3 /* ConclusaoView.swift */,
 				0D50649128D4C8D400020F17 /* ComecoView.swift */,
+				8F2391EE28D5F1BD00B75299 /* GanhoConquistasView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,7 +185,8 @@
 				0DB5C28828D221AC00267028 /* ReceitasViewController+Delegate.swift */,
 				0DD453B528D3ACFF00DA32F3 /* ConclusaoViewController.swift */,
 				0D50648F28D4C58700020F17 /* ComecoViewController.swift */,
-				8FD221E628D27640008EB0C4 /* PassoPassoViewControler.swift */,
+				8FD221E628D27640008EB0C4 /* PassoPassoViewController.swift */,
+				8F2391F028D5F1D600B75299 /* GanhoConquistasViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -368,12 +374,14 @@
 				CA826B4E28CFC52C00D5268F /* TabBarController.swift in Sources */,
 				0DF1FBC728D0EED6005EE8D7 /* PesquisarView.swift in Sources */,
 				0D50649028D4C58700020F17 /* ComecoViewController.swift in Sources */,
+				8F2391EF28D5F1BD00B75299 /* GanhoConquistasView.swift in Sources */,
 				0D66D53228CFBD9500F1A41C /* ConquistasViewController.swift in Sources */,
 				0DD453B628D3ACFF00DA32F3 /* ConclusaoViewController.swift in Sources */,
 				CA67837F28D4BD02006134FF /* ConquistasCollectionViewCell.swift in Sources */,
+				8F2391F128D5F1D600B75299 /* GanhoConquistasViewController.swift in Sources */,
 				0DB5C28928D221AC00267028 /* ReceitasViewController+Delegate.swift in Sources */,
 				0D50649228D4C8D400020F17 /* ComecoView.swift in Sources */,
-				8FD221E728D27640008EB0C4 /* PassoPassoViewControler.swift in Sources */,
+				8FD221E728D27640008EB0C4 /* PassoPassoViewController.swift in Sources */,
 				0D66D53028CFBD8A00F1A41C /* ReceitasViewController.swift in Sources */,
 				477E934B28CFB532009E57A8 /* Receita.swift in Sources */,
 				0DB5C28528D21AE300267028 /* ReceitasTableViewCell.swift in Sources */,
