@@ -14,19 +14,22 @@ class TabBarController: UITabBarController {
     let controllers: [UIViewController] = [
         ConquistasViewController(),
         ReceitasViewController(),
-        PesquisarViewController()
+        PesquisarViewController(),
+        //PreviaViewController()
     ]
     
     let icons = [
       "rosette",
       "fork.knife",
-      "magnifyingglass"]
+      "magnifyingglass",
+      //"magnifyingglass",
+    ]
 
     let titles = [
         "Conquistas",
         "Receitas",
-        "Buscar"
-        
+        "Buscar",
+        //"Previa"
     ]
     
     override func viewDidLoad() {
@@ -71,3 +74,18 @@ class TabBarController: UITabBarController {
     }
 
 }
+
+// MARK: - Preview
+#if DEBUG
+import SwiftUI
+
+@available(iOS 13, *)
+struct TabBarController_Preview: PreviewProvider {
+    static var previews: some View {
+        Group {
+            TabBarController().showPreview().previewDevice("iPhone SE (3rd generation)")
+            TabBarController().showPreview().previewDevice("iPhone SE (3rd generation)").previewInterfaceOrientation(.landscapeLeft)
+        }
+    }
+}
+#endif
