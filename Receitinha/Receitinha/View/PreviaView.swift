@@ -220,7 +220,7 @@ class PreviaView: UIView {
                         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
                         button.setTitleColor(.white, for: .normal)
                         button.tintColor = UIColor(named: "azul-acao")
-                        button.layer.cornerRadius = 30
+                        button.layer.cornerRadius = 25
                         button.backgroundColor = UIColor(named: "azul-acao")
                         //button.configuration = .filled()
                         button.layer.shadowOffset = CGSize(width: 0, height: 3)
