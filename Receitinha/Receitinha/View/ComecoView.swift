@@ -36,7 +36,7 @@ class ComecoView: UIView {
     } ()
     
     
-    let comecarButton = UIButton (configuration: .filled())
+    let comecarButton = UIButton ()
     
     let minorStack = UIStackView ()
     
@@ -57,23 +57,21 @@ class ComecoView: UIView {
     private func setupComecoViewHierarchy() {
         self.addSubview(componentesStack)
         
+        componentesStack.addArrangedSubview(comecarLabel)
+        componentesStack.addArrangedSubview(cenouraImage)
         componentesStack.addArrangedSubview(minorStack)
-        componentesStack.addArrangedSubview(preparacaoLabel)
         componentesStack.addArrangedSubview(comecarButton)
         
-        minorStack.addArrangedSubview(comecarLabel)
-        minorStack.addArrangedSubview(cenouraImage)
         minorStack.addArrangedSubview(lavarMaosLabel)
-        
+        minorStack.addArrangedSubview(preparacaoLabel)
     }
 
     private func setupComecoViewsAtributes () {
         minorStack.axis = .vertical
-        //minorStack.spacing = 40
+        minorStack.spacing = 8
         
         componentesStack.axis = .vertical
-        componentesStack.distribution = .fill
-        //componentesStack.spacing = 40
+        componentesStack.distribution = .equalSpacing
         
         cenouraImage.contentMode = .scaleAspectFit
         cenouraImage.image = UIImage(named: "cenourinhaComColher")
@@ -81,6 +79,12 @@ class ComecoView: UIView {
         comecarButton.setTitle("Começar preparação", for: .normal)
         comecarButton.backgroundColor = UIColor(named: "azul-acao")
         comecarButton.layer.cornerRadius = 25
+        
+        //shadow do botao
+        comecarButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        comecarButton.layer.shadowRadius = 10
+        comecarButton.layer.shadowColor = UIColor.black.cgColor
+        comecarButton.layer.shadowOpacity = 0.25
         
         lavarMaosLabel.numberOfLines = 0
         lavarMaosLabel.textAlignment = .center
@@ -90,21 +94,13 @@ class ComecoView: UIView {
         
         preparacaoLabel.numberOfLines = 0
         preparacaoLabel.textAlignment = .center
-        
-        
-        preparacaoLabel.backgroundColor = .systemPink
-        comecarLabel.backgroundColor = .green
-        //minorStack.backgroundColor = .blue
-        cenouraImage.backgroundColor = .yellow
-        lavarMaosLabel.backgroundColor = .purple
-        componentesStack.backgroundColor = .brown
     }
     
     
     private func setupComecoConstraints () {
         componentesStack.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            componentesStack.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 40),
+            componentesStack.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 16),
             componentesStack.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -8),
             componentesStack.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,constant: 16),
             componentesStack.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,constant: -16)
@@ -114,15 +110,6 @@ class ComecoView: UIView {
         NSLayoutConstraint.activate([
             comecarButton.heightAnchor.constraint(equalToConstant: 56)
         ])
-        
-        cenouraImage.translatesAutoresizingMaskIntoConstraints = false
-        cenouraImage.setContentHuggingPriority(.defaultLow, for: .vertical)
-        
-        preparacaoLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
-        
-        comecarLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
-        
-        lavarMaosLabel.setContentHuggingPriority(.defaultLow, for: .vertical)
     }
     
 }
