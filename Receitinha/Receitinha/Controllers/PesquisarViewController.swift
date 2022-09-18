@@ -7,7 +7,9 @@
 
 import UIKit
 
-let listaReceitas = ["banana com nescau", "misto quente", "bolo", "bolacha"]
+let listaReceitas = ["banana com nescau", "misto quente"]
+
+var indiceResult: [Int] = []
 
 var quantidadeCell = 0
 
@@ -55,34 +57,48 @@ class PesquisarViewController: UIViewController, UISearchResultsUpdating, UITabl
         let viewController = searchController.searchResultsController as? ResultsViewController
         viewController?.view.backgroundColor = UIColor(named: "blueBackground")
         
-        print(text)
-        var listaResultado: [String] = []
+        indiceResult = []
         
         
         if let foo = listaReceitas.enumerated().first(where: {$0.element.contains(text.lowercased())}) {
            // do something with foo
-            for titulo in listaReceitas {
-                if titulo.contains(text.lowercased()) {
-                    listaResultado.append(titulo)
+            for i in 0...listaReceitas.count-1 {
+                if listaReceitas[i].contains(text.lowercased()) {
+                    indiceResult.append(i)
                 }
-                quantidadeCell = listaResultado.count
-                pesquisarView.receitasTableView.reloadData()
             }
-            
         }
-        
-        print(listaResultado)
-        //print(teste)
+        quantidadeCell = indiceResult.count
+        pesquisarView.receitasTableView.reloadData()
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return quantidadeCell
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = pesquisarView.receitasTableView.dequeueReusableCell(withIdentifier: ReceitasTableViewCell.recipeCellIdentifier, for: indexPath) as! ReceitasTableViewCell
-            cell.backgroundColor = UIColor(named: "blueBackground")
-            return cell
+        let cell = pesquisarView.receitasTableView.dequeueReusableCell(withIdentifier: ReceitasTableViewCell.recipeCellIdentifier, for: indexPath) as! ReceitasTableViewCell
+        cell.backgroundColor = UIColor(named: "blueBackground")
+        
+        let receita = Receita.receitas()
+        let receitaAtual = indiceResult[indexPath.item]
+        
+        cell.imageRecipe.image = UIImage(named: receita[receitaAtual].imagemPrevia)
+        
+        var duracao = String(receita[receitaAtual].duracao)
+        duracao = "Duração: " + duracao + " minutos"
+        var dificuldade = receita[receitaAtual].dificuldade
+        dificuldade = "Dificuldade: " + dificuldade
+        
+        cell.nameRecipe.text = receita[receitaAtual].titulo
+        cell.dificultyRecipe.text = dificuldade
+        cell.durationRecipe.text = duracao
+        
+        return cell
         }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 128
+    }
 }
 
 
