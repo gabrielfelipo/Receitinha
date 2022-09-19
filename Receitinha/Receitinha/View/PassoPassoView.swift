@@ -49,7 +49,6 @@ class PassoPassoView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupViewsHierarchy()
         setupViewsAttributes()
         setupConstraints()

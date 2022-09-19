@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVFoundation
+
 extension PassoPassoViewController: PassoPassoDelegate{
     func anterior() {
         if passo == receitas[receitaIndex!].troca + 1 {
@@ -33,6 +35,32 @@ extension PassoPassoViewController: PassoPassoDelegate{
     
     func oiSomTestano() {
         
+        receitas[receitaIndex!].audioDescricao[passo]
+        if let player = player, player.isPlaying {
+            // num faz nada
+        }
+        else {
+            let urlString = Bundle.main.path(forResource: receitas[receitaIndex!].audioDescricao[passo], ofType: "mp3")
+            do {
+                try AVAudioSession.sharedInstance().setMode(.default)
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                
+                guard let urlString = urlString else{
+                    return
+                }
+                
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                
+                guard let player = player else{ // Unrapping
+                    return
+                }
+                
+                player.play()
+            }
+            catch {
+                fatalError("Deu BO")
+            }
+        }
     }
     
     

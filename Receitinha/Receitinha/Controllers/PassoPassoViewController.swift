@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PassoPassoViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class PassoPassoViewController: UIViewController {
     var passo = 0
     let passoPassoView = PassoPassoView()
     let receitas = Receita.receitas()
+    var player: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
