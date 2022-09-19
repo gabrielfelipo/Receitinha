@@ -22,11 +22,15 @@ class PreviaViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     func setupPreviaViewController () {
         view.backgroundColor = UIColor(named: "blueBackground")
         self.navigationItem.title = receitas[i!].titulo
-        // TODO: SETAR O LEFT ITEM (PRECISA DE ALGUM VC ANTES)
-        self.navigationItem.leftBarButtonItem?.title = "Voltar para o menu"
+        
         
         previaView.imagemCapa.image = UIImage(named: receitas[i!].imagemPrevia)
         previaView.descricaoLabel.text = receitas[i!].descricaoPrevia

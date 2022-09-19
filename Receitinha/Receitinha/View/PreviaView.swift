@@ -254,6 +254,7 @@ class PreviaView: UIView {
     
     
     fileprivate func setupViewHierarchy(){
+        self.addSubview(UIView(frame: .zero))
         self.addSubview(scrollView)
         
         scrollView.addSubview(contentView)

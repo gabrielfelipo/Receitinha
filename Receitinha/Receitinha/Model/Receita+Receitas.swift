@@ -18,6 +18,7 @@ extension Receita {
                 dificuldade: "Fácil",
                 descricaoPrevia: "Essa é uma receita de uma deliciosa banana com leite em pó, Nescau e farinha láctea. Um lanche prático, rápido e muito divertido de fazer!!",
                 duracao: 10,
+                
                 objetos: [
                     "1 colher",
                     "1 prato"
@@ -28,6 +29,7 @@ extension Receita {
                     "Achocolatado em pó",
                     "Farinha láctea"
                 ],
+                troca: 5,
                 imagem: [
                     "IMG_BananaComNescau_1",
                     "IMG_BananaComNescau_2",
@@ -88,7 +90,7 @@ extension Receita {
                 imagemPrevia: "IMG_MistoQuente_Preview",
                 dificuldade: "Médio",
                 descricaoPrevia: "Essa é uma receita muito gostosa e prática de um misto quente bastante recheado perfeito para um lachinho da tarde ou café da manhã",
-                duracao: 10,
+                duracao: 15,
                 objetos: [
                     "1 prato",
                     "1 sanduichera"
@@ -98,6 +100,7 @@ extension Receita {
                     "Presunto fatiado",
                     "Queijo Mussarela fatiado"
                 ],
+                troca: 4,
                 imagem: [
                     "IMG_MistoQuente_1",
                     "IMG_MistoQuente_2",
@@ -128,9 +131,9 @@ extension Receita {
                     "Coloque o pão",
                     "Coloque o sanduiche",
                     "Posicione a sanduicheira",
-                    "Espere 5 minutos",
+                    "Espere 3 minutos",
                     "Abra a sanduicheira",
-                    "Espere 5 minutos",
+                    "Espere 3 minutos",
                     "Agora é só servir!"
                 ],
                 descricao: [

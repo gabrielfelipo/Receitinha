@@ -11,6 +11,7 @@ extension PreviaViewController: PreviaViewDelegate{
     func iniciarReceita() {
         let passoPassoViewController = PassoPassoViewController()
         print("pegou")
+        passoPassoViewController.receitaIndex = i
         navigationController?.pushViewController(passoPassoViewController, animated: true)
     }
     

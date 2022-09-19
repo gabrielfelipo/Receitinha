@@ -18,6 +18,9 @@ extension ReceitasViewController: UITableViewDelegate {
         if previaViewController.i ?? 0 < indexPath.row {
             previaViewController.i = indexPath.row
         } else {}
+        let backItem = UIBarButtonItem()
+        backItem.title = "Voltar para receitas"
+        navigationItem.backBarButtonItem = backItem
         navigationController?.pushViewController(previaViewController, animated: true)
     }
 }

@@ -19,8 +19,8 @@ extension ReceitasViewController: UITableViewDataSource {
         cell.backgroundColor = UIColor(named: "blueBackground")
         cell.imageRecipe.image = UIImage(named: receitas[indexPath.row].imagemPrevia)
         cell.nameRecipe.text = receitas[indexPath.row].titulo
-        cell.durationRecipe.text = "\(String(receitas[indexPath.row].duracao)) minutos"
-        cell.dificultyRecipe.text = receitas[indexPath.row].dificuldade
+        cell.durationRecipe.text = "Duração: \(String(receitas[indexPath.row].duracao)) minutos"
+        cell.dificultyRecipe.text = "Dificuldade: \(receitas[indexPath.row].dificuldade)"
         return cell
     }
     
