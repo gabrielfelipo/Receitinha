@@ -60,7 +60,7 @@ class PesquisarViewController: UIViewController, UISearchResultsUpdating, UITabl
         indiceResult = []
         
         
-        if let foo = listaReceitas.enumerated().first(where: {$0.element.contains(text.lowercased())}) {
+        if ((listaReceitas.enumerated().first(where: {$0.element.contains(text.lowercased())})) != nil) {
            // do something with foo
             for i in 0...listaReceitas.count-1 {
                 if listaReceitas[i].contains(text.lowercased()) {

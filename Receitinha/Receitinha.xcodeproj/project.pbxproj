@@ -167,7 +167,6 @@
 				0DF1FBC028D0EE41005EE8D7 /* PassoPassoView.swift */,
 				4725FB0E28D8D0E500DC3A16 /* PassoPassoDelegate.swift */,
 				CA67837E28D4BD02006134FF /* ConquistasCollectionViewCell.swift */,
-				0DF1FBC228D0EE57005EE8D7 /* CheckpointView.swift */,
 				0DF1FBC428D0EE7E005EE8D7 /* ConquistasView.swift */,
 				0DF1FBC628D0EED6005EE8D7 /* PesquisarView.swift */,
 				0DB5C28428D21AE300267028 /* ReceitasTableViewCell.swift */,
@@ -401,7 +400,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DD453B828D3AD1500DA32F3 /* ConclusaoView.swift in Sources */,
-				0DF1FBC328D0EE57005EE8D7 /* CheckpointView.swift in Sources */,
 				CA826B4C28CFC05D00D5268F /* UIViewController+Preview.swift in Sources */,
 				0D66D52E28CFBD7A00F1A41C /* PesquisarViewController.swift in Sources */,
 				D371043628D60044004F138B /* CheckViewController+Delegate.swift in Sources */,

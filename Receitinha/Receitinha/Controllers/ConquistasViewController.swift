@@ -8,7 +8,7 @@ import UIKit
 
 class ConquistasViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var conquistasDesbloqueadas = [true,false]
+    var conquistasDesbloqueadas = [false,false]
     
     let conquistasView = ConquistasView()
     
