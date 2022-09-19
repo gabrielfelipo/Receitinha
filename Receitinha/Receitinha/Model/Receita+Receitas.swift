@@ -45,7 +45,7 @@ extension Receita {
                     
                 ],
                 tituloInstrucao: [
-                    "Pegue um prato",
+                    "Pegue um prato e coloque em cima da mesa",
                     "Pegue uma colher e coloque ao lado do prato",
                     "Pegue uma banana e coloque em cima da mesa",
                     "Pegue o leite em pó e coloque junto da banana",

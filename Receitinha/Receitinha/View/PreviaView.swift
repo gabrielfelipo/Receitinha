@@ -14,7 +14,12 @@ class PreviaView: UIView {
     
     weak var delegate: PreviaViewDelegate?
     
-    let scrollView = UIScrollView()
+    let scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.showsVerticalScrollIndicator = false
+        return scroll
+    }()
+    
         let contentView = UIView()
         
     let stackViewGlobal: UIStackView = {

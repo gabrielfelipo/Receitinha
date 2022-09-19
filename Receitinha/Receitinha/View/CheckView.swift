@@ -31,6 +31,7 @@ class CheckView: UIView {
     
     let scrollView: UIScrollView = {
         var scroll = UIScrollView()
+        scroll.showsVerticalScrollIndicator = false
 //        scroll.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 1110)
         return scroll
     }()
@@ -101,7 +102,7 @@ class CheckView: UIView {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
-
+        tableView.showsVerticalScrollIndicator = false
 //        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.isScrollEnabled = true
         tableView.separatorColor = UIColor(named: "blueBackground")
