@@ -346,8 +346,8 @@ class PreviaView: UIView {
         stackObjetos.translatesAutoresizingMaskIntoConstraints = false
         buttonIniciarReceitaContainer.translatesAutoresizingMaskIntoConstraints = false
         buttonIniciarReceita.translatesAutoresizingMaskIntoConstraints = false
-//        descricaoLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
-//        descricaoLabel.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
+        descricaoLabelContainer.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        descricaoLabelContainer.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
     }
     
     fileprivate func setupConstraints(){
@@ -372,7 +372,7 @@ class PreviaView: UIView {
         NSLayoutConstraint.activate([
             scrollView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor),
             scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-//            scrollView.heightAnchor.constraint(equalTo: stackViewGlobal.heightAnchor, constant: .tabBarController.tabBar.frame.size.height),
+            //scrollView.heightAnchor.constraint(equalTo: stackViewGlobal.heightAnchor),
             scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
         

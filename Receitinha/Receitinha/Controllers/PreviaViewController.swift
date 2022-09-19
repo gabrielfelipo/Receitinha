@@ -9,7 +9,7 @@ import UIKit
 
 class PreviaViewController: UIViewController {
     
-    var i: Int? = 1
+    var i: Int?
     let previaView = PreviaView()
     let receitas = Receita.receitas()
 
