@@ -6,13 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 extension PreviaViewController: PreviaViewDelegate{
     func iniciarReceita() {
         let passoPassoViewController = PassoPassoViewController()
-        print("pegou")
         passoPassoViewController.receitaIndex = i
-        navigationController?.pushViewController(passoPassoViewController, animated: true)
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Sair da receita"
+        navigationItem.backBarButtonItem = backItem
+        
+        self.navigationController?.pushViewController(passoPassoViewController, animated: true)
     }
     
     

@@ -25,7 +25,7 @@ class ResultsViewController: UIViewController {
 }
 
 
-class PesquisarViewController: UIViewController, UISearchResultsUpdating, UITableViewDelegate, UITableViewDataSource {
+class PesquisarViewController: UIViewController, UISearchResultsUpdating {
     
     let searchController = UISearchController(searchResultsController: ResultsViewController())
     
@@ -70,34 +70,6 @@ class PesquisarViewController: UIViewController, UISearchResultsUpdating, UITabl
         }
         quantidadeCell = indiceResult.count
         pesquisarView.receitasTableView.reloadData()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return quantidadeCell
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = pesquisarView.receitasTableView.dequeueReusableCell(withIdentifier: ReceitasTableViewCell.recipeCellIdentifier, for: indexPath) as! ReceitasTableViewCell
-        cell.backgroundColor = UIColor(named: "blueBackground")
-        
-        let receita = Receita.receitas()
-        let receitaAtual = indiceResult[indexPath.item]
-        
-        cell.imageRecipe.image = UIImage(named: receita[receitaAtual].imagemPrevia)
-        
-        var duracao = String(receita[receitaAtual].duracao)
-        duracao = "Duração: " + duracao + " minutos"
-        var dificuldade = receita[receitaAtual].dificuldade
-        dificuldade = "Dificuldade: " + dificuldade
-        
-        cell.nameRecipe.text = receita[receitaAtual].titulo
-        cell.dificultyRecipe.text = dificuldade
-        cell.durationRecipe.text = duracao
-        
-        return cell
-        }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 128
     }
 }
 
