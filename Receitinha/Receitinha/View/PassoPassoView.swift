@@ -8,6 +8,8 @@
 import UIKit
 
 class PassoPassoView: UIView {
+    
+    weak var delegate: PassoPassoDelegate?
 
     // MARK: - Inicializacao dos componentes
     let tituloReceita = UILabel()
@@ -114,6 +116,7 @@ class PassoPassoView: UIView {
         tituloDescricao.text = "Descasque a Banana"
         tituloDescricao.textAlignment = .center
         tituloDescricao.font = UIFont.boldSystemFont(ofSize: 30.0)
+        tituloDescricao.numberOfLines = 0
         
         corpoDescricao.text = "Tire toda a casca da banana e depois coloque a banana descascada em cima do prato"
         corpoDescricao.textAlignment = .center
@@ -326,13 +329,13 @@ class PassoPassoView: UIView {
     
     @objc func tappedButton(sender: UIButton) {
         if sender == somBotao {
-            print("Oi, eu sou a voz da alexa")
+            delegate?.oiSomTestano()
         }
         else if sender == anteriorBotao {
-            print("Você não pode voltar, agora va até o fim")
+            delegate?.anterior()
         }
         else {
-            print("Vamo la, quase acabando")
+            delegate?.proximo()
         }
     }
 

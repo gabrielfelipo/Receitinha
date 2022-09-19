@@ -9,20 +9,40 @@ import UIKit
 
 class PassoPassoViewController: UIViewController {
     
+    var receitaIndex: Int?
+    var visitCheckpoint: Bool? = false
+    var passo = 0
     let passoPassoView = PassoPassoView()
+    let receitas = Receita.receitas()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view = passoPassoView
         setupPassoPassoViewController()
+        passoPassoView.delegate = self
         
         // Do any additional setup after loading the view.
+    }
+    
+    func getJsonPasso() {
+        passoPassoView.passoAtual.text = "Preparação: Passo \(passo+1) de \(receitas[receitaIndex!].audioDescricao.count)"
+        passoPassoView.imagemPasso.image = UIImage(named: receitas[receitaIndex!].imagem[passo])
+        passoPassoView.tituloDescricao.text = receitas[receitaIndex!].tituloInstrucao[passo]
+        if receitas[receitaIndex!].descricao[passo] == ""{
+            passoPassoView.corpoDescricaoStackView.isHidden = true
+        }else{
+            passoPassoView.corpoDescricaoStackView.isHidden = false
+        }
+        passoPassoView.corpoDescricao.text = receitas[receitaIndex!].descricao[passo]
     }
     
     func setupPassoPassoViewController () {
         view.backgroundColor = UIColor(named: "blueBackground")
         self.navigationController?.navigationBar.prefersLargeTitles = false
+        passoPassoView.tituloReceita.text = receitas[receitaIndex!].titulo
+        getJsonPasso()
+        
     }
 
 }

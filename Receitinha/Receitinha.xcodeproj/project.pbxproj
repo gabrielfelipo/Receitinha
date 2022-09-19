@@ -22,6 +22,10 @@
 		0DF1FBC328D0EE57005EE8D7 /* CheckpointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1FBC228D0EE57005EE8D7 /* CheckpointView.swift */; };
 		0DF1FBC528D0EE7E005EE8D7 /* ConquistasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1FBC428D0EE7E005EE8D7 /* ConquistasView.swift */; };
 		0DF1FBC728D0EED6005EE8D7 /* PesquisarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1FBC628D0EED6005EE8D7 /* PesquisarView.swift */; };
+		4725FB0B28D8B6F400DC3A16 /* PreviaViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0A28D8B6F400DC3A16 /* PreviaViewDelegate.swift */; };
+		4725FB0D28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0C28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift */; };
+		4725FB0F28D8D0E500DC3A16 /* PassoPassoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0E28D8D0E500DC3A16 /* PassoPassoDelegate.swift */; };
+		4725FB1128D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift */; };
 		472B6E4328D1208B00A0D036 /* MP3_MistoQuente_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3428D1208B00A0D036 /* MP3_MistoQuente_5.mp3 */; };
 		472B6E4428D1208B00A0D036 /* MP3_MistoQuente_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3528D1208B00A0D036 /* MP3_MistoQuente_7.mp3 */; };
 		472B6E4528D1208B00A0D036 /* MP3_MistoQuente_10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3628D1208B00A0D036 /* MP3_MistoQuente_10.mp3 */; };
@@ -38,12 +42,12 @@
 		472B6E5028D1208B00A0D036 /* MP3_MistoQuente_12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E4128D1208B00A0D036 /* MP3_MistoQuente_12.mp3 */; };
 		472B6E5128D1208B00A0D036 /* MP3_MistoQuente_9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E4228D1208B00A0D036 /* MP3_MistoQuente_9.mp3 */; };
 		477E934B28CFB532009E57A8 /* Receita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E934A28CFB532009E57A8 /* Receita.swift */; };
-		8F2391EF28D5F1BD00B75299 /* GanhoConquistasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2391EE28D5F1BD00B75299 /* GanhoConquistasView.swift */; };
-		8F2391F128D5F1D600B75299 /* GanhoConquistasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2391F028D5F1D600B75299 /* GanhoConquistasViewController.swift */; };
-		8FD221E728D27640008EB0C4 /* PassoPassoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD221E628D27640008EB0C4 /* PassoPassoViewController.swift */; };
 		47FAFDDE28D23D79004175C1 /* PreviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FAFDDD28D23D79004175C1 /* PreviaView.swift */; };
 		47FAFDE028D23EF9004175C1 /* PreviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FAFDDF28D23EF9004175C1 /* PreviaViewController.swift */; };
 		47FAFDE228D244C0004175C1 /* LinhaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FAFDE128D244C0004175C1 /* LinhaView.swift */; };
+		8F2391EF28D5F1BD00B75299 /* GanhoConquistasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2391EE28D5F1BD00B75299 /* GanhoConquistasView.swift */; };
+		8F2391F128D5F1D600B75299 /* GanhoConquistasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2391F028D5F1D600B75299 /* GanhoConquistasViewController.swift */; };
+		8FD221E728D27640008EB0C4 /* PassoPassoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD221E628D27640008EB0C4 /* PassoPassoViewController.swift */; };
 		8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */; };
 		CA67837F28D4BD02006134FF /* ConquistasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67837E28D4BD02006134FF /* ConquistasCollectionViewCell.swift */; };
 		CA67838128D4BD11006134FF /* Conquista.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67838028D4BD11006134FF /* Conquista.swift */; };
@@ -83,6 +87,10 @@
 		0DF1FBC228D0EE57005EE8D7 /* CheckpointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckpointView.swift; sourceTree = "<group>"; };
 		0DF1FBC428D0EE7E005EE8D7 /* ConquistasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConquistasView.swift; sourceTree = "<group>"; };
 		0DF1FBC628D0EED6005EE8D7 /* PesquisarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisarView.swift; sourceTree = "<group>"; };
+		4725FB0A28D8B6F400DC3A16 /* PreviaViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviaViewDelegate.swift; sourceTree = "<group>"; };
+		4725FB0C28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviaViewController+PreviaViewDelegate.swift"; sourceTree = "<group>"; };
+		4725FB0E28D8D0E500DC3A16 /* PassoPassoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassoPassoDelegate.swift; sourceTree = "<group>"; };
+		4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassoPassoViewController+PassoPassoDelegate.swift"; sourceTree = "<group>"; };
 		472B6E3428D1208B00A0D036 /* MP3_MistoQuente_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_5.mp3; sourceTree = "<group>"; };
 		472B6E3528D1208B00A0D036 /* MP3_MistoQuente_7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_7.mp3; sourceTree = "<group>"; };
 		472B6E3628D1208B00A0D036 /* MP3_MistoQuente_10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_10.mp3; sourceTree = "<group>"; };
@@ -99,12 +107,12 @@
 		472B6E4128D1208B00A0D036 /* MP3_MistoQuente_12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_12.mp3; sourceTree = "<group>"; };
 		472B6E4228D1208B00A0D036 /* MP3_MistoQuente_9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_9.mp3; sourceTree = "<group>"; };
 		477E934A28CFB532009E57A8 /* Receita.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receita.swift; sourceTree = "<group>"; };
-		8F2391EE28D5F1BD00B75299 /* GanhoConquistasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GanhoConquistasView.swift; sourceTree = "<group>"; };
-		8F2391F028D5F1D600B75299 /* GanhoConquistasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GanhoConquistasViewController.swift; sourceTree = "<group>"; };
-		8FD221E628D27640008EB0C4 /* PassoPassoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassoPassoViewController.swift; sourceTree = "<group>"; };
 		47FAFDDD28D23D79004175C1 /* PreviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviaView.swift; sourceTree = "<group>"; };
 		47FAFDDF28D23EF9004175C1 /* PreviaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviaViewController.swift; sourceTree = "<group>"; };
 		47FAFDE128D244C0004175C1 /* LinhaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaView.swift; sourceTree = "<group>"; };
+		8F2391EE28D5F1BD00B75299 /* GanhoConquistasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GanhoConquistasView.swift; sourceTree = "<group>"; };
+		8F2391F028D5F1D600B75299 /* GanhoConquistasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GanhoConquistasViewController.swift; sourceTree = "<group>"; };
+		8FD221E628D27640008EB0C4 /* PassoPassoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassoPassoViewController.swift; sourceTree = "<group>"; };
 		8FF9F7BD28CFEDB60004A681 /* Receita+Receitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receita+Receitas.swift"; sourceTree = "<group>"; };
 		CA67837E28D4BD02006134FF /* ConquistasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConquistasCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA67838028D4BD11006134FF /* Conquista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conquista.swift; sourceTree = "<group>"; };
@@ -147,6 +155,7 @@
 				CAEE6FD428CFACD2007AA493 /* LaunchScreen.storyboard */,
 				0DF1FBBE28D0EE0A005EE8D7 /* ReceitasView.swift */,
 				0DF1FBC028D0EE41005EE8D7 /* PassoPassoView.swift */,
+				4725FB0E28D8D0E500DC3A16 /* PassoPassoDelegate.swift */,
 				CA67837E28D4BD02006134FF /* ConquistasCollectionViewCell.swift */,
 				0DF1FBC228D0EE57005EE8D7 /* CheckpointView.swift */,
 				0DF1FBC428D0EE7E005EE8D7 /* ConquistasView.swift */,
@@ -156,6 +165,7 @@
 				0D50649128D4C8D400020F17 /* ComecoView.swift */,
 				8F2391EE28D5F1BD00B75299 /* GanhoConquistasView.swift */,
 				47FAFDDD28D23D79004175C1 /* PreviaView.swift */,
+				4725FB0A28D8B6F400DC3A16 /* PreviaViewDelegate.swift */,
 				47FAFDE128D244C0004175C1 /* LinhaView.swift */,
 			);
 			path = View;
@@ -194,8 +204,10 @@
 				0DD453B528D3ACFF00DA32F3 /* ConclusaoViewController.swift */,
 				0D50648F28D4C58700020F17 /* ComecoViewController.swift */,
 				8FD221E628D27640008EB0C4 /* PassoPassoViewController.swift */,
+				4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift */,
 				8F2391F028D5F1D600B75299 /* GanhoConquistasViewController.swift */,
 				47FAFDDF28D23EF9004175C1 /* PreviaViewController.swift */,
+				4725FB0C28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -269,7 +281,6 @@
 		CAEE6FC828CFACD1007AA493 /* Receitinha */ = {
 			isa = PBXGroup;
 			children = (
-				D3C7D6FE28D11AD100B08BA6 /* Audios */,
 				CAEE6FC928CFACD1007AA493 /* AppDelegate.swift */,
 				CAEE6FCB28CFACD1007AA493 /* SceneDelegate.swift */,
 				0D66D52C28CFBD3B00F1A41C /* Controllers */,
@@ -278,16 +289,6 @@
 				0D66D52A28CFBCFB00F1A41C /* Supporting Files */,
 			);
 			path = Receitinha;
-			sourceTree = "<group>";
-		};
-		D3C7D6FE28D11AD100B08BA6 /* Audios */ = {
-			isa = PBXGroup;
-			children = (
-				472B6E3328D1207900A0D036 /* MistoQuente */,
-				472B6E3228D1205A00A0D036 /* BananaComNescau */,
-			);
-			name = Audios;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +401,7 @@
 				0DD453B628D3ACFF00DA32F3 /* ConclusaoViewController.swift in Sources */,
 				CA67837F28D4BD02006134FF /* ConquistasCollectionViewCell.swift in Sources */,
 				8F2391F128D5F1D600B75299 /* GanhoConquistasViewController.swift in Sources */,
+				4725FB0F28D8D0E500DC3A16 /* PassoPassoDelegate.swift in Sources */,
 				0DB5C28928D221AC00267028 /* ReceitasViewController+Delegate.swift in Sources */,
 				0D50649228D4C8D400020F17 /* ComecoView.swift in Sources */,
 				8FD221E728D27640008EB0C4 /* PassoPassoViewController.swift in Sources */,
@@ -408,14 +410,17 @@
 				0DB5C28528D21AE300267028 /* ReceitasTableViewCell.swift in Sources */,
 				CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */,
 				CAEE6FCA28CFACD1007AA493 /* AppDelegate.swift in Sources */,
+				4725FB0D28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift in Sources */,
 				CAEE6FCC28CFACD1007AA493 /* SceneDelegate.swift in Sources */,
 				0DB5C28728D21FA100267028 /* ReceitasViewController+DataSource.swift in Sources */,
 				47FAFDE228D244C0004175C1 /* LinhaView.swift in Sources */,
 				0DF1FBBF28D0EE0A005EE8D7 /* ReceitasView.swift in Sources */,
 				47FAFDDE28D23D79004175C1 /* PreviaView.swift in Sources */,
 				0DF1FBC528D0EE7E005EE8D7 /* ConquistasView.swift in Sources */,
+				4725FB0B28D8B6F400DC3A16 /* PreviaViewDelegate.swift in Sources */,
 				8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */,
 				CA67838128D4BD11006134FF /* Conquista.swift in Sources */,
+				4725FB1128D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

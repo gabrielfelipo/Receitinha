@@ -10,13 +10,20 @@ import UIKit
 class ReceitasViewController: UIViewController {
 
     let receitasView = ReceitasView ()
+    let receitas = Receita.receitas()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupReceitasViewController()
+                setupReceitasViewController()
         setupTableView()
         self.view = receitasView
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
+
     }
     
     func setupTableView() {
@@ -29,7 +36,9 @@ class ReceitasViewController: UIViewController {
         self.navigationItem.title = "Escolher receita"
     }
     
-    
+    @objc func tableViewClicked(){
+        print("clicou")
+    }
 
 }
 
