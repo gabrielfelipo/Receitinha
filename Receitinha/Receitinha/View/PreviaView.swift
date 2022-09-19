@@ -12,6 +12,8 @@ class PreviaView: UIView {
     //pode travar a rotação?
     //como configura scroll view aaaaaaaaaaaaaaaaaaaaaaaaaa - consegui +-
     
+    weak var delegate: PreviaViewDelegate?
+    
     let scrollView = UIScrollView()
         let contentView = UIView()
         
@@ -344,33 +346,41 @@ class PreviaView: UIView {
         stackObjetos.translatesAutoresizingMaskIntoConstraints = false
         buttonIniciarReceitaContainer.translatesAutoresizingMaskIntoConstraints = false
         buttonIniciarReceita.translatesAutoresizingMaskIntoConstraints = false
+//        descricaoLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
+//        descricaoLabel.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
     }
     
     fileprivate func setupConstraints(){
         
         //constraints da scrollview
-        NSLayoutConstraint.activate([
-            scrollView.heightAnchor.constraint(equalTo: self.heightAnchor),
-            scrollView.widthAnchor.constraint(equalTo: self.safeAreaLayoutGuide.widthAnchor),
-            scrollView.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
-            scrollView.centerYAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerYAnchor),
-            scrollView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-//            scrollView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
-//            scrollView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
-//            scrollView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
-            
-            
-        ])
+//        NSLayoutConstraint.activate([
+//            scrollView.heightAnchor.constraint(equalTo: self.heightAnchor),
+//            scrollView.widthAnchor.constraint(equalTo: self.safeAreaLayoutGuide.widthAnchor),
+//            scrollView.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
+//            scrollView.centerYAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerYAnchor),
+//            scrollView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+////            scrollView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+////            scrollView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+////            scrollView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+//
+//
+//        ])
         
         // TODO: -AJUSTAR O TAMANHO DA SCROLL
-        scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height:  UIScreen.main.bounds.height*100)
+        //scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height:  UIScreen.main.bounds.height*100)
+        
+        NSLayoutConstraint.activate([
+            scrollView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor),
+            scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+//            scrollView.heightAnchor.constraint(equalTo: stackViewGlobal.heightAnchor, constant: .tabBarController.tabBar.frame.size.height),
+            scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+        ])
         
         //constraints da contentview
         NSLayoutConstraint.activate([
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
-            //contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
         
         //constraints da stackview global
@@ -378,7 +388,7 @@ class PreviaView: UIView {
             stackViewGlobal.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             stackViewGlobal.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             stackViewGlobal.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            //stackViewGlobal.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            stackViewGlobal.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
         
         //constraints da imagem de capa container
@@ -536,8 +546,8 @@ class PreviaView: UIView {
         
         //constraints do botao
         NSLayoutConstraint.activate([
-            buttonIniciarReceita.centerYAnchor.constraint(equalTo: buttonIniciarReceitaContainer.centerYAnchor),
-            buttonIniciarReceita.centerXAnchor.constraint(equalTo: buttonIniciarReceitaContainer.centerXAnchor),
+            buttonIniciarReceita.topAnchor.constraint(equalTo: buttonIniciarReceitaContainer.topAnchor),
+            buttonIniciarReceita.bottomAnchor.constraint(equalTo: buttonIniciarReceitaContainer.bottomAnchor),
             buttonIniciarReceita.trailingAnchor.constraint(equalTo: buttonIniciarReceitaContainer.trailingAnchor, constant: -16),
             buttonIniciarReceita.leadingAnchor.constraint(equalTo: buttonIniciarReceitaContainer.leadingAnchor, constant: 16),
             buttonIniciarReceita.heightAnchor.constraint(equalToConstant: 60)
@@ -549,7 +559,7 @@ class PreviaView: UIView {
     }
     
     @objc func tappedButton (sender: UIButton){
-        print("clicou no botao")
+        delegate?.iniciarReceita()
     }
     
     

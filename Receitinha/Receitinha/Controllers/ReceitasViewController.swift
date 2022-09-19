@@ -10,6 +10,7 @@ import UIKit
 class ReceitasViewController: UIViewController {
 
     let receitasView = ReceitasView ()
+    let receitas = Receita.receitas()
     
     override func viewDidLoad() {
         super.viewDidLoad()
