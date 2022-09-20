@@ -46,6 +46,10 @@ class PassoPassoViewController: UIViewController {
         view.backgroundColor = UIColor(named: "blueBackground")
         self.navigationController?.navigationBar.prefersLargeTitles = false
         passoPassoView.tituloReceita.text = receitas[receitaIndex!].titulo
+        
+        //setup da progress bar
+        passoPassoView.setupProgressBar(quantidadePassos: receitas[receitaIndex!].audioDescricao.count)
+        
         getJsonPasso()
         
     }
