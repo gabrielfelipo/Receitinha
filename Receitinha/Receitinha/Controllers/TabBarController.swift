@@ -37,6 +37,7 @@ class TabBarController: UITabBarController {
         
         let defaults = UserDefaults.standard
         Conquista.primeiraVez = defaults.bool(forKey: "primeiraVez")
+        print(Conquista.primeiraVez)
         if Conquista.primeiraVez{
             print("nao foi primeira vez")
             
