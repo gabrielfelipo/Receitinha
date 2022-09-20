@@ -14,7 +14,7 @@ class CheckView: UIView {
     let button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("  Próximo passo ", for: .normal)
+        button.setTitle("  Tudo certo, vamos cozinhar! ", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.tintColor = UIColor(named: "azul-acao")
         button.layer.cornerRadius = 25
@@ -154,7 +154,7 @@ class CheckView: UIView {
             button.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 16),
             button.heightAnchor.constraint(equalToConstant: 58),
             button.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            button.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor,constant: -16)
+            button.topAnchor.constraint(equalTo: stackzona.bottomAnchor,constant: 8)
         ])
         
         NSLayoutConstraint.activate([
@@ -162,7 +162,7 @@ class CheckView: UIView {
             stackzona.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 16),
             stackzona.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             stackzona.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            stackzona.bottomAnchor.constraint(equalTo: button.topAnchor,constant: -16)
+            stackzona.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor,constant: -82)
         ])
         
         NSLayoutConstraint.activate([
