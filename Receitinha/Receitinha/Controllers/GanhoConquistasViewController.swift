@@ -14,7 +14,7 @@ class GanhoConquistaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.hidesBackButton = true
         self.view = ganhoConquistaView
         setupGanhoConquistaViewController()
         ganhoConquistaView.delegate = self
@@ -23,15 +23,37 @@ class GanhoConquistaViewController: UIViewController {
     }
     
     func setupGanhoConquistaViewController () {
+        setupLabel()
+        setupImage()
         view.backgroundColor = UIColor(named: "blueBackground")
         //self.navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
+    func setupLabel(){
+        let boldText = Conquista.conquistas()[indexReceita!].nome[1]
+        let regularText = "Você desbloqueou uma nova conquista!\n"
+        // Setando a parte da string que será bold
+        let bold = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 22)]
+        let boldString = NSMutableAttributedString(string:boldText, attributes:bold)
+        // Setando a parte da string que será regular
+        let regular = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 22)]
+        let regularString = NSMutableAttributedString(string:regularText, attributes: regular)
+        // Juntando as duas strings e configurando a label
+        regularString.append(boldString)
+        ganhoConquistaView.descricaoLabel.attributedText = regularString
+    }
+    
+    func setupImage(){
+        ganhoConquistaView.imagemConquista.image = UIImage(named: Conquista.conquistas()[indexReceita!].imagem[1])
     }
 
 }
 
 extension GanhoConquistaViewController: ButtonDelegate{
     func passarTela() {
-        
+        Conquista.desbloqueadas[indexReceita!] = true
+        Conquista.veioDeOnde = "ganhoConquista"
+        print(Conquista.desbloqueadas)
         self.navigationController?.popToRootViewController(animated: true)
     }
     

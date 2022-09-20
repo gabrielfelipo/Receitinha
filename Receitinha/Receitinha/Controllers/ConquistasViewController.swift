@@ -8,15 +8,11 @@ import UIKit
 
 class ConquistasViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var conquistasDesbloqueadas = [false,false]
+    var conquistasDesbloqueadas: [Bool] = []
     
     let conquistasView = ConquistasView()
     
-// Array de conquistas
-    public let conquistas: [Conquista] = [
-        Conquista(imagem: ["mestreBanana_bloq","mestreBanana_color"], nome: ["Bloqueada", "Mestre Banana"]),
-        Conquista(imagem: ["misto_bloq","misto_color"], nome: ["Bloqueada", "Esquentou!"])
-    ]
+    var conquistas: [Conquista] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +20,13 @@ class ConquistasViewController: UIViewController, UICollectionViewDelegate, UICo
         conquistasView.collectionView.dataSource = self
         conquistasView.collectionView.delegate = self
         setupConquistasViewController()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        conquistasDesbloqueadas = Conquista.desbloqueadas
+        conquistas = Conquista.conquistas()
+        print(conquistasDesbloqueadas)
+        conquistasView.collectionView.reloadData()
     }
     
     func setupConquistasViewController () {
@@ -42,7 +45,7 @@ class ConquistasViewController: UIViewController, UICollectionViewDelegate, UICo
         let cell = conquistasView.collectionView.dequeueReusableCell(withReuseIdentifier: "conquistasCollectionViewCell", for: indexPath) as! ConquistasCollectionViewCell
         
         let item = conquistas[indexPath.row]
-        
+        print(conquistasDesbloqueadas)
         if conquistasDesbloqueadas[indexPath.row] == true {
             cell.imageView.image = UIImage(named: item.imagem[1])
             cell.nameLabel.text = item.nome[1]

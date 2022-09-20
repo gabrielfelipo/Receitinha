@@ -9,13 +9,12 @@ import UIKit
 
 class ReceitasViewController: UIViewController {
 
-    var isFirstTime: Bool? = true
     let receitasView = ReceitasView ()
     let receitas = Receita.receitas()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                setupReceitasViewController()
+        setupReceitasViewController()
         setupTableView()
         self.view = receitasView
         // Do any additional setup after loading the view.
@@ -25,13 +24,9 @@ class ReceitasViewController: UIViewController {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        print("viewDIDAPPEAR")
-        if isFirstTime!{
-            print("first time load")
-            //isFirstTime = false
-        }else{
-            print("second time load")
+        if Conquista.veioDeOnde == "ganhoConquista"{
             self.tabBarController?.selectedIndex = 0
+            Conquista.veioDeOnde = ""
         }
 
     }
