@@ -34,7 +34,22 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //setupTabBarController()
-        print("view did load")
+        
+        let defaults = UserDefaults.standard
+        Conquista.primeiraVez = defaults.bool(forKey: "primeiraVez")
+        if Conquista.primeiraVez{
+            print("nao foi primeira vez")
+            
+            let array = defaults.array(forKey: "conquistas") as? [Bool] ?? [Bool]()
+            print(array)
+            Conquista.desbloqueadas = array
+            print(Conquista.desbloqueadas)
+        }else{
+            Conquista.primeiraVez = true
+            print("foi primeira vez")
+            
+        }
+        
         
     }
     
