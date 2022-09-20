@@ -12,6 +12,8 @@
 		0D66D52E28CFBD7A00F1A41C /* PesquisarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66D52D28CFBD7A00F1A41C /* PesquisarViewController.swift */; };
 		0D66D53028CFBD8A00F1A41C /* ReceitasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66D52F28CFBD8A00F1A41C /* ReceitasViewController.swift */; };
 		0D66D53228CFBD9500F1A41C /* ConquistasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66D53128CFBD9500F1A41C /* ConquistasViewController.swift */; };
+		0DAD6E0628D906C20021C51E /* PesquisarViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD6E0528D906C20021C51E /* PesquisarViewController+DataSource.swift */; };
+		0DAD6E0828D907780021C51E /* PesquisarViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD6E0728D907780021C51E /* PesquisarViewController+Delegate.swift */; };
 		0DB5C28528D21AE300267028 /* ReceitasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB5C28428D21AE300267028 /* ReceitasTableViewCell.swift */; };
 		0DB5C28728D21FA100267028 /* ReceitasViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB5C28628D21FA100267028 /* ReceitasViewController+DataSource.swift */; };
 		0DB5C28928D221AC00267028 /* ReceitasViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB5C28828D221AC00267028 /* ReceitasViewController+Delegate.swift */; };
@@ -22,9 +24,9 @@
 		0DF1FBC528D0EE7E005EE8D7 /* ConquistasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1FBC428D0EE7E005EE8D7 /* ConquistasView.swift */; };
 		0DF1FBC728D0EED6005EE8D7 /* PesquisarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1FBC628D0EED6005EE8D7 /* PesquisarView.swift */; };
 		4725FB0B28D8B6F400DC3A16 /* PreviaViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0A28D8B6F400DC3A16 /* PreviaViewDelegate.swift */; };
-		4725FB0D28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0C28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift */; };
+		4725FB0D28D8B79B00DC3A16 /* PreviaViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0C28D8B79B00DC3A16 /* PreviaViewController+Delegate.swift */; };
 		4725FB0F28D8D0E500DC3A16 /* PassoPassoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0E28D8D0E500DC3A16 /* PassoPassoDelegate.swift */; };
-		4725FB1128D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift */; };
+		4725FB1128D8D1CC00DC3A16 /* PassoPassoViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+Delegate.swift */; };
 		472B6E4328D1208B00A0D036 /* MP3_MistoQuente_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3428D1208B00A0D036 /* MP3_MistoQuente_5.mp3 */; };
 		472B6E4428D1208B00A0D036 /* MP3_MistoQuente_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3528D1208B00A0D036 /* MP3_MistoQuente_7.mp3 */; };
 		472B6E4528D1208B00A0D036 /* MP3_MistoQuente_10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3628D1208B00A0D036 /* MP3_MistoQuente_10.mp3 */; };
@@ -81,6 +83,8 @@
 		0D66D52D28CFBD7A00F1A41C /* PesquisarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisarViewController.swift; sourceTree = "<group>"; };
 		0D66D52F28CFBD8A00F1A41C /* ReceitasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitasViewController.swift; sourceTree = "<group>"; };
 		0D66D53128CFBD9500F1A41C /* ConquistasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConquistasViewController.swift; sourceTree = "<group>"; };
+		0DAD6E0528D906C20021C51E /* PesquisarViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PesquisarViewController+DataSource.swift"; sourceTree = "<group>"; };
+		0DAD6E0728D907780021C51E /* PesquisarViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PesquisarViewController+Delegate.swift"; sourceTree = "<group>"; };
 		0DB5C28428D21AE300267028 /* ReceitasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitasTableViewCell.swift; sourceTree = "<group>"; };
 		0DB5C28628D21FA100267028 /* ReceitasViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReceitasViewController+DataSource.swift"; sourceTree = "<group>"; };
 		0DB5C28828D221AC00267028 /* ReceitasViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReceitasViewController+Delegate.swift"; sourceTree = "<group>"; };
@@ -91,9 +95,9 @@
 		0DF1FBC428D0EE7E005EE8D7 /* ConquistasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConquistasView.swift; sourceTree = "<group>"; };
 		0DF1FBC628D0EED6005EE8D7 /* PesquisarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisarView.swift; sourceTree = "<group>"; };
 		4725FB0A28D8B6F400DC3A16 /* PreviaViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviaViewDelegate.swift; sourceTree = "<group>"; };
-		4725FB0C28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviaViewController+PreviaViewDelegate.swift"; sourceTree = "<group>"; };
+		4725FB0C28D8B79B00DC3A16 /* PreviaViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviaViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4725FB0E28D8D0E500DC3A16 /* PassoPassoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassoPassoDelegate.swift; sourceTree = "<group>"; };
-		4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassoPassoViewController+PassoPassoDelegate.swift"; sourceTree = "<group>"; };
+		4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassoPassoViewController+Delegate.swift"; sourceTree = "<group>"; };
 		472B6E3428D1208B00A0D036 /* MP3_MistoQuente_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_5.mp3; sourceTree = "<group>"; };
 		472B6E3528D1208B00A0D036 /* MP3_MistoQuente_7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_7.mp3; sourceTree = "<group>"; };
 		472B6E3628D1208B00A0D036 /* MP3_MistoQuente_10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_10.mp3; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 			children = (
 				CA826B4D28CFC52C00D5268F /* TabBarController.swift */,
 				0D66D52D28CFBD7A00F1A41C /* PesquisarViewController.swift */,
+				0DAD6E0528D906C20021C51E /* PesquisarViewController+DataSource.swift */,
+				0DAD6E0728D907780021C51E /* PesquisarViewController+Delegate.swift */,
 				0D66D52F28CFBD8A00F1A41C /* ReceitasViewController.swift */,
 				0D66D53128CFBD9500F1A41C /* ConquistasViewController.swift */,
 				0DB5C28628D21FA100267028 /* ReceitasViewController+DataSource.swift */,
@@ -213,10 +219,10 @@
 				0DD453B528D3ACFF00DA32F3 /* ConclusaoViewController.swift */,
 				0D50648F28D4C58700020F17 /* ComecoViewController.swift */,
 				8FD221E628D27640008EB0C4 /* PassoPassoViewController.swift */,
-				4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift */,
+				4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+Delegate.swift */,
 				8F2391F028D5F1D600B75299 /* GanhoConquistasViewController.swift */,
 				47FAFDDF28D23EF9004175C1 /* PreviaViewController.swift */,
-				4725FB0C28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift */,
+				4725FB0C28D8B79B00DC3A16 /* PreviaViewController+Delegate.swift */,
 				D3AABE1328D23C5D0094400B /* CheckViewController.swift */,
 				D371043328D60020004F138B /* CheckViewController+DataSource.swift */,
 				D371043528D60044004F138B /* CheckViewController+Delegate.swift */,
@@ -402,6 +408,7 @@
 				0DD453B828D3AD1500DA32F3 /* ConclusaoView.swift in Sources */,
 				CA826B4C28CFC05D00D5268F /* UIViewController+Preview.swift in Sources */,
 				0D66D52E28CFBD7A00F1A41C /* PesquisarViewController.swift in Sources */,
+				0DAD6E0828D907780021C51E /* PesquisarViewController+Delegate.swift in Sources */,
 				D371043628D60044004F138B /* CheckViewController+Delegate.swift in Sources */,
 				0DF1FBC128D0EE41005EE8D7 /* PassoPassoView.swift in Sources */,
 				CA826B4E28CFC52C00D5268F /* TabBarController.swift in Sources */,
@@ -415,6 +422,7 @@
 				8F2391F128D5F1D600B75299 /* GanhoConquistasViewController.swift in Sources */,
 				4725FB0F28D8D0E500DC3A16 /* PassoPassoDelegate.swift in Sources */,
 				0DB5C28928D221AC00267028 /* ReceitasViewController+Delegate.swift in Sources */,
+				0DAD6E0628D906C20021C51E /* PesquisarViewController+DataSource.swift in Sources */,
 				0D50649228D4C8D400020F17 /* ComecoView.swift in Sources */,
 				8FD221E728D27640008EB0C4 /* PassoPassoViewController.swift in Sources */,
 				D371043428D60021004F138B /* CheckViewController+DataSource.swift in Sources */,
@@ -425,7 +433,7 @@
 				D3AABE1428D23C5D0094400B /* CheckViewController.swift in Sources */,
 				D3AABE1A28D247620094400B /* CheckTableViewCell.swift in Sources */,
 				CAEE6FCA28CFACD1007AA493 /* AppDelegate.swift in Sources */,
-				4725FB0D28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift in Sources */,
+				4725FB0D28D8B79B00DC3A16 /* PreviaViewController+Delegate.swift in Sources */,
 				CAEE6FCC28CFACD1007AA493 /* SceneDelegate.swift in Sources */,
 				0DB5C28728D21FA100267028 /* ReceitasViewController+DataSource.swift in Sources */,
 				47FAFDE228D244C0004175C1 /* LinhaView.swift in Sources */,
@@ -435,7 +443,7 @@
 				4725FB0B28D8B6F400DC3A16 /* PreviaViewDelegate.swift in Sources */,
 				8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */,
 				CA67838128D4BD11006134FF /* Conquista.swift in Sources */,
-				4725FB1128D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift in Sources */,
+				4725FB1128D8D1CC00DC3A16 /* PassoPassoViewController+Delegate.swift in Sources */,
 				D371043828D60164004F138B /* CheckView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
