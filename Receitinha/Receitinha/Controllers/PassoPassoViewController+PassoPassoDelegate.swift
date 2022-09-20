@@ -24,15 +24,20 @@ extension PassoPassoViewController: PassoPassoDelegate{
     func proximo() {
         if passo < receitas[receitaIndex!].tituloInstrucao.count - 1{
             if passo == receitas[receitaIndex!].troca {
+                
+                let backItem = UIBarButtonItem()
+                backItem.title = "Sair da receita"
+                navigationItem.backBarButtonItem = backItem
+                
                 let checkViewController = CheckViewController()
                 checkViewController.indexReceita = receitaIndex
                 navigationController?.pushViewController(checkViewController, animated: true)
-            }else{
+            } else{
                 passo = passo + 1
                 passoPassoView.increaseProgressBar(index: passo)
                 getJsonPasso()
             }
-        }else{
+        } else{
             let finalVC = ConclusaoViewController()
             finalVC.indexReceita = receitaIndex
             navigationController?.pushViewController(finalVC, animated: true)

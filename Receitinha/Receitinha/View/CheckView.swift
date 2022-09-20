@@ -19,7 +19,6 @@ class CheckView: UIView {
         button.tintColor = UIColor(named: "azul-acao")
         button.layer.cornerRadius = 25
         button.backgroundColor = UIColor(named: "azul-acao")
-//        button.setImage(iconProximo, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.semanticContentAttribute = UIApplication.shared
             .userInterfaceLayoutDirection == .rightToLeft ? .forceLeftToRight : .forceRightToLeft
@@ -34,7 +33,6 @@ class CheckView: UIView {
     let scrollView: UIScrollView = {
         var scroll = UIScrollView()
         scroll.showsVerticalScrollIndicator = false
-//        scroll.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 1110)
         return scroll
     }()
     
@@ -84,11 +82,9 @@ class CheckView: UIView {
        let label = UILabel()
         label.text = "Agora confira se você tem todos os itens e ingredientes organizados."
         label.numberOfLines = 0
-//        label.minimumScaleFactor = 18
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
-//        label.backgroundColor = .red
         return label
     }()
     
@@ -96,7 +92,6 @@ class CheckView: UIView {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.alignment = .fill
-  //      stack.distribution = .fillEqually
         stack.spacing = 24
         return stack
     }()
@@ -105,13 +100,12 @@ class CheckView: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.showsVerticalScrollIndicator = false
-//        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.isScrollEnabled = true
         tableView.separatorColor = UIColor(named: "blueBackground")
-//        tableView.backgroundView?.backgroundColor = .green
         tableView.register(CheckTableViewCell.self, forCellReuseIdentifier: CheckTableViewCell.indentifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 56
+        tableView.backgroundColor = UIColor(named: "blueBackground")
         return tableView
     }()
     

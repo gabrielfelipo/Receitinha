@@ -110,20 +110,20 @@ class PassoPassoView: UIView {
         anteriorBotao.contentMode = .scaleAspectFit
         proximoBotao.contentMode = .scaleAspectFit
         
-        tituloReceita.text = "Banana com Nescau"
+        tituloReceita.text = "<tituloLabel>"
         tituloReceita.textAlignment = .center
         tituloReceita.font = UIFont.boldSystemFont(ofSize: 24.0)
         
-        passoAtual.text = "Preparação: Passo 1 de 11"
+        passoAtual.text = "Preparação: Passo x de y"
         passoAtual.textAlignment = .center
         passoAtual.font = UIFont.systemFont(ofSize: 20.0)
         
-        tituloDescricao.text = "Descasque a Banana"
+        tituloDescricao.text = "<tituloDescricaoLabel>"
         tituloDescricao.textAlignment = .center
         tituloDescricao.font = UIFont.boldSystemFont(ofSize: 30.0)
         tituloDescricao.numberOfLines = 0
         
-        corpoDescricao.text = "Tire toda a casca da banana e depois coloque a banana descascada em cima do prato"
+        corpoDescricao.text = "<corpoDescricaoLabel>"
         corpoDescricao.textAlignment = .center
         corpoDescricao.font = UIFont.systemFont(ofSize: 22.0)
         corpoDescricao.numberOfLines = 0
@@ -350,16 +350,16 @@ class PassoPassoView: UIView {
         somBotao.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
     }
     
-    func setupProgressBar (quantidadePassos: Int) {
-        let primeiroPassoProgresso = UIView ()
-        stackDeProgresso.addArrangedSubview(primeiroPassoProgresso)
-        stackDeProgresso.arrangedSubviews[0].backgroundColor = UIColor(red: 194/255, green: 228/255, blue: 254/255, alpha: 1)
-        
-        var contador: Int = 1
+    func setupProgressBar (quantidadePassos: Int, passoAtual: Int) {
+        var contador: Int = 0
         while contador < quantidadePassos {
-            let passo = UIView ()
-            passo.backgroundColor = .white
-            stackDeProgresso.addArrangedSubview(passo)
+            let passoView = UIView ()
+            passoView.backgroundColor = .white
+            stackDeProgresso.addArrangedSubview(passoView)
+
+            if contador <= passoAtual {
+                stackDeProgresso.arrangedSubviews[contador].backgroundColor = UIColor(red: 194/255, green: 228/255, blue: 254/255, alpha: 1)
+            }
             contador += 1
         }
     }
