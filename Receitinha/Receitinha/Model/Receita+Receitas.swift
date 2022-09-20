@@ -96,7 +96,7 @@ extension Receita {
                     "1 sanduicheira"
                 ],
                 ingredientes: [
-                    "1 pacote de pão de forma",
+                    "2 fatias de pão de forma",
                     "Presunto fatiado",
                     "Queijo mussarela fatiado"
                 ],
@@ -121,9 +121,9 @@ extension Receita {
                 ],
                 tituloInstrucao: [
                     "Pegue um prato e coloque em cima da mesa",
-                    "Pegue o pacote de pão de forma e coloque ao lado do prato",
-                    "Pegue o pacote de presunto fatiado e coloque em cima da mesa",
-                    "Pegue o pacote de queijo fatiado e coloque junto ao presunto",
+                    "Pegue o de pão de forma e coloque ao lado do prato",
+                    "Pegue o presunto fatiado e coloque em cima da mesa",
+                    "Pegue o queijo fatiado e coloque junto ao presunto",
                     "Pegue a sanduicheira e coloque em cima da mesa",
                     "Posicione o pão",
                     "Coloque o presunto",
@@ -145,7 +145,7 @@ extension Receita {
                     "Abra o pacote de pão e coloque duas fatias em cima do prato",
                     "Pegue uma fatia de presunto e coloque no pão que está em cima do prato",
                     "Pegue uma fatia de queijo e coloque no pão com presunto que está em cima do prato",
-                    "Pegue a outra fatia de pão e coloque por cima do queijo, para terminar o sanduíche",
+                    "Pegue a outra fatia de pão e coloque por cima do queijo para terminar o sanduíche",
                     "Abra a sanduicheira e posicione o sanduíche que estava no prato",
                     "Feche a sanduicheira e a conecte em uma tomada",
                     "Confira se a sanduicheira está fechada",

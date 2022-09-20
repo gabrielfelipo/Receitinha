@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "IMG_MistoQuente_6.png",
+      "filename" : "IMG_MistoQuente_Passo6.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "IMG_MistoQuente_6@2x.png",
+      "filename" : "IMG_MistoQuente_Passo6@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "IMG_MistoQuente_6@3x.png",
+      "filename" : "IMG_MistoQuente_Passo6@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
