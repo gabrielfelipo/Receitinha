@@ -9,7 +9,7 @@ import UIKit
 
 class GanhoConquistaView: UIView {
     
-    weak var delegate: CheckDelegate?
+    weak var delegate: ButtonDelegate?
     // MARK: - Inicializacao dos componentes
     let regularText = "Você desbloqueou uma nova conquista! Agora você é um:\n"
     let boldText = "Mestre da Banana!"

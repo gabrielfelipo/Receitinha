@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol CheckDelegate: AnyObject{
+protocol ButtonDelegate: AnyObject{
     func passarTela()
 }

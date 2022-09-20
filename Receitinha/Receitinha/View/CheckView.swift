@@ -9,7 +9,7 @@ import UIKit
 
 class CheckView: UIView {
     
-    weak var delegate: CheckDelegate?
+    weak var delegate: ButtonDelegate?
     
     let button: UIButton = {
         let button = UIButton()

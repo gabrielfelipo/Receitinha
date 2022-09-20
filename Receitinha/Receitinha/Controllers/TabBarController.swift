@@ -34,17 +34,15 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //setupTabBarController()
+        print("view did load")
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if isFirstTime!{
-            setupTabBarController()
-            isFirstTime = false
-        }else{
-            setupTabBarController()
-            self.selectedIndex = 0
-        }
+        setupTabBarController()
     }
+    
+    
     
     private func setupTabBarController () {
         

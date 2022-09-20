@@ -25,7 +25,7 @@
 		4725FB0D28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0C28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift */; };
 		4725FB0F28D8D0E500DC3A16 /* PassoPassoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0E28D8D0E500DC3A16 /* PassoPassoDelegate.swift */; };
 		4725FB1128D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift */; };
-		4725FB1328D8F61200DC3A16 /* CheckDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB1228D8F61200DC3A16 /* CheckDelegate.swift */; };
+		4725FB1328D8F61200DC3A16 /* ButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB1228D8F61200DC3A16 /* ButtonDelegate.swift */; };
 		472B6E4328D1208B00A0D036 /* MP3_MistoQuente_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3428D1208B00A0D036 /* MP3_MistoQuente_5.mp3 */; };
 		472B6E4428D1208B00A0D036 /* MP3_MistoQuente_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3528D1208B00A0D036 /* MP3_MistoQuente_7.mp3 */; };
 		472B6E4528D1208B00A0D036 /* MP3_MistoQuente_10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3628D1208B00A0D036 /* MP3_MistoQuente_10.mp3 */; };
@@ -95,7 +95,7 @@
 		4725FB0C28D8B79B00DC3A16 /* PreviaViewController+PreviaViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviaViewController+PreviaViewDelegate.swift"; sourceTree = "<group>"; };
 		4725FB0E28D8D0E500DC3A16 /* PassoPassoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassoPassoDelegate.swift; sourceTree = "<group>"; };
 		4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassoPassoViewController+PassoPassoDelegate.swift"; sourceTree = "<group>"; };
-		4725FB1228D8F61200DC3A16 /* CheckDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDelegate.swift; sourceTree = "<group>"; };
+		4725FB1228D8F61200DC3A16 /* ButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDelegate.swift; sourceTree = "<group>"; };
 		472B6E3428D1208B00A0D036 /* MP3_MistoQuente_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_5.mp3; sourceTree = "<group>"; };
 		472B6E3528D1208B00A0D036 /* MP3_MistoQuente_7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_7.mp3; sourceTree = "<group>"; };
 		472B6E3628D1208B00A0D036 /* MP3_MistoQuente_10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_10.mp3; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 			children = (
 				CAEE6FD428CFACD2007AA493 /* LaunchScreen.storyboard */,
 				D371043728D60164004F138B /* CheckView.swift */,
-				4725FB1228D8F61200DC3A16 /* CheckDelegate.swift */,
+				4725FB1228D8F61200DC3A16 /* ButtonDelegate.swift */,
 				D3AABE1928D247620094400B /* CheckTableViewCell.swift */,
 				0DF1FBBE28D0EE0A005EE8D7 /* ReceitasView.swift */,
 				0DF1FBC028D0EE41005EE8D7 /* PassoPassoView.swift */,
@@ -425,7 +425,7 @@
 				477E934B28CFB532009E57A8 /* Receita.swift in Sources */,
 				0DB5C28528D21AE300267028 /* ReceitasTableViewCell.swift in Sources */,
 				CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */,
-				4725FB1328D8F61200DC3A16 /* CheckDelegate.swift in Sources */,
+				4725FB1328D8F61200DC3A16 /* ButtonDelegate.swift in Sources */,
 				D3AABE1428D23C5D0094400B /* CheckViewController.swift in Sources */,
 				D3AABE1A28D247620094400B /* CheckTableViewCell.swift in Sources */,
 				CAEE6FCA28CFACD1007AA493 /* AppDelegate.swift in Sources */,

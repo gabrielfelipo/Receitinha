@@ -15,7 +15,7 @@ extension CheckViewController:UITableViewDelegate{
     
 }
 
-extension CheckViewController: CheckDelegate{
+extension CheckViewController: ButtonDelegate{
     func passarTela() {
         print("chegou aqui no passar tela")
         let passoPassoVC = PassoPassoViewController()

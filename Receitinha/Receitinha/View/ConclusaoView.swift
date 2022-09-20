@@ -9,7 +9,7 @@ import UIKit
 
 class ConclusaoView: UIView {
     
-    weak var delegate: CheckDelegate?
+    weak var delegate: ButtonDelegate?
     
     let parabensLabel: UILabel = {
         let label = UILabel ()

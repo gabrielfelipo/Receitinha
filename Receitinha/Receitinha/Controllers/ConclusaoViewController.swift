@@ -21,7 +21,7 @@ class ConclusaoViewController: UIViewController {
 
 }
 
-extension ConclusaoViewController: CheckDelegate {
+extension ConclusaoViewController: ButtonDelegate {
     func passarTela() {
         let ganhoConquistaVC = GanhoConquistaViewController()
         ganhoConquistaVC.indexReceita = indexReceita

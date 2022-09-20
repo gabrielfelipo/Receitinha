@@ -29,7 +29,7 @@ class GanhoConquistaViewController: UIViewController {
 
 }
 
-extension GanhoConquistaViewController: CheckDelegate{
+extension GanhoConquistaViewController: ButtonDelegate{
     func passarTela() {
         self.navigationController?.popToRootViewController(animated: true)
     }
