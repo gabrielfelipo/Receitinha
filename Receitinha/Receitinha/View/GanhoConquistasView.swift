@@ -9,6 +9,7 @@ import UIKit
 
 class GanhoConquistaView: UIView {
     
+    weak var delegate: CheckDelegate?
     // MARK: - Inicializacao dos componentes
     let regularText = "Você desbloqueou uma nova conquista! Agora você é um:\n"
     let boldText = "Mestre da Banana!"
@@ -31,7 +32,7 @@ class GanhoConquistaView: UIView {
         setupViewsHierarchy()
         setupViewsAttributes()
         setupConstraints()
-        //setupButtonTap()
+        setupButton()
     }
     
     required init(coder: NSCoder) {
@@ -143,6 +144,14 @@ class GanhoConquistaView: UIView {
             botao.trailingAnchor.constraint(equalTo: botaoContainer.trailingAnchor),
             botao.heightAnchor.constraint(equalToConstant: 56)
         ])
+    }
+    
+    func setupButton(){
+        botao.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+    }
+    
+    @objc func tappedButton(){
+        delegate?.passarTela()
     }
     
 }

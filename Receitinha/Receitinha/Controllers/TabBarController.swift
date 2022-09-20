@@ -9,6 +9,8 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    var isFirstTime: Bool? = true
+    
     var navigationControllers: [UIViewController] = []
     
     let controllers: [UIViewController] = [
@@ -31,9 +33,18 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTabBarController()
+        //setupTabBarController()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if isFirstTime!{
+            setupTabBarController()
+            isFirstTime = false
+        }else{
+            setupTabBarController()
+            self.selectedIndex = 0
+        }
+    }
     
     private func setupTabBarController () {
         

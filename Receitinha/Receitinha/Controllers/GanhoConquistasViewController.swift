@@ -10,12 +10,14 @@ import UIKit
 class GanhoConquistaViewController: UIViewController {
     
     let ganhoConquistaView = GanhoConquistaView()
+    var indexReceita: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view = ganhoConquistaView
         setupGanhoConquistaViewController()
+        ganhoConquistaView.delegate = self
         
         // Do any additional setup after loading the view.
     }
@@ -25,6 +27,14 @@ class GanhoConquistaViewController: UIViewController {
         //self.navigationController?.navigationBar.prefersLargeTitles = false
     }
 
+}
+
+extension GanhoConquistaViewController: CheckDelegate{
+    func passarTela() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
 }
 
 

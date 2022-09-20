@@ -9,24 +9,29 @@ import UIKit
 extension PassoPassoViewController: PassoPassoDelegate{
     func anterior() {
         if passo == receitas[receitaIndex!].troca + 1 {
-            //volta checkpoint
+            self.navigationController?.popViewController(animated: true)
         }else if passo == 0{
             // volta preview
+            self.navigationController?.popViewController(animated: true)
         }else{
             passo = passo - 1
             getJsonPasso()        }
     }
     
     func proximo() {
-        if passo < receitas[receitaIndex!].tituloInstrucao.count{
-            if passo == receitas[receitaIndex!].troca && !visitCheckpoint! {
-                //checkpoint tela
+        if passo < receitas[receitaIndex!].tituloInstrucao.count - 1{
+            if passo == receitas[receitaIndex!].troca {
+                let checkViewController = CheckViewController()
+                checkViewController.indexReceita = receitaIndex
+                navigationController?.pushViewController(checkViewController, animated: true)
             }else{
                 passo = passo + 1
                 getJsonPasso()
             }
         }else{
-            //final tela
+            let finalVC = ConclusaoViewController()
+            finalVC.indexReceita = receitaIndex
+            navigationController?.pushViewController(finalVC, animated: true)
         }
         
     }

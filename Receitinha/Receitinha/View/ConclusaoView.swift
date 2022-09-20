@@ -9,6 +9,8 @@ import UIKit
 
 class ConclusaoView: UIView {
     
+    weak var delegate: CheckDelegate?
+    
     let parabensLabel: UILabel = {
         let label = UILabel ()
         label.textColor = UIColor.black
@@ -46,6 +48,7 @@ class ConclusaoView: UIView {
         setupConclusaoViewHierarchy()
         setupConclusaoViewsAtributes()
         setupConclusaoConstraints()
+        setupButton()
     }
     
     required init?(coder: NSCoder) {
@@ -110,6 +113,14 @@ class ConclusaoView: UIView {
         NSLayoutConstraint.activate([
             finalizarButton.heightAnchor.constraint(equalToConstant: 56)
         ])
+    }
+    
+    private func setupButton(){
+        finalizarButton.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+    }
+
+    @objc func tappedButton(sender: UIButton) {
+        delegate?.passarTela()
     }
     
 }

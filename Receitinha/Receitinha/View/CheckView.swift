@@ -9,6 +9,8 @@ import UIKit
 
 class CheckView: UIView {
     
+    weak var delegate: CheckDelegate?
+    
     let button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -117,6 +119,7 @@ class CheckView: UIView {
             self.backgroundColor = UIColor(named: "blueBackground")
             setupHierarquia()
             setupConstraints()
+            setupButton()
         }
     
         required init?(coder aDecoder: NSCoder) {
@@ -124,9 +127,7 @@ class CheckView: UIView {
         }
     
     private func setupHierarquia(){
-//        view.addSubview(scrollView)
-//        scrollView.addSubview(contentView)
-//        contentView.addSubview(stackzona)
+
         self.addSubview(stackzona)
         self.addSubview(button)
         titleLabelContainer.addSubview(titleLabel)
@@ -146,21 +147,8 @@ class CheckView: UIView {
         cenouraImageContainer.translatesAutoresizingMaskIntoConstraints = false
         subTitleLabelContainer.translatesAutoresizingMaskIntoConstraints = false
         descLabel.translatesAutoresizingMaskIntoConstraints = false
-//        scrollView.translatesAutoresizingMaskIntoConstraints = false
-//        contentView.translatesAutoresizingMaskIntoConstraints = false
-        
 
-//        scrollView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-//        scrollView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-//        scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-//        scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-//
-//        contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-//        contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
-//        contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
-//        contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-//        contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
-        
+        button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             button.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 16),
             button.heightAnchor.constraint(equalToConstant: 58),
@@ -212,16 +200,18 @@ class CheckView: UIView {
         descLabel.setContentHuggingPriority(.defaultLow, for: .vertical)
         descLabelContainer.setContentHuggingPriority(.defaultLow, for: .vertical)
 
-//        NSLayoutConstraint.activate([
-//            tableView.topAnchor.constraint(equalTo: descLabelContainer.topAnchor),
-//            tableView.leadingAnchor.constraint(equalTo: stackzona.leadingAnchor),
-//            tableView.centerXAnchor.constraint(equalTo: stackzona.centerXAnchor),
-//            tableView.centerYAnchor.constraint(equalTo: stackzona.centerYAnchor)
-//        ])
+
         
         tableView.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }
+    
+    private func setupButton(){
+        button.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+    }
 
+    @objc func tappedButton(sender: UIButton) {
+        delegate?.passarTela()
+    }
 
 }
 

@@ -10,7 +10,6 @@ import UIKit
 class PassoPassoViewController: UIViewController {
     
     var receitaIndex: Int?
-    var visitCheckpoint: Bool? = false
     var passo = 0
     let passoPassoView = PassoPassoView()
     let receitas = Receita.receitas()
@@ -26,7 +25,11 @@ class PassoPassoViewController: UIViewController {
     }
     
     func getJsonPasso() {
-        passoPassoView.passoAtual.text = "Preparação: Passo \(passo+1) de \(receitas[receitaIndex!].audioDescricao.count)"
+        if passo > receitas[receitaIndex!].troca{
+            passoPassoView.passoAtual.text = "Cozinhando: Passo \(passo+1) de \(receitas[receitaIndex!].audioDescricao.count)"
+        }else{
+            passoPassoView.passoAtual.text = "Preparação: Passo \(passo+1) de \(receitas[receitaIndex!].audioDescricao.count)"
+        }
         passoPassoView.imagemPasso.image = UIImage(named: receitas[receitaIndex!].imagem[passo])
         passoPassoView.tituloDescricao.text = receitas[receitaIndex!].tituloInstrucao[passo]
         if receitas[receitaIndex!].descricao[passo] == ""{
