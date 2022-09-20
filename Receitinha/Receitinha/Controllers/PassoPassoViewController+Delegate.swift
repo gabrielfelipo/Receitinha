@@ -15,6 +15,7 @@ extension PassoPassoViewController: PassoPassoDelegate{
         }else if passo == 0{
             // volta preview
         }else{
+            passoPassoView.decreaseProgressbar(index: passo)
             passo = passo - 1
             getJsonPasso()        }
     }
@@ -25,6 +26,7 @@ extension PassoPassoViewController: PassoPassoDelegate{
                 //checkpoint tela
             }else{
                 passo = passo + 1
+                passoPassoView.increaseProgressBar(index: passo)
                 getJsonPasso()
             }
         }else{

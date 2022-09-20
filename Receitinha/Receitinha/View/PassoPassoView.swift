@@ -10,12 +10,13 @@ import UIKit
 class PassoPassoView: UIView {
     
     weak var delegate: PassoPassoDelegate?
-
+    
     // MARK: - Inicializacao dos componentes
     let tituloReceita = UILabel()
     
     let passoAtual = UILabel()
-    let barraDeProgresso = UIProgressView()
+    let barraDeProgresso = UIView()
+    let stackDeProgresso = UIStackView ()
     
     let imagemPasso = UIImageView(image: UIImage(named: "IMG_BananaComNescau_1"))
     
@@ -33,7 +34,6 @@ class PassoPassoView: UIView {
     
     let tituloReceitaContainer = UIView()
     let passoAtualContainer = UIView()
-    let barraDeProgressoContainer = UIView()
     let imagemPassoContainer = UIView()
     let somBotaoContainer = UIView()
     let tituloDescricaoContainer = UIView()
@@ -59,13 +59,16 @@ class PassoPassoView: UIView {
         fatalError("ïnit(coder:) has not been implemented")
     }
     
+    let teste2 = UIImageView ()
+    
+    
     func setupViewsHierarchy() {
         // MARK: - Setup na hierarquia das views
         self.addSubview(finalStackView)
         
         tituloReceitaContainer.addSubview(tituloReceita)
         passoAtualContainer.addSubview(passoAtual)
-        barraDeProgressoContainer.addSubview(barraDeProgresso)
+        //barraDeProgressoContainer.addSubview(barraDeProgresso)
         imagemPassoContainer.addSubview(imagemPasso)
         somBotaoContainer.addSubview(somBotao)
         tituloDescricaoContainer.addSubview(tituloDescricao)
@@ -73,8 +76,11 @@ class PassoPassoView: UIView {
         anteriorBotaoContainer.addSubview(anteriorBotao)
         proximoContainer.addSubview(proximoBotao)
         
+        
         progressoStackView.addArrangedSubview(passoAtualContainer)
-        progressoStackView.addArrangedSubview(barraDeProgressoContainer)
+        progressoStackView.addArrangedSubview(barraDeProgresso)
+        
+        barraDeProgresso.addSubview(stackDeProgresso)
         
         corpoDescricaoStackView.addArrangedSubview(corpoDescricaoContainer)
         
@@ -193,6 +199,18 @@ class PassoPassoView: UIView {
         proximoBotao.layer.shadowRadius = 10
         proximoBotao.layer.shadowColor = UIColor.black.cgColor
         proximoBotao.layer.shadowOpacity = 0.25
+        
+        barraDeProgresso.layer.cornerRadius = 10
+        barraDeProgresso.layer.borderWidth = 1
+        barraDeProgresso.layer.borderColor = UIColor(red: 27/255, green: 73/255, blue: 101/255, alpha: 1).cgColor
+        
+        stackDeProgresso.axis = .horizontal
+        stackDeProgresso.distribution = .fillEqually
+        stackDeProgresso.spacing = 1
+        stackDeProgresso.layer.cornerRadius = 10
+        stackDeProgresso.layer.masksToBounds = true
+        stackDeProgresso.backgroundColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
+        
     }
     
     func setupConstraints() {
@@ -228,13 +246,8 @@ class PassoPassoView: UIView {
         
         barraDeProgresso.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            barraDeProgresso.topAnchor.constraint(equalTo: barraDeProgressoContainer.topAnchor),
-            barraDeProgresso.bottomAnchor.constraint(equalTo: barraDeProgressoContainer.bottomAnchor),
-            barraDeProgresso.leadingAnchor.constraint(equalTo: barraDeProgressoContainer.leadingAnchor),
-            barraDeProgresso.trailingAnchor.constraint(equalTo: barraDeProgressoContainer.trailingAnchor),
+            barraDeProgresso.heightAnchor.constraint(equalToConstant: 25)
         ])
-        barraDeProgressoContainer.translatesAutoresizingMaskIntoConstraints = false
-        barraDeProgressoContainer.setContentHuggingPriority(.defaultHigh, for: .vertical)
         
         progressoStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -315,6 +328,17 @@ class PassoPassoView: UIView {
             botaoStackView.centerXAnchor.constraint(equalTo: finalStackView.centerXAnchor),
         ])
         botaoStackView.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        
+        
+        stackDeProgresso.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackDeProgresso.topAnchor.constraint(equalTo: barraDeProgresso.topAnchor),
+            stackDeProgresso.bottomAnchor.constraint(equalTo: barraDeProgresso.bottomAnchor),
+            stackDeProgresso.leadingAnchor.constraint(equalTo: barraDeProgresso.leadingAnchor),
+            stackDeProgresso.trailingAnchor.constraint(equalTo: barraDeProgresso.trailingAnchor)
+        ])
+        
+        
     }
     
     func setupButtonTap() {
@@ -324,6 +348,28 @@ class PassoPassoView: UIView {
         proximoBotao.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
         
         somBotao.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+    }
+    
+    func setupProgressBar (quantidadePassos: Int) {
+        let primeiroPassoProgresso = UIView ()
+        stackDeProgresso.addArrangedSubview(primeiroPassoProgresso)
+        stackDeProgresso.arrangedSubviews[0].backgroundColor = UIColor(red: 194/255, green: 228/255, blue: 254/255, alpha: 1)
+        
+        var contador: Int = 1
+        while contador < quantidadePassos {
+            let passo = UIView ()
+            passo.backgroundColor = .white
+            stackDeProgresso.addArrangedSubview(passo)
+            contador += 1
+        }
+    }
+    
+    func increaseProgressBar (index: Int) {
+        stackDeProgresso.arrangedSubviews[index].backgroundColor = UIColor(red: 194/255, green: 228/255, blue: 254/255, alpha: 1)
+    }
+    
+    func decreaseProgressbar (index: Int) {
+        stackDeProgresso.arrangedSubviews[index].backgroundColor = .white
     }
     
     @objc func tappedButton(sender: UIButton) {
@@ -337,7 +383,7 @@ class PassoPassoView: UIView {
             delegate?.proximo()
         }
     }
-
+    
 }
 
 // MARK: - Preview
