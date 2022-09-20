@@ -1,5 +1,5 @@
 //
-//  CheckViewController+DataSource.swift
+//  CheckViewController+Delegate.swift
 //  Receitinha
 //
 //  Created by rsbj on 17/09/22.
@@ -7,11 +7,18 @@
 
 import UIKit
 
-extension CheckViewController:UITableViewDelegate{
+extension CheckViewController:UITableViewDataSource{
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        
+        return objetosIngredientes!.count
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 56
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        CheckTableViewCell.checkIndex = "\((indexPath.row)+1)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: CheckTableViewCell.indentifier, for: indexPath) as? CheckTableViewCell
+        cell?.utensilioLabel.text = objetosIngredientes![indexPath.row]
+        return cell ?? UITableViewCell()
     }
+
 }

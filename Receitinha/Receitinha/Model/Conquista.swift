@@ -13,3 +13,4 @@ struct Conquista{
     let imagem: [String]
     let nome: [String]
 }
+

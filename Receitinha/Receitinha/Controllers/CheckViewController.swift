@@ -10,12 +10,18 @@ import UIKit
 class CheckViewController: UIViewController {
     
     let checkView = CheckView()
+    var indexReceita: Int?
+    let receitas = Receita.receitas()
+    var objetosIngredientes: [String]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkView.tableView.delegate = self
         checkView.tableView.dataSource = self
         self.view = checkView
+        objetosIngredientes = receitas[indexReceita!].objetos + receitas[indexReceita!].ingredientes
+        checkView.delegate = self
     }
 }
 

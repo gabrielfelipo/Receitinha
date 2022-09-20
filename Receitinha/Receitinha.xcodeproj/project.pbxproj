@@ -26,7 +26,8 @@
 		4725FB0B28D8B6F400DC3A16 /* PreviaViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0A28D8B6F400DC3A16 /* PreviaViewDelegate.swift */; };
 		4725FB0D28D8B79B00DC3A16 /* PreviaViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0C28D8B79B00DC3A16 /* PreviaViewController+Delegate.swift */; };
 		4725FB0F28D8D0E500DC3A16 /* PassoPassoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB0E28D8D0E500DC3A16 /* PassoPassoDelegate.swift */; };
-		4725FB1128D8D1CC00DC3A16 /* PassoPassoViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+Delegate.swift */; };
+		4725FB1128D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift */; };
+		4725FB1328D8F61200DC3A16 /* ButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725FB1228D8F61200DC3A16 /* ButtonDelegate.swift */; };
 		472B6E4328D1208B00A0D036 /* MP3_MistoQuente_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3428D1208B00A0D036 /* MP3_MistoQuente_5.mp3 */; };
 		472B6E4428D1208B00A0D036 /* MP3_MistoQuente_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3528D1208B00A0D036 /* MP3_MistoQuente_7.mp3 */; };
 		472B6E4528D1208B00A0D036 /* MP3_MistoQuente_10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472B6E3628D1208B00A0D036 /* MP3_MistoQuente_10.mp3 */; };
@@ -59,8 +60,8 @@
 		CAEE6FCC28CFACD1007AA493 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE6FCB28CFACD1007AA493 /* SceneDelegate.swift */; };
 		CAEE6FD328CFACD2007AA493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAEE6FD228CFACD2007AA493 /* Assets.xcassets */; };
 		CAEE6FD628CFACD2007AA493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEE6FD428CFACD2007AA493 /* LaunchScreen.storyboard */; };
-		D371043428D60021004F138B /* CheckViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371043328D60020004F138B /* CheckViewController+DataSource.swift */; };
-		D371043628D60044004F138B /* CheckViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371043528D60044004F138B /* CheckViewController+Delegate.swift */; };
+		D371043428D60021004F138B /* CheckViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371043328D60020004F138B /* CheckViewController+Delegate.swift */; };
+		D371043628D60044004F138B /* CheckViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371043528D60044004F138B /* CheckViewController+DataSource.swift */; };
 		D371043828D60164004F138B /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371043728D60164004F138B /* CheckView.swift */; };
 		D3AABE1428D23C5D0094400B /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AABE1328D23C5D0094400B /* CheckViewController.swift */; };
 		D3AABE1A28D247620094400B /* CheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AABE1928D247620094400B /* CheckTableViewCell.swift */; };
@@ -97,7 +98,8 @@
 		4725FB0A28D8B6F400DC3A16 /* PreviaViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviaViewDelegate.swift; sourceTree = "<group>"; };
 		4725FB0C28D8B79B00DC3A16 /* PreviaViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviaViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4725FB0E28D8D0E500DC3A16 /* PassoPassoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassoPassoDelegate.swift; sourceTree = "<group>"; };
-		4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassoPassoViewController+Delegate.swift"; sourceTree = "<group>"; };
+		4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassoPassoViewController+PassoPassoDelegate.swift"; sourceTree = "<group>"; };
+		4725FB1228D8F61200DC3A16 /* ButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDelegate.swift; sourceTree = "<group>"; };
 		472B6E3428D1208B00A0D036 /* MP3_MistoQuente_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_5.mp3; sourceTree = "<group>"; };
 		472B6E3528D1208B00A0D036 /* MP3_MistoQuente_7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_7.mp3; sourceTree = "<group>"; };
 		472B6E3628D1208B00A0D036 /* MP3_MistoQuente_10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_MistoQuente_10.mp3; sourceTree = "<group>"; };
@@ -132,8 +134,8 @@
 		CAEE6FD228CFACD2007AA493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAEE6FD528CFACD2007AA493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAEE6FD728CFACD2007AA493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D371043328D60020004F138B /* CheckViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckViewController+DataSource.swift"; sourceTree = "<group>"; };
-		D371043528D60044004F138B /* CheckViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckViewController+Delegate.swift"; sourceTree = "<group>"; };
+		D371043328D60020004F138B /* CheckViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckViewController+Delegate.swift"; sourceTree = "<group>"; };
+		D371043528D60044004F138B /* CheckViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckViewController+DataSource.swift"; sourceTree = "<group>"; };
 		D371043728D60164004F138B /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
 		D3AABE1328D23C5D0094400B /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		D3AABE1928D247620094400B /* CheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTableViewCell.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				CAEE6FD428CFACD2007AA493 /* LaunchScreen.storyboard */,
 				D371043728D60164004F138B /* CheckView.swift */,
+				4725FB1228D8F61200DC3A16 /* ButtonDelegate.swift */,
 				D3AABE1928D247620094400B /* CheckTableViewCell.swift */,
 				0DF1FBBE28D0EE0A005EE8D7 /* ReceitasView.swift */,
 				0DF1FBC028D0EE41005EE8D7 /* PassoPassoView.swift */,
@@ -224,8 +227,8 @@
 				47FAFDDF28D23EF9004175C1 /* PreviaViewController.swift */,
 				4725FB0C28D8B79B00DC3A16 /* PreviaViewController+Delegate.swift */,
 				D3AABE1328D23C5D0094400B /* CheckViewController.swift */,
-				D371043328D60020004F138B /* CheckViewController+DataSource.swift */,
-				D371043528D60044004F138B /* CheckViewController+Delegate.swift */,
+				D371043328D60020004F138B /* CheckViewController+Delegate.swift */,
+				D371043528D60044004F138B /* CheckViewController+DataSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				0D66D52E28CFBD7A00F1A41C /* PesquisarViewController.swift in Sources */,
 				0DAD6E0828D907780021C51E /* PesquisarViewController+Delegate.swift in Sources */,
 				D371043628D60044004F138B /* CheckViewController+Delegate.swift in Sources */,
+				D371043628D60044004F138B /* CheckViewController+DataSource.swift in Sources */,
 				0DF1FBC128D0EE41005EE8D7 /* PassoPassoView.swift in Sources */,
 				CA826B4E28CFC52C00D5268F /* TabBarController.swift in Sources */,
 				0DF1FBC728D0EED6005EE8D7 /* PesquisarView.swift in Sources */,
@@ -425,11 +429,12 @@
 				0DAD6E0628D906C20021C51E /* PesquisarViewController+DataSource.swift in Sources */,
 				0D50649228D4C8D400020F17 /* ComecoView.swift in Sources */,
 				8FD221E728D27640008EB0C4 /* PassoPassoViewController.swift in Sources */,
-				D371043428D60021004F138B /* CheckViewController+DataSource.swift in Sources */,
+				D371043428D60021004F138B /* CheckViewController+Delegate.swift in Sources */,
 				0D66D53028CFBD8A00F1A41C /* ReceitasViewController.swift in Sources */,
 				477E934B28CFB532009E57A8 /* Receita.swift in Sources */,
 				0DB5C28528D21AE300267028 /* ReceitasTableViewCell.swift in Sources */,
 				CA826B4A28CFC04C00D5268F /* UIView+Preview.swift in Sources */,
+				4725FB1328D8F61200DC3A16 /* ButtonDelegate.swift in Sources */,
 				D3AABE1428D23C5D0094400B /* CheckViewController.swift in Sources */,
 				D3AABE1A28D247620094400B /* CheckTableViewCell.swift in Sources */,
 				CAEE6FCA28CFACD1007AA493 /* AppDelegate.swift in Sources */,

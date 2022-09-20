@@ -9,6 +9,7 @@ import UIKit
 
 class ReceitasViewController: UIViewController {
 
+    var isFirstTime: Bool? = true
     let receitasView = ReceitasView ()
     let receitas = Receita.receitas()
     
@@ -23,6 +24,15 @@ class ReceitasViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = false
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        print("viewDIDAPPEAR")
+        if isFirstTime!{
+            print("first time load")
+            //isFirstTime = false
+        }else{
+            print("second time load")
+            self.tabBarController?.selectedIndex = 0
+        }
 
     }
     
