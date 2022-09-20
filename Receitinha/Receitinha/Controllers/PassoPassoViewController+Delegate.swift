@@ -17,7 +17,9 @@ extension PassoPassoViewController: PassoPassoDelegate{
         }else{
             passoPassoView.decreaseProgressbar(index: passo)
             passo = passo - 1
-            getJsonPasso()        }
+            getJsonPasso()
+            
+        }
     }
     
     func proximo() {

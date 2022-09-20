@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVFoundation
+
 extension PassoPassoViewController: PassoPassoDelegate{
     func anterior() {
         if passo == receitas[receitaIndex!].troca + 1 {
@@ -14,6 +16,7 @@ extension PassoPassoViewController: PassoPassoDelegate{
             // volta preview
             self.navigationController?.popViewController(animated: true)
         }else{
+            passoPassoView.decreaseProgressbar(index: passo)
             passo = passo - 1
             getJsonPasso()        }
     }
@@ -26,6 +29,7 @@ extension PassoPassoViewController: PassoPassoDelegate{
                 navigationController?.pushViewController(checkViewController, animated: true)
             }else{
                 passo = passo + 1
+                passoPassoView.increaseProgressBar(index: passo)
                 getJsonPasso()
             }
         }else{
@@ -36,8 +40,32 @@ extension PassoPassoViewController: PassoPassoDelegate{
         
     }
     
-    func oiSomTestano() {
-        
+    func reproducaoAudios() {
+        if let player = player, player.isPlaying {
+                   // num faz nada
+               }
+               else {
+                   let urlString = Bundle.main.path(forResource: receitas[receitaIndex!].audioDescricao[passo], ofType: "mp3")
+                   do {
+                       try AVAudioSession.sharedInstance().setMode(.default)
+                       try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                       
+                       guard let urlString = urlString else{
+                           return
+                       }
+                       
+                       player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                       
+                       guard let player = player else{ // Unrapping
+                           return
+                       }
+                       
+                       player.play()
+                   }
+                   catch {
+                       fatalError("Deu BO")
+                   }
+               }
     }
     
     

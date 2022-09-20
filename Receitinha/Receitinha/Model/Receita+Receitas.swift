@@ -13,10 +13,10 @@ extension Receita {
         return [
             Receita(
                 //comentario de thales
-                titulo: "Banana com Nescau",
+                titulo: "Banana com leite e chocolate",
                 imagemPrevia: "IMG_BananaComNescau_Preview",
                 dificuldade: "Fácil",
-                descricaoPrevia: "Essa é uma receita de uma deliciosa banana com leite em pó, Nescau e farinha láctea. Um lanche prático, rápido e muito divertido de fazer!!",
+                descricaoPrevia: "Essa é uma receita de uma deliciosa banana com leite em pó, achocolatado em pó e farinha láctea. Um lanche prático, rápido e muito divertido de fazer!!",
                 duracao: 10,
                 
                 objetos: [
@@ -49,12 +49,12 @@ extension Receita {
                     "Pegue uma colher e coloque ao lado do prato",
                     "Pegue uma banana e coloque em cima da mesa",
                     "Pegue o leite em pó e coloque junto da banana",
-                    "Pegue o Nescau e coloque junto da banana",
+                    "Pegue o achocolatado em pó e coloque junto da banana",
                     "Pegue a farinha láctea e coloque junto da banana",
-                    "Descasque a Banana",
+                    "Descasque a banana",
                     "Corte a banana",
                     "Coloque o leite em pó",
-                    "Coloque o Nescau",
+                    "Coloque o achocolatado em pó",
                     "Coloque a farinha láctea"
                 ],
                 descricao: [
@@ -67,8 +67,8 @@ extension Receita {
                     "Tire toda a casca da banana e depois coloque a banana descascada em cima do prato",
                     "Use a colher para cortar a banana em pequenos pedaços",
                     "Pegue o leite em pó com a colher e espalhe por cima da banana",
-                    "Pegue o Nescau com a colher e espalhe por cima da banana",
-                    "Pegue a Farinha Láctea com a colher e espalhe por cima da banana"
+                    "Pegue o achocolatado em pó com a colher e espalhe por cima da banana",
+                    "Pegue a farinha Láctea com a colher e espalhe por cima da banana"
                 ],
                 audioDescricao: [
                     "MP3_BananaComNescau_1",
@@ -93,12 +93,12 @@ extension Receita {
                 duracao: 15,
                 objetos: [
                     "1 prato",
-                    "1 sanduichera"
+                    "1 sanduicheira"
                 ],
                 ingredientes: [
                     "1 pacote de pão de forma",
                     "Presunto fatiado",
-                    "Queijo Mussarela fatiado"
+                    "Queijo mussarela fatiado"
                 ],
                 troca: 4,
                 imagem: [
@@ -122,14 +122,14 @@ extension Receita {
                 tituloInstrucao: [
                     "Pegue um prato e coloque em cima da mesa",
                     "Pegue o pacote de pão de forma e coloque ao lado do prato",
-                    "Pegue o pacote de Presunto fatiado e coloque em cima da mesa",
-                    "Pegue o pacote de Queijo fatiado e coloque junto ao Presunto",
-                    "Pegue a Sanduicheira e coloque em cima da mesa",
+                    "Pegue o pacote de presunto fatiado e coloque em cima da mesa",
+                    "Pegue o pacote de queijo fatiado e coloque junto ao presunto",
+                    "Pegue a sanduicheira e coloque em cima da mesa",
                     "Posicione o pão",
                     "Coloque o presunto",
                     "Coloque o queijo",
                     "Coloque o pão",
-                    "Coloque o sanduiche",
+                    "Coloque o sanduíche",
                     "Posicione a sanduicheira",
                     "Espere 3 minutos",
                     "Abra a sanduicheira",
@@ -145,8 +145,8 @@ extension Receita {
                     "Abra o pacote de pão e coloque duas fatias em cima do prato",
                     "Pegue uma fatia de presunto e coloque no pão que está em cima do prato",
                     "Pegue uma fatia de queijo e coloque no pão com presunto que está em cima do prato",
-                    "Pegue a outra fatia de pão e coloque por cima do queijo, para terminar o sanduiche",
-                    "Abra a sanduicheira e posicione o sanduiche que estava no prato",
+                    "Pegue a outra fatia de pão e coloque por cima do queijo, para terminar o sanduíche",
+                    "Abra a sanduicheira e posicione o sanduíche que estava no prato",
                     "Feche a sanduicheira e a conecte em uma tomada",
                     "Confira se a sanduicheira está fechada",
                     "Desligue a sanduicheira e deixe aberta para que a temperatura do pão diminua",

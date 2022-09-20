@@ -9,5 +9,5 @@ import Foundation
 protocol PassoPassoDelegate: AnyObject{
     func anterior()
     func proximo()
-    func oiSomTestano()
+    func reproducaoAudios()
 }

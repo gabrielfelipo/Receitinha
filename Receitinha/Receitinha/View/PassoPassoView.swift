@@ -374,7 +374,7 @@ class PassoPassoView: UIView {
     
     @objc func tappedButton(sender: UIButton) {
         if sender == somBotao {
-            delegate?.oiSomTestano()
+            delegate?.reproducaoAudios()
         }
         else if sender == anteriorBotao {
             delegate?.anterior()
