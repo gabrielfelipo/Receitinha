@@ -110,20 +110,20 @@ class PassoPassoView: UIView {
         anteriorBotao.contentMode = .scaleAspectFit
         proximoBotao.contentMode = .scaleAspectFit
         
-        tituloReceita.text = "Banana com Nescau"
+        tituloReceita.text = "<tituloLabel>"
         tituloReceita.textAlignment = .center
         tituloReceita.font = UIFont.boldSystemFont(ofSize: 24.0)
         
-        passoAtual.text = "Preparação: Passo 1 de 11"
+        passoAtual.text = "Preparação: Passo x de y"
         passoAtual.textAlignment = .center
         passoAtual.font = UIFont.systemFont(ofSize: 20.0)
         
-        tituloDescricao.text = "Descasque a Banana"
+        tituloDescricao.text = "<tituloDescricaoLabel>"
         tituloDescricao.textAlignment = .center
         tituloDescricao.font = UIFont.boldSystemFont(ofSize: 30.0)
         tituloDescricao.numberOfLines = 0
         
-        corpoDescricao.text = "Tire toda a casca da banana e depois coloque a banana descascada em cima do prato"
+        corpoDescricao.text = "<corpoDescricaoLabel>"
         corpoDescricao.textAlignment = .center
         corpoDescricao.font = UIFont.systemFont(ofSize: 22.0)
         corpoDescricao.numberOfLines = 0

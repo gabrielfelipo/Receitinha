@@ -17,7 +17,10 @@ extension CheckViewController: UITableViewDelegate{
 
 extension CheckViewController: ButtonDelegate{
     func passarTela() {
-        print("chegou aqui no passar tela")
+        let backItem = UIBarButtonItem()
+        backItem.title = "Sair da receita"
+        navigationItem.backBarButtonItem = backItem
+        
         let passoPassoVC = PassoPassoViewController()
         passoPassoVC.passo = receitas[indexReceita!].troca + 1
         passoPassoVC.receitaIndex = indexReceita
