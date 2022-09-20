@@ -350,16 +350,16 @@ class PassoPassoView: UIView {
         somBotao.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
     }
     
-    func setupProgressBar (quantidadePassos: Int) {
-        let primeiroPassoProgresso = UIView ()
-        stackDeProgresso.addArrangedSubview(primeiroPassoProgresso)
-        stackDeProgresso.arrangedSubviews[0].backgroundColor = UIColor(red: 194/255, green: 228/255, blue: 254/255, alpha: 1)
-        
-        var contador: Int = 1
+    func setupProgressBar (quantidadePassos: Int, passoAtual: Int) {
+        var contador: Int = 0
         while contador < quantidadePassos {
-            let passo = UIView ()
-            passo.backgroundColor = .white
-            stackDeProgresso.addArrangedSubview(passo)
+            let passoView = UIView ()
+            passoView.backgroundColor = .white
+            stackDeProgresso.addArrangedSubview(passoView)
+
+            if contador <= passoAtual {
+                stackDeProgresso.arrangedSubviews[contador].backgroundColor = UIColor(red: 194/255, green: 228/255, blue: 254/255, alpha: 1)
+            }
             contador += 1
         }
     }

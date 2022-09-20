@@ -48,7 +48,7 @@ class PassoPassoViewController: UIViewController {
         passoPassoView.tituloReceita.text = receitas[receitaIndex!].titulo
         
         //setup da progress bar
-        passoPassoView.setupProgressBar(quantidadePassos: receitas[receitaIndex!].audioDescricao.count)
+        passoPassoView.setupProgressBar(quantidadePassos: receitas[receitaIndex!].audioDescricao.count, passoAtual: passo)
         
         getJsonPasso()
         

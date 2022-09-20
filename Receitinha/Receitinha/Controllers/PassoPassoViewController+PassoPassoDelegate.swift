@@ -29,6 +29,7 @@ extension PassoPassoViewController: PassoPassoDelegate{
                 navigationController?.pushViewController(checkViewController, animated: true)
             }else{
                 passo = passo + 1
+                print(passo)
                 passoPassoView.increaseProgressBar(index: passo)
                 getJsonPasso()
             }
