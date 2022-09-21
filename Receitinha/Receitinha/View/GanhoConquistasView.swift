@@ -75,6 +75,8 @@ class GanhoConquistaView: UIView {
         tituloLabel.textAlignment = .center
         tituloLabel.font = UIFont.boldSystemFont(ofSize: 34.0)
         
+        imagemConquista.contentMode = .scaleAspectFit
+        
         descricaoConquista.text = "Mestre Banana"
         descricaoConquista.textAlignment = .center
         descricaoConquista.font = UIFont.boldSystemFont(ofSize: 16.0)

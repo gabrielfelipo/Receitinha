@@ -87,7 +87,7 @@ extension Receita {
                 ]
             ),
             Receita(
-                precisaAuxilio: false,
+                precisaAuxilio: true,
                 titulo: "Misto quente",
                 imagemPrevia: "IMG_MistoQuente_Preview",
                 dificuldade: "Médio",
@@ -178,7 +178,7 @@ extension Receita {
                 precisaAuxilio: false,
                 titulo: "Bolo de caneca",
                 imagemPrevia: "IMG_BoloDeCaneca_Preview",
-                dificuldade: "Fácil",
+                dificuldade: "Difícil",
                 descricaoPrevia: "Essa é uma receita de um delicioso bolo de caneca. Muito fofinho e macio, é uma excelente sobremesa!",
                 duracao: 5,
                 objetos: [

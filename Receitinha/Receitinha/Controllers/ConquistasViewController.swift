@@ -50,6 +50,7 @@ class ConquistasViewController: UIViewController, UICollectionViewDelegate, UICo
             cell.nameLabel.textColor = UIColor(red: 0.87, green: 0.55, blue: 0.22, alpha: 1.00)
         }
         else {
+            cell.nameLabel.textColor = .systemGray
             cell.imageView.image = UIImage(named: item.imagem[0])
             cell.nameLabel.text = item.nome[0]
         }

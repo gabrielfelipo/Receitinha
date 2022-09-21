@@ -30,7 +30,7 @@ import AVFoundation
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if self.passoPassoView.layer.bounds.height < 884{
+        if self.passoPassoView.layer.bounds.height < 812{
             passoPassoView.tituloDescricao.font = .boldSystemFont(ofSize: 24)
             passoPassoView.corpoDescricao.font = .systemFont(ofSize: 18)
             passoPassoView.descricaoStackView.spacing = 0

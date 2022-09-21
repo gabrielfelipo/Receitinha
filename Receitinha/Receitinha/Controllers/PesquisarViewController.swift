@@ -7,7 +7,7 @@
 
 import UIKit
 
-let listaReceitas = ["banana com nescau", "misto quente"]
+let listaReceitas = ["banana com nescau", "misto quente", "bolo de caneca"]
 
 var indiceResult: [Int] = []
 
@@ -34,6 +34,14 @@ class PesquisarViewController: UIViewController, UISearchResultsUpdating {
         
         setupTableView()
         setupPesquisarViewController()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+        if Conquista.veioDeOnde == "ganhoConquista"{
+            self.tabBarController?.selectedIndex = 0
+            Conquista.veioDeOnde = ""
+        }
     }
     
     func setupTableView() {
