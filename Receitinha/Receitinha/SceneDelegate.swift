@@ -54,7 +54,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
         let defaults = UserDefaults.standard
         let array = Conquista.desbloqueadas
-        let primeiraVez = Conquista.primeiraVez
+        let primeiraVez = Conquista.isNotFirstTime
         defaults.set(array, forKey: "conquistas")
         defaults.set(primeiraVez, forKey: "primeiraVez")
     }

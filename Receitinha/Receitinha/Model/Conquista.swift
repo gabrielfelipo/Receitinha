@@ -16,7 +16,7 @@ struct Conquista{
 
 extension Conquista{
     static var desbloqueadas: [Bool] = [false, false]
-    static var primeiraVez: Bool = false
+    static var isNotFirstTime: Bool = false
     static var veioDeOnde: String = ""
 }
 
