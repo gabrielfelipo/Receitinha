@@ -180,7 +180,7 @@ extension Receita {
                 imagemPrevia: "IMG_BoloDeCaneca_Preview",
                 dificuldade: "Difícil",
                 descricaoPrevia: "Essa é uma receita de um delicioso bolo de caneca. Muito fofinho e macio, é uma excelente sobremesa!",
-                duracao: 5,
+                duracao: 10,
                 objetos: [
                     "1 caneca",
                     "1 xícara",
