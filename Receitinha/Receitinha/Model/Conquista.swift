@@ -15,8 +15,8 @@ struct Conquista{
 }
 
 extension Conquista{
-    static var desbloqueadas: [Bool] = [false, false]
-    static var primeiraVez: Bool = false
+    static var desbloqueadas: [Bool] = [false, false, false]
+    static var isNotFirstTime: Bool = false
     static var veioDeOnde: String = ""
 }
 
@@ -39,6 +39,15 @@ extension Conquista{
                 nome: [
                     "Bloqueada",
                     "Esquentou!"
+                ]),
+            Conquista(
+                imagem: [
+                "boloCaneca_bloq",
+                "boloCaneca_color"
+                ],
+                nome: [
+                "Bloqueada",
+                "Grande Boleiro"
                 ])
         ]
     }

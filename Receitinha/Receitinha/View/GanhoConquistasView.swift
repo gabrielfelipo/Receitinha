@@ -13,16 +13,22 @@ class GanhoConquistaView: UIView {
     // MARK: - Inicializacao dos componentes
     
     let tituloLabel = UILabel()
-    let imagemConquista = UIImageView(image: UIImage(named: "IMG_GanhoConquistaBanana"))
+    let backgroundConquista = UIImageView(image: UIImage(named: "IMG_GanhoConquista"))
+    let imagemConquista = UIImageView()
+    let descricaoConquista = UILabel()
+    
     let descricaoLabel = UILabel()
     let botao = UIButton()
     
     let tituloLabelContainer = UIView()
+    let backgroundConquistaContainer = UIView()
     let imagemConquistaContainer = UIView()
+    let descricaoConquistaContainer = UIView()
     let descricaoLabelContainer = UIView()
     let botaoContainer = UIView()
     
     let finalStackView = UIStackView()
+    let conquistaStackView = UIStackView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,19 +48,26 @@ class GanhoConquistaView: UIView {
         self.addSubview(finalStackView)
         
         tituloLabelContainer.addSubview(tituloLabel)
-        imagemConquistaContainer.addSubview(imagemConquista)
         descricaoLabelContainer.addSubview(descricaoLabel)
         botaoContainer.addSubview(botao)
+        descricaoConquistaContainer.addSubview(descricaoConquista)
+        imagemConquistaContainer.addSubview(imagemConquista)
+        
+        backgroundConquistaContainer.addSubview(backgroundConquista)
+        backgroundConquistaContainer.addSubview(conquistaStackView)
+        
+        conquistaStackView.addArrangedSubview(imagemConquistaContainer)
+        conquistaStackView.addArrangedSubview(descricaoConquistaContainer)
         
         finalStackView.addArrangedSubview(tituloLabelContainer)
-        finalStackView.addArrangedSubview(imagemConquistaContainer)
+        finalStackView.addArrangedSubview(backgroundConquistaContainer)
         finalStackView.addArrangedSubview(descricaoLabelContainer)
         finalStackView.addArrangedSubview(botaoContainer)
     }
     
     func setupViewsAttributes() {
         tituloLabel.contentMode = .scaleAspectFit
-        imagemConquista.contentMode = .scaleAspectFit
+        backgroundConquista.contentMode = .scaleAspectFit
         descricaoLabel.contentMode = .scaleAspectFit
         botao.contentMode = .scaleAspectFit
         
@@ -62,9 +75,20 @@ class GanhoConquistaView: UIView {
         tituloLabel.textAlignment = .center
         tituloLabel.font = UIFont.boldSystemFont(ofSize: 34.0)
         
+        imagemConquista.contentMode = .scaleAspectFit
+        
+        descricaoConquista.text = "Mestre Banana"
+        descricaoConquista.textAlignment = .center
+        descricaoConquista.font = UIFont.boldSystemFont(ofSize: 16.0)
+        descricaoConquista.textColor = UIColor(red: 0.87, green: 0.55, blue: 0.22, alpha: 1.00)
         
         descricaoLabel.textAlignment = .center
         descricaoLabel.numberOfLines = 0
+        
+        conquistaStackView.axis = .vertical
+        conquistaStackView.alignment = .fill
+        conquistaStackView.distribution = .fill
+        conquistaStackView.spacing = 10
         
         finalStackView.axis = .vertical
         finalStackView.alignment = .fill
@@ -104,6 +128,17 @@ class GanhoConquistaView: UIView {
         tituloLabelContainer.translatesAutoresizingMaskIntoConstraints = false
         tituloLabelContainer.setContentHuggingPriority(.defaultHigh, for: .vertical)
         
+        backgroundConquista.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            backgroundConquista.topAnchor.constraint(equalTo: backgroundConquistaContainer.topAnchor),
+            backgroundConquista.bottomAnchor.constraint(equalTo: backgroundConquistaContainer.bottomAnchor),
+            backgroundConquista.leadingAnchor.constraint(equalTo: backgroundConquistaContainer.leadingAnchor),
+            backgroundConquista.trailingAnchor.constraint(equalTo: backgroundConquistaContainer.trailingAnchor)
+        ])
+        backgroundConquista.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        backgroundConquistaContainer.translatesAutoresizingMaskIntoConstraints = false
+        backgroundConquistaContainer.setContentHuggingPriority(.defaultLow, for: .vertical)
+        
         imagemConquista.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imagemConquista.topAnchor.constraint(equalTo: imagemConquistaContainer.topAnchor),
@@ -111,9 +146,22 @@ class GanhoConquistaView: UIView {
             imagemConquista.leadingAnchor.constraint(equalTo: imagemConquistaContainer.leadingAnchor),
             imagemConquista.trailingAnchor.constraint(equalTo: imagemConquistaContainer.trailingAnchor)
         ])
-        imagemConquista.setContentHuggingPriority(.defaultHigh, for: .vertical)
-        imagemConquistaContainer.translatesAutoresizingMaskIntoConstraints = false
-        imagemConquistaContainer.setContentHuggingPriority(.defaultLow, for: .vertical)
+        imagemConquista.setContentHuggingPriority(.defaultLow, for: .vertical)
+        
+        descricaoConquista.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            descricaoConquista.topAnchor.constraint(equalTo: descricaoConquistaContainer.topAnchor),
+            descricaoConquista.bottomAnchor.constraint(equalTo: descricaoConquistaContainer.bottomAnchor),
+            descricaoConquista.leadingAnchor.constraint(equalTo: descricaoConquistaContainer.leadingAnchor),
+            descricaoConquista.trailingAnchor.constraint(equalTo: descricaoConquistaContainer.trailingAnchor)
+        ])
+        descricaoConquista.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        
+        conquistaStackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            conquistaStackView.centerXAnchor.constraint(equalTo: backgroundConquistaContainer.centerXAnchor),
+            conquistaStackView.centerYAnchor.constraint(equalTo: backgroundConquistaContainer.centerYAnchor)
+        ])
         
         descricaoLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

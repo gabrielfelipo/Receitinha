@@ -6,19 +6,20 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class PreviaViewController: UIViewController {
     
-    var i: Int?
+    var indexReceita: Int?
     let previaView = PreviaView()
     let receitas = Receita.receitas()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = previaView
         setupPreviaViewController()
         previaView.delegate = self
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -29,26 +30,34 @@ class PreviaViewController: UIViewController {
     
     func setupPreviaViewController () {
         view.backgroundColor = UIColor(named: "blueBackground")
-        self.navigationItem.title = receitas[i!].titulo
+        self.navigationItem.title = receitas[indexReceita!].titulo
         
         
-        previaView.imagemCapa.image = UIImage(named: receitas[i!].imagemPrevia)
-        previaView.descricaoLabel.text = receitas[i!].descricaoPrevia
+        previaView.imagemCapa.image = UIImage(named: receitas[indexReceita!].imagemPrevia)
+        previaView.descricaoLabel.text = receitas[indexReceita!].descricaoPrevia
         let objetosIngredientes = gerarListas()
         previaView.listaObjetosLabel.text = objetosIngredientes[0]
         previaView.listaIngredientesLabel.text = objetosIngredientes[1]
-        previaView.labelTempoDuracao.text = "\(String(receitas[i!].duracao)) minutos"
-        previaView.labelDificuldadeDificuldade.text = receitas[i!].dificuldade
+        previaView.labelTempoDuracao.text = "\(String(receitas[indexReceita!].duracao)) minutos"
+        previaView.labelDificuldadeDificuldade.text = receitas[indexReceita!].dificuldade
+        
+        if receitas[indexReceita!].precisaAuxilio{
+            previaView.buttonIniciarReceita.setTitle("Desbloquear Receita", for: .normal)
+            previaView.buttonIniciarReceita.backgroundColor = .lightGray
+        }
+        else{
+            
+        }
     }
     
     func gerarListas () -> [String]{
         var array: [String] = []
         var textoObjetos = ""
         var textoIngredientes = ""
-        receitas[i!].objetos.enumerated().forEach{ (index, objeto) in
+        receitas[indexReceita!].objetos.enumerated().forEach{ (index, objeto) in
             textoObjetos = "\(textoObjetos)• \(objeto)\n"
         }
-        receitas[i!].ingredientes.enumerated().forEach{ (index, ingrediente) in
+        receitas[indexReceita!].ingredientes.enumerated().forEach{ (index, ingrediente) in
             textoIngredientes = "\(textoIngredientes)• \(ingrediente)\n"
         }
         array.append(textoObjetos)

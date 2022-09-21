@@ -23,6 +23,18 @@ class ConclusaoViewController: UIViewController {
 }
 
 extension ConclusaoViewController: ButtonDelegate {
+    func fechar() {
+    }
+    
+    func sair() {
+    }
+    
+    func continuar() {
+    }
+    
+    func menu() {
+    }
+    
     func passarTela() {
         if Conquista.desbloqueadas[indexReceita!]{
             navigationController?.popToRootViewController(animated: true)

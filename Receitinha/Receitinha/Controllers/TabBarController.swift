@@ -35,13 +35,13 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         let defaults = UserDefaults.standard
-        Conquista.primeiraVez = defaults.bool(forKey: "primeiraVez")
+        Conquista.isNotFirstTime = defaults.bool(forKey: "primeiraVez")
 
-        if Conquista.primeiraVez{
+        if Conquista.isNotFirstTime{
             let array = defaults.array(forKey: "conquistas") as? [Bool] ?? [Bool]()
             Conquista.desbloqueadas = array
         } else {
-            Conquista.primeiraVez = true
+            Conquista.isNotFirstTime = true
             
         }
         

@@ -14,9 +14,9 @@ extension ReceitasViewController: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let previaViewController = PreviaViewController()
-        previaViewController.i = 0
-        if previaViewController.i ?? 0 < indexPath.row {
-            previaViewController.i = indexPath.row
+        previaViewController.indexReceita = 0
+        if previaViewController.indexReceita ?? 0 < indexPath.row {
+            previaViewController.indexReceita = indexPath.row
         } else {}
         
         let backItem = UIBarButtonItem()

@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class PassoPassoViewController: UIViewController {
+@objcMembers class PassoPassoViewController: UIViewController {
     
     var receitaIndex: Int?
     var passo = 0
@@ -23,7 +23,18 @@ class PassoPassoViewController: UIViewController {
         setupPassoPassoViewController()
         passoPassoView.delegate = self
         
+        let backItem = UIBarButtonItem(title: "X Sair da receita", style: .plain, target: self, action: #selector(sair))
+        navigationItem.leftBarButtonItem = backItem
+
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if self.passoPassoView.layer.bounds.height < 812{
+            passoPassoView.tituloDescricao.font = .boldSystemFont(ofSize: 24)
+            passoPassoView.corpoDescricao.font = .systemFont(ofSize: 18)
+            passoPassoView.descricaoStackView.spacing = 0
+        }
     }
     
     func getJsonPasso() {
@@ -45,6 +56,7 @@ class PassoPassoViewController: UIViewController {
     func setupPassoPassoViewController () {
         view.backgroundColor = UIColor(named: "blueBackground")
         self.navigationController?.navigationBar.prefersLargeTitles = false
+        //self.navigationController?.
         passoPassoView.tituloReceita.text = receitas[receitaIndex!].titulo
         
         //setup da progress bar

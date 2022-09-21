@@ -45,11 +45,21 @@ class GanhoConquistaViewController: UIViewController {
     
     func setupImage(){
         ganhoConquistaView.imagemConquista.image = UIImage(named: Conquista.conquistas()[indexReceita!].imagem[1])
+        ganhoConquistaView.descricaoConquista.text = Conquista.conquistas()[indexReceita!].nome[1]
     }
 
 }
 
 extension GanhoConquistaViewController: ButtonDelegate{
+    func fechar() {
+    }
+    func sair() {
+    }
+    func continuar() {
+    }
+    func menu() {
+    }
+    
     func passarTela() {
         Conquista.desbloqueadas[indexReceita!] = true
         Conquista.veioDeOnde = "ganhoConquista"

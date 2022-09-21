@@ -7,5 +7,9 @@
 
 import Foundation
 protocol ButtonDelegate: AnyObject{
+    func sair()
+    func continuar()
+    func menu()
+    func fechar()
     func passarTela()
 }

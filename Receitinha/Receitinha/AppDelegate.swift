@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         let defaults = UserDefaults.standard
         let array = Conquista.desbloqueadas
-        let primeiraVez = Conquista.primeiraVez
+        let primeiraVez = Conquista.isNotFirstTime
         defaults.set(array, forKey: "conquistas")
         defaults.set(primeiraVez, forKey: "primeiraVez")
     }
