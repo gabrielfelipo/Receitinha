@@ -10,7 +10,7 @@ import UIKit
 extension CheckViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 56
+        return 52
     }
     
 }

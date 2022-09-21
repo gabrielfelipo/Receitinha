@@ -18,7 +18,7 @@ class PassoPassoView: UIView {
     let barraDeProgresso = UIView()
     let stackDeProgresso = UIStackView ()
     
-    let imagemPasso = UIImageView(image: UIImage(named: "IMG_BananaComNescau_1"))
+    let imagemPasso = UIImageView()
     
     let somBotao = UIButton()
     let iconSom = UIImage(named: "somIconEspacamento")

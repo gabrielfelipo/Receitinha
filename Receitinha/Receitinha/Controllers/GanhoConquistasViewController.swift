@@ -45,6 +45,7 @@ class GanhoConquistaViewController: UIViewController {
     
     func setupImage(){
         ganhoConquistaView.imagemConquista.image = UIImage(named: Conquista.conquistas()[indexReceita!].imagem[1])
+        ganhoConquistaView.descricaoConquista.text = Conquista.conquistas()[indexReceita!].nome[1]
     }
 
 }

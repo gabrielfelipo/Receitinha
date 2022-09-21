@@ -26,6 +26,14 @@ class PassoPassoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if self.passoPassoView.layer.bounds.height < 884{
+            passoPassoView.tituloDescricao.font = .boldSystemFont(ofSize: 24)
+            passoPassoView.corpoDescricao.font = .systemFont(ofSize: 18)
+            passoPassoView.descricaoStackView.spacing = 0
+        }
+    }
+    
     func getJsonPasso() {
         if passo > receitas[receitaIndex!].troca{
             passoPassoView.passoAtual.text = "Cozinhando: Passo \(passo+1) de \(receitas[receitaIndex!].audioDescricao.count)"
