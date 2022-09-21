@@ -10,6 +10,7 @@ import AVFoundation
 
 extension PassoPassoViewController: PassoPassoDelegate{
     func anterior() {
+        player?.stop()
         if passo == receitas[receitaIndex!].troca + 1 {
             self.navigationController?.popViewController(animated: true)
         }else if passo == 0{
@@ -22,6 +23,7 @@ extension PassoPassoViewController: PassoPassoDelegate{
     }
     
     func proximo() {
+        player?.stop()
         if passo < receitas[receitaIndex!].tituloInstrucao.count - 1{
             if passo == receitas[receitaIndex!].troca {
                 
