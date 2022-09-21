@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let tabBarController = TabBarController()
         window.rootViewController = tabBarController
+        window.overrideUserInterfaceStyle = .light
         self.window = window
         window.makeKeyAndVisible()
     }
@@ -56,8 +57,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let primeiraVez = Conquista.primeiraVez
         defaults.set(array, forKey: "conquistas")
         defaults.set(primeiraVez, forKey: "primeiraVez")
-        print("fechou o app")
-        print(defaults.array(forKey: "conquistas") as? [Bool] ?? [Bool]())
     }
 
     

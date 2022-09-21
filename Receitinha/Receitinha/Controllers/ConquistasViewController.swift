@@ -25,7 +25,6 @@ class ConquistasViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewWillAppear(_ animated: Bool) {
         conquistasDesbloqueadas = Conquista.desbloqueadas
         conquistas = Conquista.conquistas()
-        print(conquistasDesbloqueadas)
         conquistasView.collectionView.reloadData()
     }
     
@@ -45,7 +44,6 @@ class ConquistasViewController: UIViewController, UICollectionViewDelegate, UICo
         let cell = conquistasView.collectionView.dequeueReusableCell(withReuseIdentifier: "conquistasCollectionViewCell", for: indexPath) as! ConquistasCollectionViewCell
         
         let item = conquistas[indexPath.row]
-        print(conquistasDesbloqueadas)
         if conquistasDesbloqueadas[indexPath.row] == true {
             cell.imageView.image = UIImage(named: item.imagem[1])
             cell.nameLabel.text = item.nome[1]
