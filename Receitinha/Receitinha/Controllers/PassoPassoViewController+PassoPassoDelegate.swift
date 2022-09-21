@@ -9,6 +9,21 @@ import UIKit
 import AVFoundation
 
 extension PassoPassoViewController: PassoPassoDelegate{
+    func sair() {
+        passoPassoView.popupBackgroundView.isHidden = false
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    func continuar() {
+        passoPassoView.popupBackgroundView.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    func menu() {
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.popToRootViewController(animated: false)
+    }
+    
     func anterior() {
         player?.stop()
         if passo == receitas[receitaIndex!].troca + 1 {

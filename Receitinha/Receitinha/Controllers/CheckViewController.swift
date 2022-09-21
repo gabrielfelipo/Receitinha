@@ -19,9 +19,15 @@ class CheckViewController: UIViewController {
         super.viewDidLoad()
         checkView.tableView.delegate = self
         checkView.tableView.dataSource = self
+        
         self.view = checkView
+        
         objetosIngredientes = receitas[indexReceita!].objetos + receitas[indexReceita!].ingredientes
         checkView.delegate = self
+        
+        
+        let backItem = UIBarButtonItem(title: "X Sair da receita", style: .plain, target: self, action: #selector(sair))
+        navigationItem.leftBarButtonItem = backItem
     }
 }
 

@@ -51,6 +51,18 @@ class GanhoConquistaViewController: UIViewController {
 }
 
 extension GanhoConquistaViewController: ButtonDelegate{
+    func sair() {
+        
+    }
+    
+    func continuar() {
+        
+    }
+    
+    func menu() {
+        
+    }
+    
     func passarTela() {
         Conquista.desbloqueadas[indexReceita!] = true
         Conquista.veioDeOnde = "ganhoConquista"

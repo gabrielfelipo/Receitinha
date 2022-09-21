@@ -13,10 +13,6 @@ extension PreviaViewController: PreviaViewDelegate{
         let passoPassoViewController = PassoPassoViewController()
         passoPassoViewController.receitaIndex = i
         
-        let backItem = UIBarButtonItem()
-        backItem.title = "Sair da receita"
-        navigationItem.backBarButtonItem = backItem
-        
         self.navigationController?.pushViewController(passoPassoViewController, animated: true)
     }
     

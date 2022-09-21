@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class PassoPassoViewController: UIViewController {
+@objcMembers class PassoPassoViewController: UIViewController {
     
     var receitaIndex: Int?
     var passo = 0
@@ -23,6 +23,9 @@ class PassoPassoViewController: UIViewController {
         setupPassoPassoViewController()
         passoPassoView.delegate = self
         
+        let backItem = UIBarButtonItem(title: "X Sair da receita", style: .plain, target: self, action: #selector(sair))
+        navigationItem.leftBarButtonItem = backItem
+
         // Do any additional setup after loading the view.
     }
     
@@ -53,6 +56,7 @@ class PassoPassoViewController: UIViewController {
     func setupPassoPassoViewController () {
         view.backgroundColor = UIColor(named: "blueBackground")
         self.navigationController?.navigationBar.prefersLargeTitles = false
+        //self.navigationController?.
         passoPassoView.tituloReceita.text = receitas[receitaIndex!].titulo
         
         //setup da progress bar
