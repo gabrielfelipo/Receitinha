@@ -16,8 +16,8 @@ extension PesquisarViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let previaViewController = PreviaViewController()
         previaViewController.indexReceita = 0
-        if previaViewController.indexReceita ?? 0 < indexPath.row {
-            previaViewController.indexReceita = indexPath.row
+        if previaViewController.indexReceita ?? 0 < indiceResult[indexPath.row] {
+            previaViewController.indexReceita = indiceResult[indexPath.row]
         } else {}
         
         let backItem = UIBarButtonItem()

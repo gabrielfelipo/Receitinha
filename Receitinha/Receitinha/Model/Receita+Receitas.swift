@@ -282,7 +282,7 @@ extension Receita {
                     "Coloque a caneca em cima do píres, e depois coloque dentro do forno micro-ondas",
                     "Ligue o micro-ondas por 3 minutos e aguarde até terminar",
                     "Cuidado, o bolo vai sair bem quente, pegue um pano para retirá-lo do micro-ondas",
-                    "Com o pano, retire com cuidado o píres com a caneca do micro-ondas e espere esfriar",
+                    "CUIDADO: A caneca está quente!\nCom o pano, retire  o píres com a caneca do micro-ondas e espere esfriar",
                     "Seu bolo de caneca está pronto! Pode pegar uma colher e saboreá-lo"
                 ],
                 audioDescricao: [
