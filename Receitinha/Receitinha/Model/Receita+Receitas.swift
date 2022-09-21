@@ -13,6 +13,7 @@ extension Receita {
         return [
             Receita(
                 //comentario de thales
+                precisaAuxilio: false,
                 titulo: "Banana com leite e chocolate",
                 imagemPrevia: "IMG_BananaComNescau_Preview",
                 dificuldade: "Fácil",
@@ -86,6 +87,7 @@ extension Receita {
                 ]
             ),
             Receita(
+                precisaAuxilio: true,
                 titulo: "Misto quente",
                 imagemPrevia: "IMG_MistoQuente_Preview",
                 dificuldade: "Médio",

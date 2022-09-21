@@ -9,6 +9,7 @@ import Foundation
 
 struct Receita{
     //Dados estáticos
+    let precisaAuxilio: Bool
     let titulo: String
     let imagemPrevia: String
     let dificuldade: String
