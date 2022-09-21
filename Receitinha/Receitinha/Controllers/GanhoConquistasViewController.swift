@@ -51,16 +51,13 @@ class GanhoConquistaViewController: UIViewController {
 }
 
 extension GanhoConquistaViewController: ButtonDelegate{
+    func fechar() {
+    }
     func sair() {
-        
     }
-    
     func continuar() {
-        
     }
-    
     func menu() {
-        
     }
     
     func passarTela() {
