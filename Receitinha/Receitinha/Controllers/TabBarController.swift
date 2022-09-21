@@ -20,11 +20,11 @@ class TabBarController: UITabBarController {
     ]
     
     let icons = [
-      "rosette",
-      "fork.knife",
-      "magnifyingglass",
+        "rosette",
+        "fork.knife",
+        "magnifyingglass",
     ]
-
+    
     let titles = [
         "Conquistas",
         "Receitas",
@@ -33,8 +33,18 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupTabBarController()
-        print("view did load")
+        
+        let defaults = UserDefaults.standard
+        Conquista.primeiraVez = defaults.bool(forKey: "primeiraVez")
+
+        if Conquista.primeiraVez{
+            let array = defaults.array(forKey: "conquistas") as? [Bool] ?? [Bool]()
+            Conquista.desbloqueadas = array
+        } else {
+            Conquista.primeiraVez = true
+            
+        }
+        
         
     }
     
@@ -78,7 +88,7 @@ class TabBarController: UITabBarController {
         tabBar.layer.shadowColor = UIColor.black.cgColor
         tabBar.layer.shadowOpacity = 0.3
     }
-
+    
 }
 
 // MARK: - Preview

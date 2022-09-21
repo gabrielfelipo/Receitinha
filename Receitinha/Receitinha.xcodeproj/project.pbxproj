@@ -222,7 +222,7 @@
 				0DD453B528D3ACFF00DA32F3 /* ConclusaoViewController.swift */,
 				0D50648F28D4C58700020F17 /* ComecoViewController.swift */,
 				8FD221E628D27640008EB0C4 /* PassoPassoViewController.swift */,
-				4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+Delegate.swift */,
+				4725FB1028D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift */,
 				8F2391F028D5F1D600B75299 /* GanhoConquistasViewController.swift */,
 				47FAFDDF28D23EF9004175C1 /* PreviaViewController.swift */,
 				4725FB0C28D8B79B00DC3A16 /* PreviaViewController+Delegate.swift */,
@@ -412,7 +412,7 @@
 				CA826B4C28CFC05D00D5268F /* UIViewController+Preview.swift in Sources */,
 				0D66D52E28CFBD7A00F1A41C /* PesquisarViewController.swift in Sources */,
 				0DAD6E0828D907780021C51E /* PesquisarViewController+Delegate.swift in Sources */,
-				D371043628D60044004F138B /* CheckViewController+Delegate.swift in Sources */,
+				D371043628D60044004F138B /* CheckViewController+DataSource.swift in Sources */,
 				D371043628D60044004F138B /* CheckViewController+DataSource.swift in Sources */,
 				0DF1FBC128D0EE41005EE8D7 /* PassoPassoView.swift in Sources */,
 				CA826B4E28CFC52C00D5268F /* TabBarController.swift in Sources */,
@@ -448,7 +448,7 @@
 				4725FB0B28D8B6F400DC3A16 /* PreviaViewDelegate.swift in Sources */,
 				8FF9F7BE28CFEDB60004A681 /* Receita+Receitas.swift in Sources */,
 				CA67838128D4BD11006134FF /* Conquista.swift in Sources */,
-				4725FB1128D8D1CC00DC3A16 /* PassoPassoViewController+Delegate.swift in Sources */,
+				4725FB1128D8D1CC00DC3A16 /* PassoPassoViewController+PassoPassoDelegate.swift in Sources */,
 				D371043828D60164004F138B /* CheckView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,8 +593,9 @@
 				INFOPLIST_FILE = Receitinha/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,8 +621,9 @@
 				INFOPLIST_FILE = Receitinha/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -16,6 +16,7 @@ class ConclusaoViewController: UIViewController {
         super.viewDidLoad()
         self.view = conclusaoView
         conclusaoView.delegate = self
+        navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }
 
@@ -23,9 +24,14 @@ class ConclusaoViewController: UIViewController {
 
 extension ConclusaoViewController: ButtonDelegate {
     func passarTela() {
-        let ganhoConquistaVC = GanhoConquistaViewController()
-        ganhoConquistaVC.indexReceita = indexReceita
-        navigationController?.pushViewController(ganhoConquistaVC, animated: true)
+        if Conquista.desbloqueadas[indexReceita!]{
+            navigationController?.popToRootViewController(animated: true)
+        }else{
+            let ganhoConquistaVC = GanhoConquistaViewController()
+            ganhoConquistaVC.indexReceita = indexReceita
+            navigationController?.pushViewController(ganhoConquistaVC, animated: true)
+        }
+        
     }
     
     

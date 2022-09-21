@@ -14,3 +14,34 @@ struct Conquista{
     let nome: [String]
 }
 
+extension Conquista{
+    static var desbloqueadas: [Bool] = [false, false]
+    static var primeiraVez: Bool = false
+    static var veioDeOnde: String = ""
+}
+
+extension Conquista{
+    static func conquistas() -> [Conquista]{
+        return [
+            Conquista(
+                imagem: [
+                    "mestreBanana_bloq",
+                    "mestreBanana_color"
+                ],
+                nome: [
+                    "Bloqueada",
+                    "Mestre Banana"
+                ]),
+            Conquista(
+                imagem: [
+                    "misto_bloq",
+                    "misto_color"],
+                nome: [
+                    "Bloqueada",
+                    "Esquentou!"
+                ])
+        ]
+    }
+}
+
+

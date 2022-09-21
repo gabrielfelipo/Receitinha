@@ -28,7 +28,6 @@ class CheckViewController: UIViewController {
 
 
 
-
 // MARK: - Preview
 #if DEBUG
 import SwiftUI

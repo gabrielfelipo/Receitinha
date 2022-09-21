@@ -11,8 +11,6 @@ class GanhoConquistaView: UIView {
     
     weak var delegate: ButtonDelegate?
     // MARK: - Inicializacao dos componentes
-    let regularText = "Você desbloqueou uma nova conquista! Agora você é um:\n"
-    let boldText = "Mestre da Banana!"
     
     let tituloLabel = UILabel()
     let imagemConquista = UIImageView(image: UIImage(named: "IMG_GanhoConquistaBanana"))
@@ -28,7 +26,7 @@ class GanhoConquistaView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        print("entrou no init da view")
         setupViewsHierarchy()
         setupViewsAttributes()
         setupConstraints()
@@ -64,15 +62,7 @@ class GanhoConquistaView: UIView {
         tituloLabel.textAlignment = .center
         tituloLabel.font = UIFont.boldSystemFont(ofSize: 34.0)
         
-        // Setando a parte da string que será bold
-        let bold = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 22)]
-        let boldString = NSMutableAttributedString(string:boldText, attributes:bold)
-        // Setando a parte da string que será regular
-        let regular = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 22)]
-        let regularString = NSMutableAttributedString(string:regularText, attributes: regular)
-        // Juntando as duas strings e configurando a label
-        regularString.append(boldString)
-        descricaoLabel.attributedText = regularString
+        
         descricaoLabel.textAlignment = .center
         descricaoLabel.numberOfLines = 0
         
