@@ -47,6 +47,17 @@ class PassoPassoView: UIView {
     let botaoStackView = UIStackView()
     let finalStackView = UIStackView()
     
+    //MARK: - Inicialização dos componentes da PopUp
+    let popupBackgroundView = UIView()
+    let popupView = UIView()
+    let popupStackView = UIStackView()
+    let popupImageView = UIImageView()
+    let popupPerguntaLabel = UILabel()
+    let popupAvisoLabel = UILabel()
+    let popupButtonsStackView = UIStackView()
+    let popupButtonContinuar = UIButton()
+    let popupButtonMenu = UIButton()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViewsHierarchy()
@@ -56,7 +67,7 @@ class PassoPassoView: UIView {
     }
     
     required init(coder: NSCoder) {
-        fatalError("ïnit(coder:) has not been implemented")
+        fatalError("Init(coder:) has not been implemented")
     }
     
     let teste2 = UIImageView ()
@@ -65,6 +76,18 @@ class PassoPassoView: UIView {
     func setupViewsHierarchy() {
         // MARK: - Setup na hierarquia das views
         self.addSubview(finalStackView)
+        self.addSubview(popupBackgroundView)
+        
+        popupBackgroundView.addSubview(popupView)
+        popupView.addSubview(popupStackView)
+        
+        popupStackView.addArrangedSubview(popupImageView)
+        popupStackView.addArrangedSubview(popupPerguntaLabel)
+        popupStackView.addArrangedSubview(popupAvisoLabel)
+        popupStackView.addArrangedSubview(popupButtonsStackView)
+        
+        popupButtonsStackView.addArrangedSubview(popupButtonContinuar)
+        popupButtonsStackView.addArrangedSubview(popupButtonMenu)
         
         tituloReceitaContainer.addSubview(tituloReceita)
         passoAtualContainer.addSubview(passoAtual)
@@ -100,6 +123,60 @@ class PassoPassoView: UIView {
     
     func setupViewsAttributes() {
         // MARK: - Configuracao dos atributos dos componentes
+        popupBackgroundView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
+        popupView.backgroundColor = .white
+        popupView.layer.borderWidth = 1
+        popupView.layer.borderColor = CGColor(red: 0.68, green: 0.68, blue: 0.68, alpha: 1.00)
+        popupView.layer.cornerRadius = 20
+        popupBackgroundView.isHidden = true
+        
+        popupStackView.axis = .vertical
+        popupStackView.spacing = 24
+        
+        popupImageView.image = UIImage(named: "CenourinhaPopExit")
+        popupImageView.contentMode = .scaleAspectFit
+        
+        popupPerguntaLabel.text = "Você deseja sair da receita e voltar ao menu?"
+        popupPerguntaLabel.numberOfLines = 2
+        popupPerguntaLabel.textAlignment = .center
+        popupPerguntaLabel.adjustsFontSizeToFitWidth = true
+        popupPerguntaLabel.font = UIFont.boldSystemFont(ofSize: 28)
+        
+        popupAvisoLabel.text = "Se você sair da receita você perderá todo o progresso até aqui!"
+        popupAvisoLabel.numberOfLines = 2
+        popupAvisoLabel.textAlignment = .center
+        popupAvisoLabel.adjustsFontSizeToFitWidth = true
+        popupAvisoLabel.font = UIFont.systemFont(ofSize: 22)
+        
+        popupButtonsStackView.axis = .vertical
+        popupButtonsStackView.spacing = 16
+        
+        popupButtonContinuar.setTitle("Continuar receita", for: .normal)
+        popupButtonContinuar.setTitleColor(UIColor(named: "azul-acao"), for: .normal)
+        popupButtonContinuar.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        popupButtonContinuar.tintColor = .white
+        popupButtonContinuar.layer.cornerRadius = 25
+        popupButtonContinuar.backgroundColor = .white
+        popupButtonContinuar.layer.borderColor = UIColor(named: "azul-acao")?.cgColor
+        popupButtonContinuar.layer.borderWidth = 2
+        //shadow do botao
+        popupButtonContinuar.layer.shadowOffset = CGSize(width: 0, height: 3)
+        popupButtonContinuar.layer.shadowRadius = 10
+        popupButtonContinuar.layer.shadowColor = UIColor.black.cgColor
+        popupButtonContinuar.layer.shadowOpacity = 0.25
+        
+        popupButtonMenu.setTitle("Voltar para o menu", for: .normal)
+        popupButtonMenu.setTitleColor(.white, for: .normal)
+        popupButtonMenu.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        popupButtonMenu.tintColor = UIColor(named: "azul-acao")
+        popupButtonMenu.backgroundColor = UIColor(named: "azul-acao")
+        popupButtonMenu.layer.cornerRadius = 25.5
+        //shadow do botao
+        popupButtonMenu.layer.shadowOffset = CGSize(width: 0, height: 3)
+        popupButtonMenu.layer.shadowRadius = 10
+        popupButtonMenu.layer.shadowColor = UIColor.black.cgColor
+        popupButtonMenu.layer.shadowOpacity = 0.25
+        
         tituloReceita.contentMode = .scaleAspectFit
         passoAtual.contentMode = .scaleAspectFit
         barraDeProgresso.contentMode = .scaleAspectFit
@@ -215,6 +292,47 @@ class PassoPassoView: UIView {
     
     func setupConstraints() {
         // MARK: - Configuracao das constraints de auto layout
+        popupBackgroundView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            popupBackgroundView.topAnchor.constraint(equalTo: topAnchor),
+            popupBackgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            popupBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            popupBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor)
+        ])
+        
+        popupView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            popupView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            popupView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            popupView.heightAnchor.constraint(equalTo: popupBackgroundView.heightAnchor, multiplier: 0.63),
+            popupView.widthAnchor.constraint(equalTo: popupBackgroundView.widthAnchor, multiplier: 0.88)
+        ])
+        
+        popupStackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            popupStackView.topAnchor.constraint(equalTo: popupView.topAnchor, constant: 24),
+            popupStackView.bottomAnchor.constraint(equalTo: popupView.bottomAnchor, constant: -32),
+            popupStackView.trailingAnchor.constraint(equalTo: popupView.trailingAnchor, constant: -24),
+            popupStackView.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant: 24)
+        ])
+        
+        popupButtonsStackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            popupButtonsStackView.bottomAnchor.constraint(equalTo: popupStackView.bottomAnchor)
+        ])
+        
+        popupButtonContinuar.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            popupButtonContinuar.heightAnchor.constraint(equalToConstant: 52)
+        ])
+        
+        popupButtonMenu.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            popupButtonMenu.leadingAnchor.constraint(equalTo: popupButtonsStackView.leadingAnchor),
+            popupButtonMenu.trailingAnchor.constraint(equalTo: popupButtonsStackView.trailingAnchor),
+            popupButtonMenu.heightAnchor.constraint(equalToConstant: 52)
+        ])
+        
         finalStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             finalStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
@@ -343,6 +461,10 @@ class PassoPassoView: UIView {
     
     func setupButtonTap() {
         // MARK: - Outras configuracoes
+        popupButtonContinuar.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        
+        popupButtonMenu.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        
         anteriorBotao.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
         
         proximoBotao.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
@@ -375,6 +497,12 @@ class PassoPassoView: UIView {
     @objc func tappedButton(sender: UIButton) {
         if sender == somBotao {
             delegate?.reproducaoAudios()
+        }
+        else if sender == popupButtonContinuar {
+            delegate?.continuar()
+        }
+        else if sender == popupButtonMenu {
+            delegate?.menu()
         }
         else if sender == anteriorBotao {
             delegate?.anterior()

@@ -7,6 +7,9 @@
 
 import Foundation
 protocol PassoPassoDelegate: AnyObject{
+    func sair()
+    func continuar()
+    func menu()
     func anterior()
     func proximo()
     func reproducaoAudios()
