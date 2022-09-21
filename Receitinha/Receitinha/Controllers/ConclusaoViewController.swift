@@ -22,6 +22,18 @@ class ConclusaoViewController: UIViewController {
 }
 
 extension ConclusaoViewController: ButtonDelegate {
+    func sair() {
+        
+    }
+    
+    func continuar() {
+        
+    }
+    
+    func menu() {
+        
+    }
+    
     func passarTela() {
         let ganhoConquistaVC = GanhoConquistaViewController()
         ganhoConquistaVC.indexReceita = indexReceita
