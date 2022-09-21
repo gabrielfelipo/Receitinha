@@ -109,7 +109,7 @@ class CheckView: UIView {
         return tableView
     }()
     
-    //MARK: - Inicialização dos componentes da PopUp
+    //MARK: - Inicialização dos componentes da PopUp exit
     let popupBackgroundView = UIView()
     let popupView = UIView()
     let popupStackView = UIStackView()
@@ -119,6 +119,12 @@ class CheckView: UIView {
     let popupButtonsStackView = UIStackView()
     let popupButtonContinuar = UIButton()
     let popupButtonMenu = UIButton()
+    
+    //MARK: - Inicialização dos componentes da PopUp Help
+    let helpBackgroungView = UIView()
+    let helpView = UIView()
+    let helpExitButton = UIButton()
+    let helpImageView = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -138,6 +144,11 @@ class CheckView: UIView {
         self.addSubview(stackzona)
         self.addSubview(button)
         self.addSubview(popupBackgroundView)
+        self.addSubview(helpBackgroungView)
+        
+        helpBackgroungView.addSubview(helpView)
+        helpView.addSubview(helpExitButton)
+        helpView.addSubview(helpImageView)
         
         popupBackgroundView.addSubview(popupView)
         popupView.addSubview(popupStackView)
@@ -216,9 +227,60 @@ class CheckView: UIView {
         popupButtonMenu.layer.shadowRadius = 10
         popupButtonMenu.layer.shadowColor = UIColor.black.cgColor
         popupButtonMenu.layer.shadowOpacity = 0.25
+        
+        helpBackgroungView.isHidden = true
+        helpBackgroungView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
+        
+        helpView.backgroundColor = .white
+        helpView.layer.cornerRadius = 20
+        
+        helpExitButton.setTitle("Fechar  X", for: .normal)
+        helpExitButton.setTitleColor(UIColor(named: "azul-acao"), for: .normal)
+        helpExitButton.titleLabel?.font = UIFont.systemFont(ofSize: 17)
+        helpExitButton.tintColor = .white
+        helpExitButton.layer.cornerRadius = 16
+        helpExitButton.backgroundColor = .white
+        helpExitButton.layer.borderColor = UIColor(named: "azul-acao")?.cgColor
+        helpExitButton.layer.borderWidth = 1
+        
+        helpImageView.contentMode = .scaleAspectFit
+        helpImageView.image = UIImage(named: "IMG_BananaComNescau_1")
     }
     
     private func setupConstraints(){
+        
+        helpBackgroungView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            helpBackgroungView.topAnchor.constraint(equalTo: topAnchor),
+            helpBackgroungView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            helpBackgroungView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            helpBackgroungView.leadingAnchor.constraint(equalTo: leadingAnchor)
+        ])
+        
+        helpView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            helpView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.4),
+            helpView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            helpView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            helpView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
+        ])
+        
+        helpExitButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            helpExitButton.topAnchor.constraint(equalTo: helpView.topAnchor,constant: 24),
+            helpExitButton.trailingAnchor.constraint(equalTo: helpView.trailingAnchor, constant: -24),
+            helpExitButton.heightAnchor.constraint(equalToConstant: 32),
+            helpExitButton.widthAnchor.constraint(equalToConstant: 112)
+        ])
+        
+        helpImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            helpImageView.topAnchor.constraint(equalTo: helpExitButton.bottomAnchor,constant: 24),
+            helpImageView.leadingAnchor.constraint(equalTo: helpView.leadingAnchor, constant: 24),
+            helpImageView.trailingAnchor.constraint(equalTo: helpView.trailingAnchor, constant: -24),
+            helpImageView.bottomAnchor.constraint(equalTo: helpView.bottomAnchor, constant: -24)
+        ])
+        
         popupBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             popupBackgroundView.topAnchor.constraint(equalTo: topAnchor),
@@ -329,6 +391,8 @@ class CheckView: UIView {
         popupButtonContinuar.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
         
         popupButtonMenu.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        
+        helpExitButton.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
     }
 
     @objc func tappedButton(sender: UIButton) {
@@ -340,6 +404,9 @@ class CheckView: UIView {
         }
         else if sender == popupButtonMenu {
             delegate?.menu()
+        }
+        else {
+            delegate?.fechar()
         }
     }
 

@@ -23,16 +23,16 @@ class ConclusaoViewController: UIViewController {
 }
 
 extension ConclusaoViewController: ButtonDelegate {
+    func fechar() {
+    }
+    
     func sair() {
-        
     }
     
     func continuar() {
-        
     }
     
     func menu() {
-        
     }
     
     func passarTela() {
