@@ -17,6 +17,7 @@ struct Receita{
     let duracao: Int
     let objetos: [String]
     let ingredientes: [String]
+    let imagensObjetos: [String]
     let troca: Int
     //Dados que mudam por passo
     let imagem: [String]

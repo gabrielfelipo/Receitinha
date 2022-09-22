@@ -92,6 +92,8 @@
 		D371043428D60021004F138B /* CheckViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371043328D60020004F138B /* CheckViewController+Delegate.swift */; };
 		D371043628D60044004F138B /* CheckViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371043528D60044004F138B /* CheckViewController+DataSource.swift */; };
 		D371043828D60164004F138B /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371043728D60164004F138B /* CheckView.swift */; };
+		D3846D9C28DBF11600F06585 /* proximoPasso.wav in Resources */ = {isa = PBXBuildFile; fileRef = D3846D9B28DBF11600F06585 /* proximoPasso.wav */; };
+		D3846DA028DBF40A00F06585 /* ultimoPasso.wav in Resources */ = {isa = PBXBuildFile; fileRef = D3846D9F28DBF40A00F06585 /* ultimoPasso.wav */; };
 		D3AABE1428D23C5D0094400B /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AABE1328D23C5D0094400B /* CheckViewController.swift */; };
 		D3AABE1A28D247620094400B /* CheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AABE1928D247620094400B /* CheckTableViewCell.swift */; };
 		D3C7D70A28D11AE600B08BA6 /* MP3_BananaComNescau_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3C7D6FF28D11AE600B08BA6 /* MP3_BananaComNescau_3.mp3 */; };
@@ -193,6 +195,8 @@
 		D371043328D60020004F138B /* CheckViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckViewController+Delegate.swift"; sourceTree = "<group>"; };
 		D371043528D60044004F138B /* CheckViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckViewController+DataSource.swift"; sourceTree = "<group>"; };
 		D371043728D60164004F138B /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
+		D3846D9B28DBF11600F06585 /* proximoPasso.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = proximoPasso.wav; sourceTree = "<group>"; };
+		D3846D9F28DBF40A00F06585 /* ultimoPasso.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ultimoPasso.wav; sourceTree = "<group>"; };
 		D3AABE1328D23C5D0094400B /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		D3AABE1928D247620094400B /* CheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTableViewCell.swift; sourceTree = "<group>"; };
 		D3C7D6FF28D11AE600B08BA6 /* MP3_BananaComNescau_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3_BananaComNescau_3.mp3; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 		0DD453BB28D3FC5D00DA32F3 /* Audios */ = {
 			isa = PBXGroup;
 			children = (
+				D3846D9B28DBF11600F06585 /* proximoPasso.wav */,
+				D3846D9F28DBF40A00F06585 /* ultimoPasso.wav */,
 				CA7415FD28DBB2D2006B83AF /* BoloDeCaneca */,
 				0DD453B928D3FC2400DA32F3 /* MistoQuente */,
 				0DD453BA28D3FC4B00DA32F3 /* BananaComNescau */,
@@ -473,6 +479,7 @@
 				472B6E5028D1208B00A0D036 /* MP3_MistoQuente_12.mp3 in Resources */,
 				CAEE6FD628CFACD2007AA493 /* LaunchScreen.storyboard in Resources */,
 				472B6E4F28D1208B00A0D036 /* MP3_MistoQuente_13.mp3 in Resources */,
+				D3846D9C28DBF11600F06585 /* proximoPasso.wav in Resources */,
 				CA74161C28DBB2D2006B83AF /* MP3_BoloDeCaneca_6.mp3 in Resources */,
 				CA74161928DBB2D2006B83AF /* MP3_BoloDeCaneca_17.mp3 in Resources */,
 				CA74162428DBB2D2006B83AF /* MP3_BoloDeCaneca_2.mp3 in Resources */,
@@ -508,6 +515,7 @@
 				472B6E4728D1208B00A0D036 /* MP3_MistoQuente_8.mp3 in Resources */,
 				472B6E4628D1208B00A0D036 /* MP3_MistoQuente_2.mp3 in Resources */,
 				CA74162328DBB2D2006B83AF /* MP3_BoloDeCaneca_10.mp3 in Resources */,
+				D3846DA028DBF40A00F06585 /* ultimoPasso.wav in Resources */,
 				472B6E4928D1208B00A0D036 /* MP3_MistoQuente_11.mp3 in Resources */,
 				CA74162D28DBB2D2006B83AF /* MP3_BoloDeCaneca_18.mp3 in Resources */,
 				472B6E4D28D1208B00A0D036 /* MP3_MistoQuente_15.mp3 in Resources */,
@@ -704,7 +712,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CMWHQAT5B4;
+				DEVELOPMENT_TEAM = B6XWN7H84M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Receitinha/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -732,7 +740,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CMWHQAT5B4;
+				DEVELOPMENT_TEAM = B6XWN7H84M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Receitinha/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

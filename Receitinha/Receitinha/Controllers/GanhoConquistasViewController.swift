@@ -63,7 +63,6 @@ extension GanhoConquistaViewController: ButtonDelegate{
     func passarTela() {
         Conquista.desbloqueadas[indexReceita!] = true
         Conquista.veioDeOnde = "ganhoConquista"
-        print(Conquista.desbloqueadas)
         self.navigationController?.popToRootViewController(animated: true)
     }
     

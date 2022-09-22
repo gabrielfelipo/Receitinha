@@ -35,7 +35,7 @@ extension CheckViewController: UITableViewDelegate{
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let imagemNome = receitas[indexReceita!].imagem[indexPath.row]
+        let imagemNome = receitas[indexReceita!].imagensObjetos[indexPath.row]
         checkView.helpImageView.image = UIImage(named: imagemNome)
         ajuda()
     }

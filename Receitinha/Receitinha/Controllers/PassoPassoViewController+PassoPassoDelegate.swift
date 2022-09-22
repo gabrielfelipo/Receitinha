@@ -53,41 +53,93 @@ extension PassoPassoViewController: PassoPassoDelegate{
                 passo = passo + 1
                 passoPassoView.increaseProgressBar(index: passo)
                 getJsonPasso()
+                if let player = player, player.isPlaying {
+                    // num faz nada
+                }
+                else {
+                    let urlString = Bundle.main.path(forResource: "proximoPasso", ofType: "wav")
+                    do {
+                        try AVAudioSession.sharedInstance().setMode(.default)
+                        try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                        
+                        guard let urlString = urlString else{
+                            return
+                        }
+                        
+                        player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                        
+                        guard let player = player else{ // Unrapping
+                            return
+                        }
+                        
+                        player.play()
+                    }
+                    catch {
+                        fatalError("Deu BO")
+                    }
+                }
+
             }
         } else{
             let finalVC = ConclusaoViewController()
             finalVC.indexReceita = receitaIndex
             navigationController?.pushViewController(finalVC, animated: true)
+            
+            if let player = player, player.isPlaying {
+                // num faz nada
+            }
+            else {
+                let urlString = Bundle.main.path(forResource: "ultimoPasso", ofType: "wav")
+                do {
+                    try AVAudioSession.sharedInstance().setMode(.default)
+                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                    
+                    guard let urlString = urlString else{
+                        return
+                    }
+                    
+                    player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                    
+                    guard let player = player else{ // Unrapping
+                        return
+                    }
+                    
+                    player.play()
+                }
+                catch {
+                    fatalError("Deu BO")
+                }
+            }
         }
         
     }
     
     func reproducaoAudios() {
         if let player = player, player.isPlaying {
-                   // num faz nada
-               }
-               else {
-                   let urlString = Bundle.main.path(forResource: receitas[receitaIndex!].audioDescricao[passo], ofType: "mp3")
-                   do {
-                       try AVAudioSession.sharedInstance().setMode(.default)
-                       try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-                       
-                       guard let urlString = urlString else{
-                           return
-                       }
-                       
-                       player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-                       
-                       guard let player = player else{ // Unrapping
-                           return
-                       }
-                       
-                       player.play()
-                   }
-                   catch {
-                       fatalError("Deu BO")
-                   }
-               }
+            // num faz nada
+        }
+        else {
+            let urlString = Bundle.main.path(forResource: receitas[receitaIndex!].audioDescricao[passo], ofType: "mp3")
+            do {
+                try AVAudioSession.sharedInstance().setMode(.default)
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                
+                guard let urlString = urlString else{
+                    return
+                }
+                
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                
+                guard let player = player else{ // Unrapping
+                    return
+                }
+                
+                player.play()
+            }
+            catch {
+                fatalError("Deu BO")
+            }
+        }
     }
     
     

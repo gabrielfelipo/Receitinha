@@ -32,7 +32,6 @@ class GanhoConquistaView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print("entrou no init da view")
         setupViewsHierarchy()
         setupViewsAttributes()
         setupConstraints()

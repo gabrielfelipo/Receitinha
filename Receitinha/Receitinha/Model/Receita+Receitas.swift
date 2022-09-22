@@ -21,14 +21,21 @@ extension Receita {
                 duracao: 10,
                 
                 objetos: [
-                    "1 colher",
-                    "1 prato"
+                    "1 prato",
+                    "1 colher"
                 ],
                 ingredientes: [
                     "1 banana",
                     "Leite em pó",
                     "Achocolatado em pó",
                     "Farinha láctea"
+                ], imagensObjetos: [
+                    "IMG_BananaComNescau_1",
+                    "IMG_BananaComNescau_2",
+                    "IMG_BananaComNescau_3",
+                    "IMG_BananaComNescau_4",
+                    "IMG_BananaComNescau_5",
+                    "IMG_BananaComNescau_6",
                 ],
                 troca: 5,
                 imagem: [
@@ -101,6 +108,12 @@ extension Receita {
                     "2 fatias de pão de forma",
                     "Presunto fatiado",
                     "Queijo mussarela fatiado"
+                ],imagensObjetos: [
+                    "IMG_MistoQuente_1",
+                    "IMG_MistoQuente_5",
+                    "IMG_MistoQuente_2",
+                    "IMG_MistoQuente_3",
+                    "IMG_MistoQuente_4",
                 ],
                 troca: 4,
                 imagem: [
@@ -119,7 +132,6 @@ extension Receita {
                     "IMG_MistoQuente_13",
                     "IMG_MistoQuente_14",
                     "IMG_MistoQuente_15",
-                    
                 ],
                 tituloInstrucao: [
                     "Pegue um prato e coloque em cima da mesa",
@@ -180,7 +192,7 @@ extension Receita {
                 imagemPrevia: "IMG_BoloDeCaneca_Preview",
                 dificuldade: "Difícil",
                 descricaoPrevia: "Essa é uma receita de um delicioso bolo de caneca. Muito fofinho e macio, é uma excelente sobremesa!",
-                duracao: 10,
+                duracao: 12,
                 objetos: [
                     "1 caneca",
                     "1 xícara",
@@ -196,6 +208,19 @@ extension Receita {
                     "Leite",
                     "Óleo",
                     "1 ovo"
+                ],imagensObjetos: [
+                    "IMG_BoloDeCaneca_1",
+                    "IMG_BoloDeCaneca_2",
+                    "IMG_BoloDeCaneca_3",
+                    "IMG_BoloDeCaneca_4",
+                    "IMG_BoloDeCaneca_6",
+                    "IMG_BoloDeCaneca_7",
+                    "IMG_BoloDeCaneca_8",
+                    "IMG_BoloDeCaneca_9",
+                    "IMG_BoloDeCaneca_10",
+                    "IMG_BoloDeCaneca_11",
+                    "IMG_BoloDeCaneca_12",
+                    "IMG_BoloDeCaneca_13"
                 ],
                 troca: 11,
                 imagem: [
