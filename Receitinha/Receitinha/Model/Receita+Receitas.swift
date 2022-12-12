@@ -70,21 +70,8 @@ extension Receita {
                     "Pegue o leite em pó com a colher e espalhe por cima da banana",
                     "Pegue o achocolatado em pó com a colher e espalhe por cima da banana",
                     "Pegue a farinha Láctea com a colher e espalhe por cima da banana"
-                ],
-                audioDescricao: [
-                    "MP3_BananaComNescau_1",
-                    "MP3_BananaComNescau_2",
-                    "MP3_BananaComNescau_3",
-                    "MP3_BananaComNescau_4",
-                    "MP3_BananaComNescau_5",
-                    "MP3_BananaComNescau_6",
-                    "MP3_BananaComNescau_7",
-                    "MP3_BananaComNescau_8",
-                    "MP3_BananaComNescau_9",
-                    "MP3_BananaComNescau_10",
-                    "MP3_BananaComNescau_11",
-                    
                 ]
+                
             ),
             Receita(
                 precisaAuxilio: true,
@@ -154,25 +141,8 @@ extension Receita {
                     "Desligue a sanduicheira e deixe aberta para que a temperatura do pão diminua",
                     "Você pode aproveitar esse tempo para organizar os materiais que foram utilizados na receita",
                     "Retire o misto quente da sanduicheira e coloque no prato"
-                ],
-                audioDescricao: [
-                    "MP3_MistoQuente_1",
-                    "MP3_MistoQuente_2",
-                    "MP3_MistoQuente_3",
-                    "MP3_MistoQuente_4",
-                    "MP3_MistoQuente_5",
-                    "MP3_MistoQuente_6",
-                    "MP3_MistoQuente_7",
-                    "MP3_MistoQuente_8",
-                    "MP3_MistoQuente_9",
-                    "MP3_MistoQuente_10",
-                    "MP3_MistoQuente_11",
-                    "MP3_MistoQuente_12",
-                    "MP3_MistoQuente_13",
-                    "MP3_MistoQuente_14",
-                    "MP3_MistoQuente_15",
-                    
                 ]
+                
             ),
             Receita(
                 precisaAuxilio: false,
@@ -284,36 +254,8 @@ extension Receita {
                     "Cuidado, o bolo vai sair bem quente, pegue um pano para retirá-lo do micro-ondas",
                     "CUIDADO: A caneca está quente!\nCom o pano, retire  o píres com a caneca do micro-ondas e espere esfriar",
                     "Seu bolo de caneca está pronto! Pode pegar uma colher e saboreá-lo"
-                ],
-                audioDescricao: [
-                    "MP3_BoloDeCaneca_1",
-                    "MP3_BoloDeCaneca_2",
-                    "MP3_BoloDeCaneca_3",
-                    "MP3_BoloDeCaneca_4",
-                    "MP3_BoloDeCaneca_6",
-                    "MP3_BoloDeCaneca_7",
-                    "MP3_BoloDeCaneca_8",
-                    "MP3_BoloDeCaneca_9",
-                    "MP3_BoloDeCaneca_10",
-                    "MP3_BoloDeCaneca_11",
-                    "MP3_BoloDeCaneca_12",
-                    "MP3_BoloDeCaneca_13",
-                    "MP3_BoloDeCaneca_14",
-                    "MP3_BoloDeCaneca_15",
-                    "MP3_BoloDeCaneca_16",
-                    "MP3_BoloDeCaneca_17",
-                    "MP3_BoloDeCaneca_18",
-                    "MP3_BoloDeCaneca_19",
-                    "MP3_BoloDeCaneca_20",
-                    "MP3_BoloDeCaneca_21",
-                    "MP3_BoloDeCaneca_22",
-                    "MP3_BoloDeCaneca_23",
-                    "MP3_BoloDeCaneca_24",
-                    "MP3_BoloDeCaneca_25",
-                    "MP3_BoloDeCaneca_26",
-                    "MP3_BoloDeCaneca_27",
-                    "MP3_BoloDeCaneca_28"
                 ]
+                
             ),
         ]
     }

@@ -26,6 +26,7 @@ extension PassoPassoViewController: PassoPassoDelegate{
     
     func anterior() {
         player?.stop()
+        speechService.synthesizer.stopSpeaking(at: .immediate)
         if passo == receitas[receitaIndex!].troca + 1 {
             self.navigationController?.popViewController(animated: true)
         }else if passo == 0{
@@ -39,6 +40,7 @@ extension PassoPassoViewController: PassoPassoDelegate{
     
     func proximo() {
         player?.stop()
+        speechService.synthesizer.stopSpeaking(at: .immediate)
         if passo < receitas[receitaIndex!].tituloInstrucao.count - 1{
             if passo == receitas[receitaIndex!].troca {
                 
@@ -63,31 +65,8 @@ extension PassoPassoViewController: PassoPassoDelegate{
     }
     
     func reproducaoAudios() {
-        if let player = player, player.isPlaying {
-                   // num faz nada
-               }
-               else {
-                   let urlString = Bundle.main.path(forResource: receitas[receitaIndex!].audioDescricao[passo], ofType: "mp3")
-                   do {
-                       try AVAudioSession.sharedInstance().setMode(.default)
-                       try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-                       
-                       guard let urlString = urlString else{
-                           return
-                       }
-                       
-                       player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-                       
-                       guard let player = player else{ // Unrapping
-                           return
-                       }
-                       
-                       player.play()
-                   }
-                   catch {
-                       fatalError("Deu BO")
-                   }
-               }
+        let stringToBeSpoken = "\(receitas[receitaIndex!].tituloInstrucao[passo]). \(receitas[receitaIndex!].descricao[passo])"
+        speechService.say(stringToBeSpoken)
     }
     
     
