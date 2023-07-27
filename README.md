@@ -38,13 +38,13 @@ Developed by
   <tr>
 <td align="center"><a href="https://www.linkedin.com/in/gabriel-felipo-raeli-20329a1b1/"><img src="https://i.imgur.com/7FVUUrG.jpeg" width="100px;" alt=""/><br /><sub><b>Gabriel Felipo</b></sub></a><br/></td>
 
-<td align="center"><a href="https://www.linkedin.com/in/thalesvgfraga/"><img src="https://i.imgur.com/K39AuNm.jpeg" width="100px;" alt=""/><br /><sub><b>Thales Vinícius</b></sub></a><br/></td>
+<td align="center"><a href="https://www.linkedin.com/in/thalesvgfraga/"><img src="https://i.imgur.com/K39AuNm.jpeg" width="100px;" alt=""/><br /><sub><b>Thales Fraga</b></sub></a><br/></td>
 
-<td align="center"><a href="https://www.linkedin.com/in/lorena-vilaca/"><img src="https://i.imgur.com/SBokZM2.jpeg" width="100px;" alt=""/><br /><sub><b>Lorena Carla</b></sub></a><br/></td>
+<td align="center"><a href="https://www.linkedin.com/in/lorena-vilaca/"><img src="https://i.imgur.com/SBokZM2.jpeg" width="100px;" alt=""/><br /><sub><b>Lorena Vilaça</b></sub></a><br/></td>
 
 <td align="center"><a href="https://www.linkedin.com/in/rinaldo-da-silva-bento-júnior-416a15201/"><img src="https://i.imgur.com/EYin5ui.jpeg" width="100px;" alt=""/><br /><sub><b>Rinaldo Júnior</b></sub></a><br/></td>
 
-<td align="center"><a href="https://www.linkedin.com/in/lucas-souza-60839327a/"><img src="https://i.imgur.com/ji5YPRv.jpeg" width="100px;" alt=""/><br /><sub><b>Lucas e Silva</b></sub></a><br/></td>
+<td align="center"><a href="https://www.linkedin.com/in/lucas-souza-60839327a/"><img src="https://i.imgur.com/ji5YPRv.jpeg" width="100px;" alt=""/><br /><sub><b>Lucas Souza</b></sub></a><br/></td>
 </tr>
  </table>
 
