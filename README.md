@@ -1,4 +1,4 @@
 # Receitinha
 
 ### Demostration Vídeo:
-[![IMAGE ALT TEXT HERE](https://youtu.be/nmUA2IlwZqo)](https://youtu.be/nmUA2IlwZqo)
+[![Demo](https://img.youtube.com/vi/nmUA2IlwZqo/0.jpg)](https://youtu.be/nmUA2IlwZqo)
