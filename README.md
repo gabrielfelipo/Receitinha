@@ -20,7 +20,9 @@ App Developed in the challenge Paris at the Apple Developer Academy | UFPE. We'v
 </p>
 
 ### Demostration Vídeo:
+<p align="center">
 [![Demo](https://img.youtube.com/vi/nmUA2IlwZqo/0.jpg)](https://youtu.be/nmUA2IlwZqo)
+</p>
 
 ## About the App
 Receitinha is an interactive recipe book designed for autistic children. It includes various features to assist autistic individuals, such as button captions, sound support system, positive reinforcement through achievements, and parental lock for complex recipes. And the best part: there's no need to be in a clinic to access it!
