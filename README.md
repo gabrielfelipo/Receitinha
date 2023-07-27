@@ -44,7 +44,7 @@ Developed by
 
 <td align="center"><a href="https://www.linkedin.com/in/rinaldo-da-silva-bento-júnior-416a15201/"><img src="https://i.imgur.com/EYin5ui.jpeg" width="100px;" alt=""/><br /><sub><b>Rinaldo Júnior</b></sub></a><br/></td>
 
-<td align="center"><a href="https://www.linkedin.com/in/lucas-souza-60839327a/"><img src="https://i.imgur.com/ji5YPRv.jpeg" width="100px;" alt=""/><br /><sub><b>Lucas Silva</b></sub></a><br/></td>
+<td align="center"><a href="https://www.linkedin.com/in/lucas-souza-60839327a/"><img src="https://i.imgur.com/ji5YPRv.jpeg" width="100px;" alt=""/><br /><sub><b>Lucas e Silva</b></sub></a><br/></td>
 </tr>
  </table>
 
