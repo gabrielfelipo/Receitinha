@@ -23,6 +23,5 @@ struct Receita{
     let imagem: [String]
     let tituloInstrucao: [String]
     let descricao: [String]
-    let audioDescricao: [String]
 }
 

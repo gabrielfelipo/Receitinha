@@ -15,6 +15,7 @@ import AVFoundation
     let passoPassoView = PassoPassoView()
     let receitas = Receita.receitas()
     var player: AVAudioPlayer?
+    let speechService = SpeechService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +40,9 @@ import AVFoundation
     
     func getJsonPasso() {
         if passo > receitas[receitaIndex!].troca{
-            passoPassoView.passoAtual.text = "Cozinhando: Passo \(passo+1) de \(receitas[receitaIndex!].audioDescricao.count)"
+            passoPassoView.passoAtual.text = "Cozinhando: Passo \(passo+1) de \(receitas[receitaIndex!].imagem.count)"
         }else{
-            passoPassoView.passoAtual.text = "Preparação: Passo \(passo+1) de \(receitas[receitaIndex!].audioDescricao.count)"
+            passoPassoView.passoAtual.text = "Preparação: Passo \(passo+1) de \(receitas[receitaIndex!].imagem.count)"
         }
         passoPassoView.imagemPasso.image = UIImage(named: receitas[receitaIndex!].imagem[passo])
         passoPassoView.tituloDescricao.text = receitas[receitaIndex!].tituloInstrucao[passo]
@@ -60,7 +61,7 @@ import AVFoundation
         passoPassoView.tituloReceita.text = receitas[receitaIndex!].titulo
         
         //setup da progress bar
-        passoPassoView.setupProgressBar(quantidadePassos: receitas[receitaIndex!].audioDescricao.count, passoAtual: passo)
+        passoPassoView.setupProgressBar(quantidadePassos: receitas[receitaIndex!].imagem.count, passoAtual: passo)
         
         getJsonPasso()
         
