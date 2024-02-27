@@ -38,34 +38,38 @@ extension ConclusaoViewController: ButtonDelegate {
     }
     
     func passarTela() {
+        print("TEste ai boy")
         if Conquista.desbloqueadas[indexReceita!]{
+            print("Desbloqueada")
             navigationController?.popToRootViewController(animated: true)
         }else{
-            if let player = player, player.isPlaying {
-                // num faz nada
-            }
-            else {
-                let urlString = Bundle.main.path(forResource: "ultimoPasso", ofType: "wav")
-                do {
-                    try AVAudioSession.sharedInstance().setMode(.default)
-                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-                    
-                    guard let urlString = urlString else{
-                        return
-                    }
-                    
-                    player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-                    
-                    guard let player = player else{ // Unrapping
-                        return
-                    }
-                    
-                    player.play()
-                }
-                catch {
-                    fatalError("Deu BO")
-                }
-            }
+//            if let player = player, player.isPlaying {
+//                // num faz nada
+//                print("Tendi nao")
+//            }
+//            else {
+//                print("dale")
+//                let urlString = Bundle.main.path(forResource: "ultimoPasso", ofType: "wav")
+//                do {
+//                    try AVAudioSession.sharedInstance().setMode(.default)
+//                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+//
+//                    guard let urlString = urlString else{
+//                        return
+//                    }
+//
+//                    player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+//
+//                    guard let player = player else{ // Unrapping
+//                        return
+//                    }
+//
+//                    player.play()
+//                }
+//                catch {
+//                    fatalError("Deu BO")
+//                }
+//            }
             let ganhoConquistaVC = GanhoConquistaViewController()
             ganhoConquistaVC.indexReceita = indexReceita
             navigationController?.pushViewController(ganhoConquistaVC, animated: true)

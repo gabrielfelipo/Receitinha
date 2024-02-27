@@ -81,7 +81,7 @@ extension Receita {
                 
             ),
             Receita(
-                precisaAuxilio: true,
+                precisaAuxilio: false,
                 titulo: "Misto quente",
                 imagemPrevia: "IMG_MistoQuente_Preview",
                 dificuldade: "Médio",
